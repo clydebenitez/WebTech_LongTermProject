@@ -35,12 +35,26 @@
             <div class="row">
                 <div class="three columns">
                 <nav class="topicnav">
+                    <h5><strong>Prelim Topics</strong></h5>
                     <ul>
                         <li><a href="#http">HTTP</a></li>
                         <li><a href="#protocol">Protocol</a></li>
                         <li><a href="#fundamentals">HTTP Fundamentals</a></li>
                         <li><a href="#cache">Cache</a></li>
-                        <li><a href="#cache">Cache</a></li>
+                        <li><a href="#httpresponse">HTTP Response Messages</a></li>
+                        <li>
+                            <a href="#httprequest">HTTP Request Methods</a>
+                            <ul>
+                                <li><a href="#get">GET</a></li>
+                                <li><a href="#head">HEAD</a></li>
+                                <li><a href="#post">POST</a></li>
+                                <li><a href="#options">OPTIONS</a></li>
+                                <li><a href="#trace">TRACE</a></li>
+                                <li><a href="#put">PUT</a></li>
+                                <li><a href="#delete">DELETE</a></li>
+                                <li><a href="#connect">CONNECT</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -134,7 +148,7 @@
                             <li>
                                 Status line
                                 <ul>
-                                    <li>HTTp protocol version</li>
+                                    <li>HTTP protocol version</li>
                                     <li>Status code</li>
                                     <li>Reason phrase</li>
                                 </ul>
@@ -144,6 +158,76 @@
                         </ul>
                     </div>
                 </div>
+
+                <div class="row">
+                    <div id="requestmethods" class="ten columns">
+                        <h4><strong>HTTP Request Methods</strong></h4>
+                        <ul>
+                            <li id="get">
+                                <strong>GET</strong>
+                                <ul>
+                                    <li>Most commonly used HTTP method </li>
+                                    <li>Used to request from the server the retrieval of the source identified by the request URI; the retrieved resource is returned in the message body as an entity. </li>
+                                    <li>Can be combined with conditional and/or range request headers to effect conditional and/or partial resource retrieval </li>
+                                    <li>Must be supported by all general-purpose servers. </li>
+                                </ul>
+                            </li>
+                            <li id="head">
+                                <strong>HEAD</strong>
+                                <ul>
+                                    <li>Identical to GET, except the message body is not included in the response </li>
+                                </ul>
+                            </li>
+                            <li id="post">
+                                <strong>POST</strong>
+                                <ul>
+                                    <li>Request that the origin server accept the entity enclosed in the request as a new subordinate of the resource identified by the Request-URI in the Request-Line.</li>
+                                </ul>
+                            </li>
+                            <li id="options">
+                                <strong>OPTIONS</strong>
+                                <ul>
+                                    <li>Request for information about the communication options available on the request/response chain identified by the Request-URI. This method allows the client to determine the options and/or requirements associated with a resource, or the capabilities of a server, without implying a resource action or initiating resource retrieval. </li>
+                                </ul>
+                            </li>
+                            <li id="trace">
+                                <strong>TRACE</strong>
+                                <ul>
+                                    <li>Request the server to “echo” back to the client the received request </li>
+                                    <li>Typically used for testing/diagnostics of the request chain </li>
+                                </ul>
+                            </li>
+                            <li id="put">
+                                <strong>PUT</strong>
+                                <ul>
+                                    <li>Request the server to store the enclosed entity in the message under the specified request URI</li>
+                                </ul>
+                            </li>
+                            <li id="delete">
+                                <strong>DELETE</strong>
+                                <ul>
+                                    <li>Request the server to delete the resource identified by the request URI</li>
+                                </ul>
+                            </li>
+                            <li id="connect">
+                                <strong>CONNECT</strong>
+                                <ul>
+                                    <li>Reserved for use of tunneling proxy servers </li>
+                                </ul>
+                            </li>
+                                <li>
+                                    <em>Idempotent Methods</em>
+                                    <ul>
+                                        <li>The methods GET, HEAD, PUT and DELETE share this property.</li>
+                                        <h6><strong>add more content here</strong></h6>
+                                    </ul>
+                                </li>
+
+                        </ul>
+                            
+                        </ul>
+                    </div>
+                </div>                
             </div>
             </div>
             
