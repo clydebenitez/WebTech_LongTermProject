@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Webtek Course Project</title>
+        <link rel="stylesheet" href="../styles/layout.css">
+        <link rel="stylesheet" href="../styles/mainstyle.css">
+    </head>
+    
+    <body>
+    <!-- top section -->
+        
+        <div class="section header">
+            <div class="container">
+                <div class="row">
+                    <div class="four columns">
+                        <p class="logo">WEBTEK IS LIFE</p>
+                    </div>
+                    <div class="eight columns nav">
+                        <a class="button" href="../index.html">Home</a>
+                        <a class="button button-primary" href="prelims.html">Prelim</a>
+                        <a class="button" href="#">Midterm</a>
+                        <a class="button" href="#">Finals</a>
+                    </div>
+                </div>
+                <div class="row action">
+                    <h1 class="headtext">IT 324</h1>
+                    <h2 class="headtext">Web Systems and Technologies (Lecture)</h2>
+                    <a href="#" class="button button-primary" target="_blank">Get Started!</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container section info">
+            <div class="row">
+                <div class="three columns">
+                <nav class="topicnav">
+                    <ul>
+                        <li><a href="#http">HTTP</a></li>
+                        <li><a href="#protocol">Protocol</a></li>
+                        <li><a href="#fundamentals">HTTP Fundamentals</a></li>
+                        <li><a href="#cache">Cache</a></li>
+                        <li><a href="#cache">Cache</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="nine columns">
+                <div class="row">
+                <div id="http" class="twelve columns">
+                    <h4><strong>Hypertext Transfer Protocol (HTTP)</strong></h4>
+                    <ul>
+                        <li>Application layer used primarily to retrieve hypertext (on hypermedia) documents and resources on the World Wide Web </li>
+                        <li>Jointly developed by the W3C and the IETF </li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="row">
+                <div id="protocol" class="twelve columns">
+                    <h4><strong>Protocol</strong></h4>
+                    <ul>
+                        <li>Set of rules to be followed</li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="row">
+                <div id="fundamentals" class="twelve columns">
+                    <h4><strong>HTTP Fundamentals</strong></h4>
+                    <ul>
+                        <li>HTTP typically runs on top of TCP/IP, using TCP port 80 by default (TCP port 443 for HTTPS). </li>
+                        <li>
+                            HTTP resources are identified using URIs (specifically, HTTP URLs) 
+                            <ul>
+                                <li>Scheme (http: or https:) </li>
+                                <li>(optional) authentication information </li>
+                                <li>Host and (optional) port number </li>
+                                <li>Path (resolved to the document root on the server) to the resource </li>
+                                <li>(optional) scheme-specific parameters </li>
+                                <li>(optional) URL-encoded query </li>
+                                <li>(optional) bookmark (or fragment identifier)</li>
+                                <h5><strong>insert image</strong></h5>
+                            </ul>
+                        </li>
+
+                        <li>HTTP is based on client-server architecture</li>
+                        
+                        <li>
+                            Clients, aka user agents (UA):
+                            <ul>
+                                <li>Web browsers, web crawlers, email clients, other end user tools and applications</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                           Servers:
+                            <ul>
+                                <li>Origin servers, proxy servers, gateways, tunnels </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                           HTTP uses a request-response standard protocol 
+                            <ul>
+                                <li>The client sends an HTTP request message to the server </li>
+                                <li>The server processes the request and replies with an HTTP response message</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                           HTTP is a stateless communications protocol  
+                            <ul>
+                                <li>Servers do not keep information about clients in between requests</li>
+                                <li>Web applications effect session tracking using mechanism such as cookies on URL-encoded session information to keep track of related client requests</li>
+                            </ul>
+                        </li>
+                        <li>HTTP provides support for other functionalities such as cache control, content media type (MIME) specification, language and character set specification, content/transfer coding, client-server protocol negotiations, persistent connections, request pipelining, etc.</li>
+                    </ul>
+                </div>
+
+                <div class="row">
+                    <div id="cache" class="twelve columns">
+                        <h4><strong>Cache</strong></h4>
+                        <ul>
+                            <li>Local storage/copy of resource that is fetched from a server </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div id="httpresponse" class="ten columns">
+                        <h4><strong>HTTP Response Message</strong></h4>
+                        <ul>
+                            <li>
+                                Status line
+                                <ul>
+                                    <li>HTTp protocol version</li>
+                                    <li>Status code</li>
+                                    <li>Reason phrase</li>
+                                </ul>
+                            </li>
+                            <li>Response Headers</li>
+                            <li>Message body</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            </div>
+            
+            </div>
+            
+        </div>
+        
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="eight columns">
+                    <br>
+                    <p>© Copyright natin kunwari hart.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </body>
+</html>
