@@ -98,20 +98,6 @@
                     <h4><strong>HTTP Fundamentals</strong></h4>
                     <ul>
                         <li>HTTP typically runs on top of TCP/IP, using TCP port 80 by default (TCP port 443 for HTTPS). </li>
-                        <li>
-                            HTTP resources are identified using URIs (specifically, HTTP URLs) 
-                            <ul>
-                                <li>Scheme (http: or https:) </li>
-                                <li>(optional) authentication information </li>
-                                <li>Host and (optional) port number </li>
-                                <li>Path (resolved to the document root on the server) to the resource </li>
-                                <li>(optional) scheme-specific parameters </li>
-                                <li>(optional) URL-encoded query </li>
-                                <li>(optional) bookmark (or fragment identifier)</li>
-                                <h5><strong>insert image</strong></h5>
-                            </ul>
-                        </li>
-
                         <li>HTTP is based on client-server architecture</li>
                         
                         <li>
@@ -145,6 +131,25 @@
                         </li>
                         <li>HTTP provides support for other functionalities such as cache control, content media type (MIME) specification, language and character set specification, content/transfer coding, client-server protocol negotiations, persistent connections, request pipelining, etc.</li>
                     </ul>
+                </div>
+                
+                <div class="row">
+                    <div id="resourceaddressing">
+                        <h4> <strong> HTTP Resource Addressing </strong></h4>
+                            <ul>
+                                <li> HTTP resources are identified using URIs (RFC 3986), or more specifically, HTTP URLs </li>
+                                    <ul>
+                                    <li> Scheme (http: or https:) </li>
+                                    <li>(optional) authentication information </li>
+                                    <li>Host and (optional) port number </li>
+                                    <li>Path (resolved to the document root on the server) to the resource </li>
+                                    <li>(optional) scheme-specific parameters </li>
+                                    <li>(optional) URL-encoded query </li>
+                                    <li>(optional) bookmark (or fragment identifier)</li>
+                            </ul>
+                            </ul>
+                    
+                    </div>
                 </div>
 
                 <div class="row">
@@ -396,96 +401,6 @@
                                     </ul>
                                     <ul>
                                         <li> Last Modified </li>
-                                    </ul>
-                            </ul> 
-                    </div>
-                    <div class="row">
-                    <div id="statuscodes" class="ten columns">
-                        <h4><strong>HTTP Status Codes</strong></h4>
-                    <ul>
-                        <li id="informational"> <strong>Informational (1xx)</strong></li>
-                            <ul>
-                                <li> 100 Continue </li>
-                                <li> 101 Switching Protocols </li>
-                            </ul>
-                    </ul>
-                    <ul>
-                        <li id="success"> <strong>Success (2xx)</strong> </li>
-                            <ul>
-                                <li> 200 OK </li>
-                                <li> 202 Accepted </li>
-                                <li> 203 Non-Authorative Information </li>
-                                <li> 204 No Content </li>
-                                <li> 205 Reset Content </li>
-                                <li> 206 Partial Content </li>
-                            </ul>
-                    </ul>
-                    <ul>
-                        <li id="redirection"> <strong>Redirection (3xx)</strong> </li>
-                            <ul>
-                                <li> 300 Multiple Choices </li>
-                                <li> 301 Moved Permanently </li>
-                                <li> 302 Found </li>
-                                <li> 303 See Other </li>
-                                <li> 304 Not Modified </li>
-                                <li> 305 Use Proxy </li>
-                                <li> 307 Temporary Redirect </li>
-                            </ul>
-                    </ul>
-                    <ul>
-                        <li id="clienterror"> <strong>Client Error (4xx)</strong> </li>
-                            <ul>
-                                <li> 400 Bad Request </li>
-                                <li> 401 Unauthorized </li>
-                                <li> 402 Payment Required </li>
-                                <li> 403 Forbidden </li>
-                                <li> 404 Not Found </li>
-                                <li> 405 Method not Allowed </li>
-                                <li> 407 Not Acceptable </li>
-                                <li> 408 Request Timeout </li>
-                                <li> 409 Conflict </li>
-                                <li> 410 Gone </li>
-                                <li> 411 Length Required </li>
-                                <li> 412 Precondition Failed </li>
-                                <li> 413 Request Entity Too Large </li>
-                                <li> 414 Request-URI Too Long </li>
-                                <li> 415 Unsupported Media Type </li>
-                                <li> 416 Request Range Not Satisfiable </li>
-                                <li> 417 Expectation Failed </li>
-                            </ul>
-                    </ul>
-                       <ul>
-                        <li id="servererror"> <strong>Server Error (5xx)</strong> </li>
-                            <ul>
-                                <li> 500 Internal Server Error </li>
-                                <li> 501 Not Implemented </li>
-                                <li> 502 Bad Gateway </li>
-                                <li> 503 Service Unavailable </li>
-                                <li> 504 Gateway Timeout </li>
-                                <li> 505 HTTP Version Not Supported </li>
-                            </ul>
-                    </ul>
-            </div>
-            </div>
-            
-            </div>
-            
-        </div>
-        
-    <!-- footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="eight columns">
-                    <br>
-                    <p>© Copyright natin kunwari hart.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-    </body>
-</html>
-Last Modified </li>
                                     </ul>
                             </ul> 
                     </div>
