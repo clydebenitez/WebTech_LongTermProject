@@ -34,16 +34,33 @@
                     <nav class="topicnav">
                         <h5><strong>Prelim Topics</strong></h5>
                         <ul>
-                            <li><a href="#http">HTTP</a></li>
-			    <li><a href="#history">HTTP HISTORY</a></li>
-                            <li><a href="#fundamentals">HTTP FUNDAMENTALS</a></li>
-			    <li><a href="#functionality">HTTP FUNCTIONALITY</a></li>
-                            <li><a href="#resourceaddressing">HTTP RESOURCE ADDRESSING</a></li>
-                            <li><a href="#responsemessage">HTTP RESPONSE MESSAGE</a></li>
-			    <li><a href="#resourcemessage">HTTP RESOURCE MESSAGE</a></li>
-                            <li><a href="#requestmethods">HTTP REQUEST METHODS</a></li>
-                            <li><a href="#messageheaders">HTTP MESSAGE HEADERS</a></li>
-                            <li><a href="#statuscodes">HTTP STATUS CODES</a></li>
+                            <a class="button" href="#http">HTTP</a>
+			                <a class="button" href="#history">HTTP HISTORY</a>
+                            <a class="button" href="#fundamentals">HTTP FUNDAMENTALS</a>
+			                <a class="button" href="#functionality">HTTP FUNCTIONALITY</a>
+                            <a class="button" href="#resourceaddressing">HTTP RESOURCE ADDRESSING</a>
+                            <a class="button" href="#responsemessage">HTTP RESPONSE MESSAGE</a>
+			                <a class="button" href="#resourcemessage">HTTP RESOURCE MESSAGE</a>
+                            <a class="button" href="#requestmethods">HTTP REQUEST METHODS</a>
+                            <div class="dropdown">
+                                <button class="button">HTTP MESSAGE HEADERS ></button>
+                                <div class="dropdown-content">
+                                    <a href="#generalheader">General Header Fields</a>
+                                    <a href="#requestheader">Request Header Fields</a>
+                                    <a href="#responseheader">Response Header Fields</a>
+                                    <a href="#entityheader">Entity Header Fields</a>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <button class="button">HTTP STATUS CODE ></button>
+                                <div class="dropdown-content">    
+                                    <a href="#informational">Informational 1xx</a>
+                                    <a href="#success">Success 2xx</a>
+                                    <a href="#redirection">Redirection 3xx</a>
+                                    <a href="#clienterror">Client Error 4xx</a>
+                                    <a href="#servererror">Server Error 5xx</a>
+                                </div>
+                            </div>
                         </ul>
                     </nav>
                 </div>
