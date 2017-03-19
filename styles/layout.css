@@ -252,3 +252,10 @@ ol,
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
 }
+
+a.topic:link{
+  text-decoration: none;
+}
+a.topic:visited{
+  text-decoration: none;
+}

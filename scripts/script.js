@@ -34,3 +34,10 @@ $(document).ready(function(){
     } // End if
   });
 });
+ 
+ //show/hide contents
+$(document).ready(function(){
+    $("#hide:first").click(function(){
+        $("#content:first").fadeToggle("slow");
+    });
+});

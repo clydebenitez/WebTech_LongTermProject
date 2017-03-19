@@ -5,8 +5,9 @@
         <title>Webtek Course Project</title>
         <link rel="stylesheet" href="../styles/layout.css">
         <link rel="stylesheet" href="../styles/mainstyle.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script type="text/javascript" src="../scripts/scripts.js"></script>
+        <script type="text/javascript" src="../scripts/script.js"></script>
     </head>
     <body>
 
@@ -99,7 +100,9 @@
                 <div class="nine columns">
                     <div class="row">
                         <div id="http" class="twelve columns">
-                            <h4><strong>Hypertext Transfer Protocol (HTTP)</strong></h4>
+                            <div id="hide">
+                                <a href="#" class="topic"><h4 id="hide"><strong>Hypertext Transfer Protocol (HTTP)</strong></h4></a>
+                            </div>
                             <ul>
                                 <li><Strong>Application Layer Communication Protocol</Strong> used to access resources on the world wide web. Jointly developed by the W3C and IETF (INTERNET ENGINEERING TASK FORCE).</li>
                             </ul>
@@ -107,7 +110,7 @@
                     </div>
                     <div class="row">
                         <div id="protocol" class="twelve columns">
-                            <h4><strong>Protocol</strong></h4>
+                            <a href="#" class="topic"><h4 id="hide"><h4><strong>Protocol</strong></h4></a>
                             <ul>
                                 <li>is a <Strong>Set of rules</Strong> that end points in a telecommunication connection use when they communicate.</li>
                             </ul>
@@ -115,7 +118,7 @@
                     </div>
                     <div class="row">
                         <div id="history" class="twelve columns">
-                            <h4><Strong>History of HTTP</Strong></h4>
+                            <a href="#" class="topic"><h4 id="hide"><h4><Strong>History of HTTP</Strong></h4></a>
                             <ul>
                                 <li>HTTP 0.9 (1991)</li>
                                 <li>HTTP 1.0 (RFC 1945 - MAY 1996) – single line, resource, request, and response, after that, it terminates the line.</li>
@@ -126,7 +129,7 @@
                     </div>
                     <div class="row">
                         <div id="fundamentals" class="twelve columns">
-                            <h4><strong>HTTP Fundamentals</strong></h4>
+                            <a href="#" class="topic"><h4 id="hide"><h4><strong>HTTP Fundamentals</strong></h4></a>
                             <ul>
                                 <li>HTTP typically runs on top of TCP/IP using <Strong>TCP port 80</Strong> by default, or <Strong>TCP port 443</Strong> for HTTPS. </li>
                                 <li>HTTP is based on <Strong>client-server architecture</Strong>.</li>
@@ -161,7 +164,7 @@
                         </div>
                         <div class="row">
                             <div id="functionality" class="twelve columns">
-                                <h4><strong>HTTP Functionality</strong></h4>
+                                <a href="#" class="topic"><h4 id="hide"><h4><strong>HTTP Functionality</strong></h4></a>
                                 <ul>
                                     <li>Cache Control</li>
                                     <li>Content Media Type</li>
@@ -177,7 +180,7 @@
                         </div>
                         <div class="row">
                             <div id="resourceaddressing" class="twelve columns">
-                                <h4> <strong> HTTP Resource Addressing </strong></h4>
+                                <a href="#" class="topic"><h4 id="hide"><h4> <strong> HTTP Resource Addressing </strong></h4></a>
                                 <ul>
                                     <li> HTTP resources are identified using URIs (RFC 3986), or more specifically, HTTP URLs. </li>
                                     <ul>
@@ -205,7 +208,7 @@
                         </div>
                         <div class="row">
                             <div id="cache" class="twelve columns">
-                                <h4><strong>Cache</strong></h4>
+                                <a href="#" class="topic"><h4 id="hide"><h4><strong>Cache</strong></h4></a>
                                 <ul>
                                     <li>Local storage/copy of resource that is fetched from a server. </li>
                                 </ul>
@@ -230,7 +233,7 @@
                         </div>
                         <div class="row">
                             <div id="resourcemessage" class="ten columns">
-                                <h4><strong>HTTP Resource Message</strong></h4>
+                                <a href="#" class="topic"><h4 id="hide"><h4><strong>HTTP Resource Message</strong></h4></a>
                                 <ul>
                                     <li>
                                         Request Line
@@ -255,7 +258,7 @@
                             </div>
                             <div class="row">
                                 <div id="requestmethods" class="ten columns">
-                                    <h4><strong>HTTP Request Methods</strong></h4>
+                                    <a href="#" class="topic"><h4 id="hide"><h4><strong>HTTP Request Methods</strong></h4></a>
                                     <ul>
                                         <li>
                                             <strong>GET</strong>
@@ -332,9 +335,9 @@
                             </div>
                             <div class="row">
                                 <div id="messageheaders" class="ten columns">
-                                    <h4><strong>HTTP Message Headers</strong></h4>
+                                    <a href="#" class="topic"><h4 id="hide"><h4><strong>HTTP Message Headers</strong></h4></a>
                                     <ul>
-                                        <li id="generalheader"><strong> GENERAL HEADER FIELDS</strong> </li>
+                                        <a href="#" class="topic"><h4 id="hide"><li id="generalheader"><strong> GENERAL HEADER FIELDS</strong> </li></a>
                                         <ul>
                                             <li>uses both client and the server.</li>
                                             <ul>
@@ -367,7 +370,7 @@
                                         </ul>
                                     </ul>
                                     <ul>
-                                        <li id="requestheader"> <strong> REQUEST HEADER FIELDS </strong> </li>
+                                        <a href="#" class="topic"><h4 id="hide"><li id="requestheader"> <strong> REQUEST HEADER FIELDS </strong> </li></a>
                                         <ul>
                                             <li>it comes from the client's request.</li>
                                             <ul>
@@ -427,7 +430,7 @@
                                         </ul>
                                     </ul>
                                     <ul>
-                                        <li id="responseheader"> <strong> RESPONSE HEADER FIELDS </strong> </li>
+                                        <a href="#" class="topic"><h4 id="hide"><li id="responseheader"> <strong> RESPONSE HEADER FIELDS </strong> </li></a>
                                         <ul>
                                             <li>it comes from the server's response. </li>
                                             <ul>
@@ -460,7 +463,7 @@
                                         </ul>
                                     </ul>
                                     <ul>
-                                        <li id="entityheader"> <strong> ENTITY HEADER FIELDS </strong> </li>
+                                        <a href="#" class="topic"><h4 id="hide"><li id="entityheader"> <strong> ENTITY HEADER FIELDS </strong> </li></a>
                                         <ul>
                                             <li>message body.</li>
                                             <ul>
@@ -498,7 +501,7 @@
                                 </div>
                                 <div class="row">
                                     <div id="statuscodes" class="ten columns">
-                                        <h4><strong>HTTP Status Codes</strong></h4>
+                                        <a href="#" class="topic"><h4 id="hide"><h4><strong>HTTP Status Codes</strong></h4></a>
                                         <ul>
                                             <li id="informational"> <strong>Informational (1xx)</strong></li>
                                             <ul>

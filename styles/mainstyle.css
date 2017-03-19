@@ -218,3 +218,16 @@ footer{
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+
+
+a.topic:link{
+  text-decoration: none;
+  color: #222;
+}
+a.topic:visited{
+  text-decoration: none;
+  color: #222;
+}
+#content{
+  display: none;
+}
