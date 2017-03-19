@@ -146,7 +146,7 @@ button{
     border: 1px solid #bbb;
     cursor: pointer;
     box-sizing: border-box; 
-    width: 235px;
+    width: 200px;
 }
 
 .button:hover,
@@ -253,9 +253,3 @@ ol,
     background-color: #3e8e41;
 }
 
-a.topic:link{
-  text-decoration: none;
-}
-a.topic:visited{
-  text-decoration: none;
-}

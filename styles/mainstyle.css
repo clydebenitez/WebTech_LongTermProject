@@ -227,7 +227,7 @@ a.topic:visited{
   text-decoration: none;
   color: #222;
 }
-#content{
+.content{
   display: none;
 }
 

@@ -52,12 +52,12 @@ $(document).ready(function(){
   });
 });
 
-$('body').prepend('<a href="#" class="back-to-top">Back to Top</a>');
+// $('body').prepend('<a href="#" class="back-to-top">Back to Top</a>');
 
- //show/hide contents
+ // Show/hide contents of topic
 $(document).ready(function(){
-    $("#hide:first").click(function(){
-        $("#content:first").fadeToggle("slow");
+    $(".hide").click(function(){
+        $(this).next('div').fadeToggle("slow");
     });
 });
 
