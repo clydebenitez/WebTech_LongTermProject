@@ -1,3 +1,20 @@
+var amountScrolled = 300;
+
+$(window).scroll(function() {
+  if ( $(window).scrollTop() > amountScrolled ) {
+    $('a.back-to-top').fadeIn('slow');
+  } else {
+    $('a.back-to-top').fadeOut('slow');
+  }
+});
+
+$('a.back-to-top').click(function() {
+  $('html, body').animate({
+    scrollTop: 0
+  }, 700);
+  return false;
+});
+
 function openNav() {
     document.getElementById("sideNav").style.width = "320px";
     document.getElementById("main").style.marginLeft = "320px";
@@ -34,10 +51,13 @@ $(document).ready(function(){
     } // End if
   });
 });
- 
+
+$('body').prepend('<a href="#" class="back-to-top">Back to Top</a>');
+
  //show/hide contents
 $(document).ready(function(){
     $("#hide:first").click(function(){
         $("#content:first").fadeToggle("slow");
     });
 });
+
