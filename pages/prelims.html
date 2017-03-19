@@ -5,14 +5,17 @@
         <title>Webtek Course Project</title>
         <link rel="stylesheet" href="../styles/layout.css">
         <link rel="stylesheet" href="../styles/mainstyle.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script type="text/javascript" src="../scripts/scripts.js"></script>
     </head>
     <body>
+
         <!-- top section -->
         <div class="section header">
             <div class="container">
                 <div class="row">
                     <div class="four columns">
-                        <p class="logo">WEBTEK IS LIFE</p>
+                        <span  class="logo"style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Prelim Topics</span>
                     </div>
                     <div class="eight columns nav">
                         <a class="button" href="../index.html">Home</a>
@@ -22,28 +25,57 @@
                     </div>
                 </div>
                 <div class="row action">
-                    <h1 class="headtext">IT 324</h1>
-                    <h2 class="headtext">Web Systems and Technologies (Lecture)</h2>
-                    <a href="#" class="button button-primary" target="_blank">Get Started!</a>
+                    <h1 class="headtext">Prelims</h1>
+                    <h2 class="headtext">All about Hypertext Transfer Protocol (HTTP)</h2>
+                </div>
+            </div>
+        </div>
+        <div id="sideNav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#http" onclick="closeNav()">HTTP</a>
+            <a href="#history" onclick="closeNav()">History</a>
+            <a href="#fundamentals" onclick="closeNav()">Fundamentals</a>
+            <a href="#functionality" onclick="closeNav()">Functionality</a>
+            <a href="#resourceaddressing" onclick="closeNav()">Resource Addressing</a>
+            <a href="#responsemessage" onclick="closeNav()">Response Messages</a>
+            <a href="#resourcemessage" onclick="closeNav()">Resource Messages</a>
+            <a href="#requestmethods" onclick="closeNav()">Request Methods</a>
+            <div class="dropdown">
+                <a href="#messageheader" onclick="closeNav()">Message Headers</a>
+                <div class="dropdown-content">
+                    <a href="#generalheader" onclick="closeNav()">General Header Fields</a>
+                    <a href="#requestheader" onclick="closeNav()">Request Header Fields</a>
+                    <a href="#responseheader" onclick="closeNav()">Response Header Fields</a>
+                    <a href="#entityheader" onclick="closeNav()">Entity Header Fields</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#informational">Status Codes</a>
+                <div class="dropdown-content">
+                    <a href="#informational">Informational 1xx</a>
+                    <a href="#success">Success 2xx</a>
+                    <a href="#redirection">Redirection 3xx</a>
+                    <a href="#clienterror">Client Error 4xx</a>
+                    <a href="#servererror">Server Error 5xx</a>
                 </div>
             </div>
         </div>
         <div class="container section info">
             <div class="row">
-                <div class="three columns">
-                    <nav class="topicnav">
+                <div class="three columns topicnav">
+                    <nav>
                         <h5><strong>Prelim Topics</strong></h5>
                         <ul>
                             <a class="button" href="#http">HTTP</a>
-			                <a class="button" href="#history">HTTP HISTORY</a>
-                            <a class="button" href="#fundamentals">HTTP FUNDAMENTALS</a>
-			                <a class="button" href="#functionality">HTTP FUNCTIONALITY</a>
-                            <a class="button" href="#resourceaddressing">HTTP RESOURCE ADDRESSING</a>
-                            <a class="button" href="#responsemessage">HTTP RESPONSE MESSAGE</a>
-			                <a class="button" href="#resourcemessage">HTTP RESOURCE MESSAGE</a>
-                            <a class="button" href="#requestmethods">HTTP REQUEST METHODS</a>
+                            <a class="button" href="#history">HISTORY</a>
+                            <a class="button" href="#fundamentals">FUNDAMENTALS</a>
+                            <a class="button" href="#functionality">FUNCTIONALITY</a>
+                            <a class="button" href="#resourceaddressing">RESOURCE ADDRESSING</a>
+                            <a class="button" href="#responsemessage">RESPONSE MESSAGES</a>
+                            <a class="button" href="#resourcemessage">RESOURCE MESSAGES</a>
+                            <a class="button" href="#requestmethods">REQUEST METHODS</a>
                             <div class="dropdown">
-                                <button class="button">HTTP MESSAGE HEADERS ></button>
+                                <button class="button">MESSAGE HEADERS></button>
                                 <div class="dropdown-content">
                                     <a href="#generalheader">General Header Fields</a>
                                     <a href="#requestheader">Request Header Fields</a>
@@ -52,7 +84,7 @@
                                 </div>
                             </div>
                             <div class="dropdown">
-                                <button class="button">HTTP STATUS CODE ></button>
+                                <button class="button">STATUS CODES></button>
                                 <div class="dropdown-content">    
                                     <a href="#informational">Informational 1xx</a>
                                     <a href="#success">Success 2xx</a>
@@ -81,7 +113,7 @@
                             </ul>
                         </div>
                     </div>
-                     <div class="row">
+                    <div class="row">
                         <div id="history" class="twelve columns">
                             <h4><Strong>History of HTTP</Strong></h4>
                             <ul>
@@ -157,8 +189,8 @@
                                         <li>(optional) URL-encoded query </li>
                                         <li>(optional) bookmark (or fragment identifier)</li>
                                     </ul>
-                                <p> example for HTTP RESOURCE ADDRESS</p>
-                                <p> <Strong>http://usr:pwd@server.org:8080/info/profile.php?id=1234#addr</Strong>
+                                    <p> example for HTTP RESOURCE ADDRESS</p>
+                                    <p> <Strong>http://usr:pwd@server.org:8080/info/profile.php?id=1234#addr</Strong>
                                     <ul>
                                         <li>Scheme: http</li>
                                         <li>Credentials: usr:pwd</li>
@@ -168,7 +200,7 @@
                                         <li>Query: ?id=1234</li>
                                         <li>Fragment Identifier: #addr</li>
                                     </ul>
-                                 </ul>
+                                </ul>
                             </div>
                         </div>
                         <div class="row">
@@ -196,11 +228,12 @@
                                 </ul>
                             </div>
                         </div>
-			<div class="row">
+                        <div class="row">
                             <div id="resourcemessage" class="ten columns">
                                 <h4><strong>HTTP Resource Message</strong></h4>
                                 <ul>
-                                    <li>Request Line
+                                    <li>
+                                        Request Line
                                         <ul>
                                             <li>Methods - action to server</li>
                                             <li>Request URI - action on the server</li>
@@ -209,317 +242,327 @@
                                     </li>
                                     <li>Message Headers("general, request, entity") - HTTP 1.1, requires at least one host request</li>
                                     <li>Empty Line - terminate request</li>
-				    <li>Message Body or Payload("optional")</li>
-				    <li>Status Line
-					<ul>
-					    <li>Status Code</li>
-					    <li>Reason Phrase</li>
-					    <li>HTTP Protocol Version</li>
-					</ul>
-				    </li>
-                                </ul>
-                            </div>
-                        <div class="row">
-                            <div id="requestmethods" class="ten columns">
-                                <h4><strong>HTTP Request Methods</strong></h4>
-                                <ul>
-                                    <li><strong>GET</strong>
-                                        <ul>
-                                            <li>Most commonly used HTTP method. </li>
-                                            <li>Used to request from the server the retrieval of the source identified by the request URI; the retrieved resource is returned in the message body as an entity. </li>
-                                            <li>Can be combined with conditional and/or range request headers to effect conditional and/or partial resource retrieval. </li>
-                                            <li>Must be supported by all general-purpose servers. </li>
-                                        </ul>
-                                    </li>
-                                    <li><strong>HEAD</strong>
-                                        <ul>
-                                            <li>Identical to GET, except the message body is not included in the response. </li>
-                                        </ul>
-                                    </li>
-                                    <li><strong>POST</strong>
-                                        <ul>
-                                            <li>Request that the origin server accept the entity enclosed in the request as a new subordinate of the resource identified by the Request-URI in the Request-Line.</li>
-                                        </ul>
-                                    </li>
-                                    <li><strong>OPTIONS</strong>
-                                        <ul>
-                                            <li>Request for information about the communication options available on the request/response chain identified by the Request-URI. This method allows the client to determine the options and/or requirements associated with a resource, or the capabilities of a server, without implying a resource action or initiating resource retrieval. </li>
-                                        </ul>
-                                    </li>
-                                    <li><strong>TRACE</strong>
-                                        <ul>
-                                            <li>Request the server to “echo” back to the client the received request. </li>
-                                            <li>Typically used for testing/diagnostics of the request chain. </li>
-                                        </ul>
-                                    </li>
-                                    <li><strong>PUT</strong>
-                                        <ul>
-                                            <li>Request the server to store the enclosed entity in the message under the specified request URI.</li>
-                                        </ul>
-                                    </li>
-                                    <li><strong>DELETE</strong>
-                                        <ul>
-                                            <li>Request the server to delete the resource identified by the request URI.</li>
-                                        </ul>
-                                    </li>
-                                    <li><strong>CONNECT</strong>
-                                        <ul>
-                                            <li>Reserved for use of tunneling proxy servers. </li>
-                                        </ul>
-                                    </li>
+                                    <li>Message Body or Payload("optional")</li>
                                     <li>
-                                        <em>Idempotent Methods</em>
+                                        Status Line
                                         <ul>
-                                            <li>The methods GET, HEAD, PUT, DELETE, TRACE, and OPTION are element of a set that is <strong>unchanged in value</strong> when multiplied or otherwise operated on by itself.</li>
+                                            <li>Status Code</li>
+                                            <li>Reason Phrase</li>
+                                            <li>HTTP Protocol Version</li>
                                         </ul>
                                     </li>
-                                    <li>
-                                        <em>Safe Methods</em>
-                                        <ul>
-                                            <li>The methods POST, PUT, and DELETE are element of a set that has <strong>a change in value</strong> when multiplied or otherwise operated on by itself.</li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <em>Unsafe Methods</em>
-                                        <ul>
-                                            <li>The methods GET, HEAD, TRACE, and OPTION are element of a set that has <strong>no change in value</strong> when multiplied or otherwise operated on by itself.</li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div id="messageheaders" class="ten columns">
-                                <h4><strong>HTTP Message Headers</strong></h4>
-                                <ul>
-                                    <li id="generalheader"><strong> GENERAL HEADER FIELDS</strong> </li>
-                                    <ul> 
-                                        <li>uses both client and the server.</li>
-                                        <ul>
-                                            <li> Cache-control: cache response server to client.</li>
-                                        </ul>
-                                        <ul>
-                                            <li> Connection: client to server/network to network. </li>
-                                        </ul>
-                                        <ul>
-                                            <li> Date: response created. </li>
-                                        </ul>
-                                        <ul>
-                                            <li> Pragma: extra communication. </li>
-                                        </ul>
-                                        <ul>
-                                            <li> Trailer: additional information/message header at the end of the line. </li>
-                                        </ul>
-                                        <ul>
-                                            <li> Transfer-encoding: chincked encoding. i.e size of the encoded file/data. </li>
-                                        </ul>
-                                        <ul>
-                                            <li> Upgrade: upgrading applicaiton/information. </li>
-                                        </ul>
-                                        <ul>
-                                            <li> Via: coming from other information. </li>
-                                        </ul>
-                                        <ul>
-                                            <li> Warning: protocol variation. </li>
-                                        </ul>
-                                     </ul>
-                                </ul>
-                                <ul>
-                                    <li id="requestheader"> <strong> REQUEST HEADER FIELDS </strong> </li>
-                                    <ul> 
-                                        <li>it comes from the client's request.</li>
-                                        <ul>
-                                            <li>Accept</li>
-                                        </ul>
-                                        <ul>
-                                            <li>Accept-charset</li>
-                                        </ul>
-                                        <ul>
-                                            <li>Accept-encoding</li>
-                                        </ul>
-                                        <ul>
-                                            <li>Accept-Language</li>
-                                        </ul>
-                                        <ul>
-                                            <li>Authorization</li>
-                                        </ul>
-                                        <ul>
-                                            <li> Expect </li>
-                                        </ul>
-                                        <ul>
-                                            <li> From </li>
-                                        </ul>
-                                        <ul>
-                                            <li> Host </li>
-                                        </ul>
-                                        <ul>
-                                            <li> If-Match </li>
-                                        </ul>
-                                        <ul>
-                                            <li> If-Modified-Since </li>
-                                        </ul>
-                                        <ul>
-                                            <li> If-None-Match </li>
-                                        </ul>
-                                        <ul>
-                                            <li> If-Range</li>
-                                        </ul>
-                                        <ul>
-                                            <li> If-Unmodified-Since </li>
-                                        </ul>
-                                        <ul>
-                                            <li> Max-forward </li>
-                                        </ul>
-                                        <ul>
-                                            <li> Proxy-Authorization </li>
-                                        </ul>
-                                        <ul>
-                                            <li> Range </li>
-                                        </ul>
-                                        <ul>
-                                            <li> Referer </li>
-                                        </ul>
-                                        <ul>
-                                            <li> User-Agent </li>
-                                        </ul>
-                                        </ul>
-                                </ul>
-                                <ul>
-                                    <li id="responseheader"> <strong> RESPONSE HEADER FIELDS </strong> </li>
-                                    <ul> 
-                                        <li>it comes from the server's response. </li>
-                                        <ul>
-                                            <li>Accept-Range: portion of the copy accepted.</li>
-                                        </ul>
-                                        <ul>
-                                            <li>Age: age/generation of the resource.</li>
-                                        </ul>
-                                        <ul>
-                                            <li>E-Tag: calculate the size of the resource. </li>
-                                        </ul>
-                                        <ul>
-                                            <li>Location: redirection of the resource. </li>
-                                        </ul>
-                                        <ul>
-                                            <li>Proxy-Authenticate</li>
-                                        </ul>
-                                        <ul>
-                                            <li>Retry-After: service unavailable/under maintenance.</li>
-                                        </ul>
-                                        <ul>
-                                            <li>Server: information about the server.</li>
-                                        </ul>
-                                        <ul>
-                                            <li>Vary</li>
-                                        </ul>
-                                        <ul>
-                                            <li>WWW-Authenticate</li>
-                                        </ul>
-                                    </ul>
-                                </ul>
-                                <ul>
-                                    <li id="entityheader"> <strong> ENTITY HEADER FIELDS </strong> </li>
-                                    <ul> 
-                                        <li>message body.</li>
-                                        <ul>
-                                            <li>Allow</li>
-                                        </ul>
-                                        <ul>
-                                            <li>Content-encoding</li>
-                                        </ul>
-                                        <ul>
-                                            <li>Content-language</li>
-                                        </ul>
-                                        <ul>
-                                            <li>Content-length</li>
-                                        </ul>
-                                        <ul>
-                                            <li>Content-location: fetching the location of the resource.</li>
-                                        </ul>
-                                        <ul>
-                                            <li>Content-MD5: messege digest.</li>
-                                        </ul>
-                                        <ul>
-                                            <li> Content-range: partial reviewal of the resource.</li>
-                                        </ul>
-                                        <ul>
-                                            <li>Content-type</li>
-                                        </ul>
-                                        <ul>
-                                            <li>Expires</li>
-                                        </ul>
-                                        <ul>
-                                            <li>Last Modified</li>
-                                        </ul>
-                                    </ul>
                                 </ul>
                             </div>
                             <div class="row">
-                                <div id="statuscodes" class="ten columns">
-                                    <h4><strong>HTTP Status Codes</strong></h4>
+                                <div id="requestmethods" class="ten columns">
+                                    <h4><strong>HTTP Request Methods</strong></h4>
                                     <ul>
-                                        <li id="informational"> <strong>Informational (1xx)</strong></li>
+                                        <li>
+                                            <strong>GET</strong>
+                                            <ul>
+                                                <li>Most commonly used HTTP method. </li>
+                                                <li>Used to request from the server the retrieval of the source identified by the request URI; the retrieved resource is returned in the message body as an entity. </li>
+                                                <li>Can be combined with conditional and/or range request headers to effect conditional and/or partial resource retrieval. </li>
+                                                <li>Must be supported by all general-purpose servers. </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <strong>HEAD</strong>
+                                            <ul>
+                                                <li>Identical to GET, except the message body is not included in the response. </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <strong>POST</strong>
+                                            <ul>
+                                                <li>Request that the origin server accept the entity enclosed in the request as a new subordinate of the resource identified by the Request-URI in the Request-Line.</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <strong>OPTIONS</strong>
+                                            <ul>
+                                                <li>Request for information about the communication options available on the request/response chain identified by the Request-URI. This method allows the client to determine the options and/or requirements associated with a resource, or the capabilities of a server, without implying a resource action or initiating resource retrieval. </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <strong>TRACE</strong>
+                                            <ul>
+                                                <li>Request the server to “echo” back to the client the received request. </li>
+                                                <li>Typically used for testing/diagnostics of the request chain. </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <strong>PUT</strong>
+                                            <ul>
+                                                <li>Request the server to store the enclosed entity in the message under the specified request URI.</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <strong>DELETE</strong>
+                                            <ul>
+                                                <li>Request the server to delete the resource identified by the request URI.</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <strong>CONNECT</strong>
+                                            <ul>
+                                                <li>Reserved for use of tunneling proxy servers. </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <em>Idempotent Methods</em>
+                                            <ul>
+                                                <li>The methods GET, HEAD, PUT, DELETE, TRACE, and OPTION are element of a set that is <strong>unchanged in value</strong> when multiplied or otherwise operated on by itself.</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <em>Safe Methods</em>
+                                            <ul>
+                                                <li>The methods POST, PUT, and DELETE are element of a set that has <strong>a change in value</strong> when multiplied or otherwise operated on by itself.</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <em>Unsafe Methods</em>
+                                            <ul>
+                                                <li>The methods GET, HEAD, TRACE, and OPTION are element of a set that has <strong>no change in value</strong> when multiplied or otherwise operated on by itself.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div id="messageheaders" class="ten columns">
+                                    <h4><strong>HTTP Message Headers</strong></h4>
+                                    <ul>
+                                        <li id="generalheader"><strong> GENERAL HEADER FIELDS</strong> </li>
                                         <ul>
-                                            <li> 100 Continue </li>
-                                            <li> 101 Switching Protocols </li>
+                                            <li>uses both client and the server.</li>
+                                            <ul>
+                                                <li> Cache-control: cache response server to client.</li>
+                                            </ul>
+                                            <ul>
+                                                <li> Connection: client to server/network to network. </li>
+                                            </ul>
+                                            <ul>
+                                                <li> Date: response created. </li>
+                                            </ul>
+                                            <ul>
+                                                <li> Pragma: extra communication. </li>
+                                            </ul>
+                                            <ul>
+                                                <li> Trailer: additional information/message header at the end of the line. </li>
+                                            </ul>
+                                            <ul>
+                                                <li> Transfer-encoding: chincked encoding. i.e size of the encoded file/data. </li>
+                                            </ul>
+                                            <ul>
+                                                <li> Upgrade: upgrading applicaiton/information. </li>
+                                            </ul>
+                                            <ul>
+                                                <li> Via: coming from other information. </li>
+                                            </ul>
+                                            <ul>
+                                                <li> Warning: protocol variation. </li>
+                                            </ul>
                                         </ul>
                                     </ul>
                                     <ul>
-                                        <li id="success"> <strong>Success (2xx)</strong> </li>
+                                        <li id="requestheader"> <strong> REQUEST HEADER FIELDS </strong> </li>
                                         <ul>
-                                            <li> 200 OK </li>
-                                            <li> 202 Accepted </li>
-                                            <li> 203 Non-Authorative Information </li>
-                                            <li> 204 No Content </li>
-                                            <li> 205 Reset Content </li>
-                                            <li> 206 Partial Content </li>
+                                            <li>it comes from the client's request.</li>
+                                            <ul>
+                                                <li>Accept</li>
+                                            </ul>
+                                            <ul>
+                                                <li>Accept-charset</li>
+                                            </ul>
+                                            <ul>
+                                                <li>Accept-encoding</li>
+                                            </ul>
+                                            <ul>
+                                                <li>Accept-Language</li>
+                                            </ul>
+                                            <ul>
+                                                <li>Authorization</li>
+                                            </ul>
+                                            <ul>
+                                                <li> Expect </li>
+                                            </ul>
+                                            <ul>
+                                                <li> From </li>
+                                            </ul>
+                                            <ul>
+                                                <li> Host </li>
+                                            </ul>
+                                            <ul>
+                                                <li> If-Match </li>
+                                            </ul>
+                                            <ul>
+                                                <li> If-Modified-Since </li>
+                                            </ul>
+                                            <ul>
+                                                <li> If-None-Match </li>
+                                            </ul>
+                                            <ul>
+                                                <li> If-Range</li>
+                                            </ul>
+                                            <ul>
+                                                <li> If-Unmodified-Since </li>
+                                            </ul>
+                                            <ul>
+                                                <li> Max-forward </li>
+                                            </ul>
+                                            <ul>
+                                                <li> Proxy-Authorization </li>
+                                            </ul>
+                                            <ul>
+                                                <li> Range </li>
+                                            </ul>
+                                            <ul>
+                                                <li> Referer </li>
+                                            </ul>
+                                            <ul>
+                                                <li> User-Agent </li>
+                                            </ul>
                                         </ul>
                                     </ul>
                                     <ul>
-                                        <li id="redirection"> <strong>Redirection (3xx)</strong> </li>
+                                        <li id="responseheader"> <strong> RESPONSE HEADER FIELDS </strong> </li>
                                         <ul>
-                                            <li> 300 Multiple Choices </li>
-                                            <li> 301 Moved Permanently </li>
-                                            <li> 302 Found </li>
-                                            <li> 303 See Other </li>
-                                            <li> 304 Not Modified </li>
-                                            <li> 305 Use Proxy </li>
-                                            <li> 307 Temporary Redirect </li>
+                                            <li>it comes from the server's response. </li>
+                                            <ul>
+                                                <li>Accept-Range: portion of the copy accepted.</li>
+                                            </ul>
+                                            <ul>
+                                                <li>Age: age/generation of the resource.</li>
+                                            </ul>
+                                            <ul>
+                                                <li>E-Tag: calculate the size of the resource. </li>
+                                            </ul>
+                                            <ul>
+                                                <li>Location: redirection of the resource. </li>
+                                            </ul>
+                                            <ul>
+                                                <li>Proxy-Authenticate</li>
+                                            </ul>
+                                            <ul>
+                                                <li>Retry-After: service unavailable/under maintenance.</li>
+                                            </ul>
+                                            <ul>
+                                                <li>Server: information about the server.</li>
+                                            </ul>
+                                            <ul>
+                                                <li>Vary</li>
+                                            </ul>
+                                            <ul>
+                                                <li>WWW-Authenticate</li>
+                                            </ul>
                                         </ul>
                                     </ul>
                                     <ul>
-                                        <li id="clienterror"> <strong>Client Error (4xx)</strong> </li>
+                                        <li id="entityheader"> <strong> ENTITY HEADER FIELDS </strong> </li>
                                         <ul>
-                                            <li> 400 Bad Request </li>
-                                            <li> 401 Unauthorized </li>
-                                            <li> 402 Payment Required </li>
-                                            <li> 403 Forbidden </li>
-                                            <li> 404 Not Found </li>
-                                            <li> 405 Method not Allowed </li>
-                                            <li> 407 Not Acceptable </li>
-                                            <li> 408 Request Timeout </li>
-                                            <li> 409 Conflict </li>
-                                            <li> 410 Gone </li>
-                                            <li> 411 Length Required </li>
-                                            <li> 412 Precondition Failed </li>
-                                            <li> 413 Request Entity Too Large </li>
-                                            <li> 414 Request-URI Too Long </li>
-                                            <li> 415 Unsupported Media Type </li>
-                                            <li> 416 Request Range Not Satisfiable </li>
-                                            <li> 417 Expectation Failed </li>
+                                            <li>message body.</li>
+                                            <ul>
+                                                <li>Allow</li>
+                                            </ul>
+                                            <ul>
+                                                <li>Content-encoding</li>
+                                            </ul>
+                                            <ul>
+                                                <li>Content-language</li>
+                                            </ul>
+                                            <ul>
+                                                <li>Content-length</li>
+                                            </ul>
+                                            <ul>
+                                                <li>Content-location: fetching the location of the resource.</li>
+                                            </ul>
+                                            <ul>
+                                                <li>Content-MD5: messege digest.</li>
+                                            </ul>
+                                            <ul>
+                                                <li> Content-range: partial reviewal of the resource.</li>
+                                            </ul>
+                                            <ul>
+                                                <li>Content-type</li>
+                                            </ul>
+                                            <ul>
+                                                <li>Expires</li>
+                                            </ul>
+                                            <ul>
+                                                <li>Last Modified</li>
+                                            </ul>
                                         </ul>
                                     </ul>
-                                    <ul>
-                                        <li id="servererror"> <strong>Server Error (5xx)</strong> </li>
+                                </div>
+                                <div class="row">
+                                    <div id="statuscodes" class="ten columns">
+                                        <h4><strong>HTTP Status Codes</strong></h4>
                                         <ul>
-                                            <li> 500 Internal Server Error </li>
-                                            <li> 501 Not Implemented </li>
-                                            <li> 502 Bad Gateway </li>
-                                            <li> 503 Service Unavailable </li>
-                                            <li> 504 Gateway Timeout </li>
-                                            <li> 505 HTTP Version Not Supported </li>
+                                            <li id="informational"> <strong>Informational (1xx)</strong></li>
+                                            <ul>
+                                                <li> 100 Continue </li>
+                                                <li> 101 Switching Protocols </li>
+                                            </ul>
                                         </ul>
-                                    </ul>
+                                        <ul>
+                                            <li id="success"> <strong>Success (2xx)</strong> </li>
+                                            <ul>
+                                                <li> 200 OK </li>
+                                                <li> 202 Accepted </li>
+                                                <li> 203 Non-Authorative Information </li>
+                                                <li> 204 No Content </li>
+                                                <li> 205 Reset Content </li>
+                                                <li> 206 Partial Content </li>
+                                            </ul>
+                                        </ul>
+                                        <ul>
+                                            <li id="redirection"> <strong>Redirection (3xx)</strong> </li>
+                                            <ul>
+                                                <li> 300 Multiple Choices </li>
+                                                <li> 301 Moved Permanently </li>
+                                                <li> 302 Found </li>
+                                                <li> 303 See Other </li>
+                                                <li> 304 Not Modified </li>
+                                                <li> 305 Use Proxy </li>
+                                                <li> 307 Temporary Redirect </li>
+                                            </ul>
+                                        </ul>
+                                        <ul>
+                                            <li id="clienterror"> <strong>Client Error (4xx)</strong> </li>
+                                            <ul>
+                                                <li> 400 Bad Request </li>
+                                                <li> 401 Unauthorized </li>
+                                                <li> 402 Payment Required </li>
+                                                <li> 403 Forbidden </li>
+                                                <li> 404 Not Found </li>
+                                                <li> 405 Method not Allowed </li>
+                                                <li> 407 Not Acceptable </li>
+                                                <li> 408 Request Timeout </li>
+                                                <li> 409 Conflict </li>
+                                                <li> 410 Gone </li>
+                                                <li> 411 Length Required </li>
+                                                <li> 412 Precondition Failed </li>
+                                                <li> 413 Request Entity Too Large </li>
+                                                <li> 414 Request-URI Too Long </li>
+                                                <li> 415 Unsupported Media Type </li>
+                                                <li> 416 Request Range Not Satisfiable </li>
+                                                <li> 417 Expectation Failed </li>
+                                            </ul>
+                                        </ul>
+                                        <ul>
+                                            <li id="servererror"> <strong>Server Error (5xx)</strong> </li>
+                                            <ul>
+                                                <li> 500 Internal Server Error </li>
+                                                <li> 501 Not Implemented </li>
+                                                <li> 502 Bad Gateway </li>
+                                                <li> 503 Service Unavailable </li>
+                                                <li> 504 Gateway Timeout </li>
+                                                <li> 505 HTTP Version Not Supported </li>
+                                            </ul>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
