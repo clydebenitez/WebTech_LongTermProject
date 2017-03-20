@@ -218,14 +218,16 @@ footer{
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
-
+a{
+    cursor: hand;
+}
 a.topic:link{
   text-decoration: none;
-  color: #222;
+  
 }
 a.topic:visited{
   text-decoration: none;
-  color: #222;
+  
 }
 .content{
   display: none;
@@ -244,4 +246,7 @@ a.back-to-top {
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   border-radius: 30px;
+}
+.hide{
+    cursor: pointer;
 }
