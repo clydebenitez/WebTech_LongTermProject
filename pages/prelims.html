@@ -41,25 +41,8 @@
             <a href="#responsemessage" onclick="closeNav()">Response Messages</a>
             <a href="#resourcemessage" onclick="closeNav()">Resource Messages</a>
             <a href="#requestmethods" onclick="closeNav()">Request Methods</a>
-            <div class="dropdown">
-                <a href="#messageheader" onclick="closeNav()">Message Headers</a>
-                <div class="dropdown-content">
-                    <a href="#generalheader" onclick="closeNav()">General Header Fields</a>
-                    <a href="#requestheader" onclick="closeNav()">Request Header Fields</a>
-                    <a href="#responseheader" onclick="closeNav()">Response Header Fields</a>
-                    <a href="#entityheader" onclick="closeNav()">Entity Header Fields</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <a href="#informational">Status Codes</a>
-                <div class="dropdown-content">
-                    <a href="#informational">Informational 1xx</a>
-                    <a href="#success">Success 2xx</a>
-                    <a href="#redirection">Redirection 3xx</a>
-                    <a href="#clienterror">Client Error 4xx</a>
-                    <a href="#servererror">Server Error 5xx</a>
-                </div>
-            </div>
+            <a href="#messageheader" onclick="closeNav()">Message Headers</a>
+            <a href="#statuscodes">Status Codes</a>
         </div>
         <div class="container section info">
             <div class="row">
@@ -68,15 +51,15 @@
                         <h5><strong>Prelim Topics</strong></h5>
                         <ul>
                             <a class="button" href="#http">HTTP</a>
-                            <a class="button" href="#history">HISTORY</a>
-                            <a class="button" href="#fundamentals">FUNDAMENTALS</a>
-                            <a class="button" href="#functionality">FUNCTIONALITY</a>
-                            <a class="button" href="#resourceaddressing">RESOURCE ADDRESSING</a>
-                            <a class="button" href="#responsemessage">RESPONSE MESSAGES</a>
-                            <a class="button" href="#resourcemessage">RESOURCE MESSAGES</a>
-                            <a class="button" href="#requestmethods">REQUEST METHODS</a>
+                            <a class="button" href="#history">History</a>
+                            <a class="button" href="#fundamentals">Fundamentals</a>
+                            <a class="button" href="#functionality">Functionality</a>
+                            <a class="button" href="#resourceaddressing">Resource Addressing</a>
+                            <a class="button" href="#responsemessage">Response Messages</a>
+                            <a class="button" href="#resourcemessage">Resource Messages</a>
+                            <a class="button" href="#requestmethods">Request Methods</a>
                             <div class="dropdown">
-                                <button class="button">MESSAGE HEADERS</button>
+                                <button class="button">Message Headers</button>
                                 <div class="dropdown-content">
                                     <a href="#generalheader">General Header Fields</a>
                                     <a href="#requestheader">Request Header Fields</a>
@@ -85,7 +68,7 @@
                                 </div>
                             </div>
                             <div class="dropdown">
-                                <button class="button">STATUS CODES</button>
+                                <button class="button">Status Codes (1xx-5xx)</button>
                                 <div class="dropdown-content">    
                                     <a href="#informational">Informational 1xx</a>
                                     <a href="#success">Success 2xx</a>
@@ -605,112 +588,73 @@
                                 <h4><strong>HTTP Status Codes</strong></h4>
                             </a>
                             <div class="content">
-                            <ul>
-                                <a class="hide"><li id="informational"> <strong>Informational (1xx)</strong></li></a>
-                                <div class="content">
-                                    <ul>
-                                        <a href="#" class="topic">
-                                            <li id="generalheader"><strong> GENERAL HEADER FIELDS</strong> </li>
-                                        </a>
-                                        <div class="content">
-                                            <ul>
-                                                <li>uses both client and the server.</li>
-                                                <ul>
-                                                    <li> Cache-control: cache response server to client.</li>
-                                                </ul>
-                                                <ul>
-                                                    <li> Connection: client to server/network to network. </li>
-                                                </ul>
-                                                <ul>
-                                                    <li> Date: response created. </li>
-                                                </ul>
-                                                <ul>
-                                                    <li> Pragma: extra communication. </li>
-                                                </ul>
-                                                <ul>
-                                                    <li> Trailer: additional information/message header at the end of the line. </li>
-                                                </ul>
-                                                <ul>
-                                                    <li> Transfer-encoding: chincked encoding. i.e size of the encoded file/data. </li>
-                                                </ul>
-                                                <ul>
-                                                    <li> Upgrade: upgrading applicaiton/information. </li>
-                                                </ul>
-                                                <ul>
-                                                    <li> Via: coming from other information. </li>
-                                                </ul>
-                                                <ul>
-                                                    <li> Warning: protocol variation. </li>
-                                                </ul>
-                                       	    </ul>
-					
-                                    </ul>
-                                
-                            </ul>
-                            <ul>
-                                <a class="hide"><li id="success"> <strong>Success (2xx)</strong></li></a>
-                                <div class="content">
-                                    <ul>
-                                        <li> 200 OK </li>
-                                        <li> 202 Accepted </li>
-                                        <li> 203 Non-Authorative Information </li>
-                                        <li> 204 No Content </li>
-                                        <li> 205 Reset Content </li>
-                                        <li> 206 Partial Content </li>
-                                    </ul>
-                                </div>
-                            </ul>
-                            <ul>
-                                <a class="hide"><li id="redirection"> <strong>Redirection (3xx)</strong></li></a>
-                                <div class="content">
-                                    <ul>
-                                        <li> 300 Multiple Choices </li>
-                                        <li> 301 Moved Permanently </li>
-                                        <li> 302 Found </li>
-                                        <li> 303 See Other </li>
-                                        <li> 304 Not Modified </li>
-                                        <li> 305 Use Proxy </li>
-                                        <li> 307 Temporary Redirect </li>
-                                    </ul>
-                                </div>
-                            </ul>
-                            <ul>
-                                <a class="hide"><li id="clienterror"> <strong>Client Error (4xx)</strong> </li></a>
-                                <div class="content">
-                                    <ul>
-                                        <li> 400 Bad Request </li>
-                                        <li> 401 Unauthorized </li>
-                                        <li> 402 Payment Required </li>
-                                        <li> 403 Forbidden </li>
-                                        <li> 404 Not Found </li>
-                                        <li> 405 Method not Allowed </li>
-                                        <li> 407 Not Acceptable </li>
-                                        <li> 408 Request Timeout </li>
-                                        <li> 409 Conflict </li>
-                                        <li> 410 Gone </li>
-                                        <li> 411 Length Required </li>
-                                        <li> 412 Precondition Failed </li>
-                                        <li> 413 Request Entity Too Large </li>
-                                        <li> 414 Request-URI Too Long </li>
-                                        <li> 415 Unsupported Media Type </li>
-                                        <li> 416 Request Range Not Satisfiable </li>
-                                        <li> 417 Expectation Failed </li>
-                                    </ul>
-                                </div>
-                            </ul>
-                            <ul>
-                                <a class="hide"><li id="servererror"> <strong>Server Error (5xx)</strong> </li></a>
-                                <div class="content">
-                                    <ul>
-                                        <li> 500 Internal Server Error </li>
-                                        <li> 501 Not Implemented </li>
-                                        <li> 502 Bad Gateway </li>
-                                        <li> 503 Service Unavailable </li>
-                                        <li> 504 Gateway Timeout </li>
-                                        <li> 505 HTTP Version Not Supported </li>
-                                    </ul>
-                                </div>
-                            </ul>
+                                <ul>
+                                    <a class="hide"><li id="informational"> <strong>Informational (1xx)</strong></li></a>
+                                    <div class="content">
+                                        <ul>
+                                            <li> 100 Continue </li>
+                                            <li> 101 Switching Protocols</li>
+                                        </ul>
+                                    </div>
+                                    <a class="hide"><li id="success"> <strong>Success (2xx)</strong></li></a>
+                                    <div class="content">
+                                        <ul>
+                                            <li> 200 OK </li>
+                                            <li> 202 Accepted </li>
+                                            <li> 203 Non-Authorative Information </li>
+                                            <li> 204 No Content </li>
+                                            <li> 205 Reset Content </li>
+                                            <li> 206 Partial Content </li>
+                                        </ul>
+                                    </div>
+
+
+                                    <a class="hide"><li id="redirection"> <strong>Redirection (3xx)</strong></li></a>
+                                    <div class="content">
+                                        <ul>
+                                            <li> 300 Multiple Choices </li>
+                                            <li> 301 Moved Permanently </li>
+                                            <li> 302 Found </li>
+                                            <li> 303 See Other </li>
+                                            <li> 304 Not Modified </li>
+                                            <li> 305 Use Proxy </li>
+                                            <li> 307 Temporary Redirect </li>
+                                        </ul>
+                                    </div>
+                                    <a class="hide"><li id="clienterror"> <strong>Client Error (4xx)</strong> </li></a>
+                                    <div class="content">
+                                        <ul>
+                                            <li> 400 Bad Request </li>
+                                            <li> 401 Unauthorized </li>
+                                            <li> 402 Payment Required </li>
+                                            <li> 403 Forbidden </li>
+                                            <li> 404 Not Found </li>
+                                            <li> 405 Method not Allowed </li>
+                                            <li> 407 Not Acceptable </li>
+                                            <li> 408 Request Timeout </li>
+                                            <li> 409 Conflict </li>
+                                            <li> 410 Gone </li>
+                                            <li> 411 Length Required </li>
+                                            <li> 412 Precondition Failed </li>
+                                            <li> 413 Request Entity Too Large </li>
+                                            <li> 414 Request-URI Too Long </li>
+                                            <li> 415 Unsupported Media Type </li>
+                                            <li> 416 Request Range Not Satisfiable </li>
+                                            <li> 417 Expectation Failed </li>
+                                        </ul>
+                                    </div>
+                                    <a class="hide"><li id="servererror"> <strong>Server Error (5xx)</strong> </li></a>
+                                    <div class="content">
+                                        <ul>
+                                            <li> 500 Internal Server Error </li>
+                                            <li> 501 Not Implemented </li>
+                                            <li> 502 Bad Gateway </li>
+                                            <li> 503 Service Unavailable </li>
+                                            <li> 504 Gateway Timeout </li>
+                                            <li> 505 HTTP Version Not Supported </li>
+                                        </ul>
+                                    </div>
+                                </ul>
                             </div>
                         </div>
                     </div>
