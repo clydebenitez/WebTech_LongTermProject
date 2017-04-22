@@ -5,8 +5,10 @@
         <title>Webtek Course Project</title>
         <link rel="stylesheet" href="../styles/layout.css">
         <link rel="stylesheet" href="../styles/mainstyle.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script type="text/javascript" src="../scripts/script.js"></script>
+        <link rel="stylesheet" type="text/css" href="../styles/tabs.css">
+        <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script defer type="text/javascript" src="../scripts/script.js"></script>
+        <script defer type="text/javascript" src="../scripts/tabsAnimations.js"></script>
     </head>
     <body>
         <!-- top section -->
@@ -25,12 +27,12 @@
                     </div>
                 </div>
                 <div class="row action">
-                    <h1 class="headtext">Midterm</h1>
-                    <h2 class="headtext">Javascript</h2>
+                    <h1 class="headtext">Front - End Web Development</h1>
+                    <h3 class="headtext">HTML - CSS - Javascript</h3>
                 </div>
             </div>
         </div>
-       <div id="sideNav" class="sidenav">
+        <div id="sideNav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="#http" onclick="closeNav()">History</a>
             <a href="#http" onclick="closeNav()">Basic language features</a>
@@ -43,72 +45,98 @@
                         <ul>
                             <a class="button" href="#history">History</a>
                             <a class="button" href="#features">Features</a>
-                           
                         </ul>
                     </nav>
                 </div>
                 <div class="nine columns">
-                    <div class="row">
-                        <div id="history" class="twelve columns">
-                            <div class="hide">
-                                <a class="topic">
-                                    <h4><strong>History</strong></h4>
-                                </a>
+                    <h2>HTML</h2>
+                    <div class="tabs">
+                        <ul class="tab-links">
+                            <li class="active"><a href="#tab1">Tab #1</a></li>
+                            <li><a href="#tab2">Tab #2</a></li>
+                            <li><a href="#tab3">Tab #3</a></li>
+                            <li><a href="#tab4">Tab #4</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="tab1" class="tab active">
+                                <div class="row">
+                                    <div class="nine columns">
+                                        <div class="row">
+                                            <div id="features" class="twelve columns">
+                                                <div id="history" class="twelve columns">
+                                                    <div class="hide">
+                                                        <a class="topic">
+                                                            <h4><strong>History</strong></h4>
+                                                        </a>
+                                                    </div>
+                                                    <div class="content">
+                                                        <ul>
+                                                            <li>Developed circa 1995 by <Strong>Brendan Eich</Strong> at Netscape Communications as the scripting language for the Netscape Navigator Browser.</li>
+                                                            <li>Formely called Mocha, then LiveScript, then JavaScript.</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="hide">
+                                                    <a class="topic">
+                                                        <h4><strong>Basic language features</strong></h4>
+                                                    </a>
+                                                </div>
+                                                <div class="content">
+                                                    <ul>
+                                                        <a class="hide">
+                                                            <li id="paradigm"> <strong>Paradigm</strong></li>
+                                                        </a>
+                                                        <div class="content">
+                                                            <ul>
+                                                                <li> Object-oriented(prototype-based), functional, imperative scripting language</li>
+                                                            </ul>
+                                                        </div>
+                                                        <a class="hide">
+                                                            <li id="syntax"> <strong>Java-/C-like syntax</strong></li>
+                                                        </a>
+                                                        <div class="content">
+                                                            <ul>
+                                                                <li>Implicit semicolon insertion for statement termination</li>
+                                                                <li>Identifiers are alphanumeric, _, and $ characters</li>
+                                                                <li>Single-line (//) or block (/**/) comments</li>
+                                                            </ul>
+                                                        </div>
+                                                        <a class="hide">
+                                                            <li id="rules"><strong>Type system and variable scoping rules:</strong></li>
+                                                        </a>
+                                                        <div class="content">
+                                                            <ul>
+                                                                <li>Dynamic (aka loose or weak) typing</li>
+                                                                <li>Global (aka top-level) or local scopes</li>
+                                                                <li>Data types</li>
+                                                                <li>Keywords</li>
+                                                                <li>Reserved words (currently unused)</li>
+                                                                <li>Statements and control structures</li>
+                                                            </ul>
+                                                        </div>
+                                                </div>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="content">
-                                <ul>
-                                    <li>Developed circa 1995 by <Strong>Brendan Eich</Strong> at Netscape Communications as the scripting language for the Netscape Navigator Browser.</li>
-                                    <li>Formely called Mocha, then LiveScript, then JavaScript.</li>
-                                </ul>
+                            <div id="tab2" class="tab">
+                                <p>Tab #2 content goes here!</p>
+                                <p>Donec pulvinar neque sed semper lacinia. Curabitur lacinia ullamcorper nibh; quis imperdiet velit eleifend ac. Donec blandit mauris eget aliquet lacinia! Donec pulvinar massa interdum risus ornare mollis. In hac habitasse platea dictumst. Ut euismod tempus hendrerit. Morbi ut adipiscing nisi. Etiam rutrum sodales gravida! Aliquam tellus orci, iaculis vel.</p>
+                            </div>
+                            <div id="tab3" class="tab">
+                                <p>Tab #3 content goes here!</p>
+                                <p>Donec pulvinar neque sed semper lacinia. Curabitur lacinia ullamcorper nibh; quis imperdiet velit eleifend ac. Donec blandit mauris eget aliquet lacinia! Donec pulvinar massa interdum ri.</p>
+                            </div>
+                            <div id="tab4" class="tab">
+                                <p>Tab #4 content goes here!</p>
+                                <p>Donec pulvinar neque sed semper lacinia. Curabitur lacinia ullamcorper nibh; quis imperdiet velit eleifend ac. Donec blandit mauris eget aliquet lacinia! Donec pulvinar massa interdum risus ornare mollis. In hac habitasse platea dictumst. Ut euismod tempus hendrerit. Morbi ut adipiscing nisi. Etiam rutrum sodales gravida! Aliquam tellus orci, iaculis vel.</p>
                             </div>
                         </div>
                     </div>
-                   
-   
                 </div>
-                <div class="nine columns">
-                    <div class="row">
-                        <div id="features" class="twelve columns">
-                            <div class="hide">
-                                <a class="topic">
-                                    <h4><strong>Basic language features</strong></h4>
-                                </a>
-                            </div>
-                            <div class="content">
-                                <ul>
-                                    <a class="hide"><li id="paradigm"> <strong>Paradigm</strong></li></a>
-                                    <div class="content">
-                                        <ul>
-                                            <li> Object-oriented(prototype-based), functional, imperative scripting language</li>
-                                        </ul>
-                                    </div>
-                                     <a class="hide"><li id="syntax"> <strong>Java-/C-like syntax</strong></li></a>
-                                    <div class="content">
-                                        <ul>
-                                            <li>Implicit semicolon insertion for statement termination</li>
-                                            <li>Identifiers are alphanumeric, _, and $ characters</li>
-                                            <li>Single-line (//) or block (/**/) comments</li>
-                                        </ul>
-                                    </div>    
-                                      <a class="hide"><li id="rules"><strong>Type system and variable scoping rules:</strong></li></a>
-                                    <div class="content">
-                                        <ul>
-                                            <li>Dynamic (aka loose or weak) typing</li>
-                                            <li>Global (aka top-level) or local scopes</li>
-                                            <li>Data types</li>
-                                            <li>Keywords</li>
-                                            <li>Reserved words (currently unused)</li>
-                                            <li>Statements and control structures</li>
-                                        </ul>
-                                    </div>
-                                    </div>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                   
-   
-                </div>
+            </div>
             </div>
         </div> 
         <!-- footer -->

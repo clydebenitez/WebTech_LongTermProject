@@ -11,6 +11,7 @@ html {
 body {
     margin: 0;
     padding: 0;
+    background-color: #fffcf6;
 }
 
 .header {
@@ -30,7 +31,7 @@ body {
     left: 0;
     right: 0;
     padding-left: 10px;
-    z-index: 100;
+    z-index: 1;
 }
 .nav {
   text-align: right;
@@ -155,7 +156,7 @@ footer{
     color: white;
     margin: 0px;
     position: relative;
-    z-index: 500;
+    z-index: 2;
 }
 .indented{
     text-indent: 30px;
@@ -179,7 +180,7 @@ footer{
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 3;
     top: 0;
     left: 0;
     background-color: #111;
@@ -249,4 +250,7 @@ a.back-to-top {
 }
 .hide{
     cursor: pointer;
+}
+a{
+  text-decoration: none;
 }
