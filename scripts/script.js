@@ -61,6 +61,13 @@ $(document).ready(function(){
     });
 });
 
+$(document).ready(function(){
+    $(".hideButtpon").click(function(){
+        $(this).next('div').fadeToggle("slow");
+    });
+});
+
+
 var amountScrolled = 300;
 
 $(window).scroll(function() {
@@ -76,3 +83,17 @@ $('a.back-to-top').click(function() {
 	}, 700);
 	return false;
 });
+
+
+
+
+var $window = $(window),
+       $stickyEl = $('#topicNav'),
+       elTop = $stickyEl.offset().top;
+       $contentArea = $('#content');
+
+
+   $window.scroll(function() {
+        $stickyEl.toggleClass('sticky', $window.scrollTop() > elTop);
+        $contentArea.toggleClass('stickyContent', $window.scrollTop() > elTop);
+    });

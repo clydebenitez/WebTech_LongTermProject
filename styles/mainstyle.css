@@ -222,6 +222,10 @@ footer{
 a{
     cursor: hand;
 }
+#the-sticky-div.sticky {
+     position: fixed;
+     top: 0;
+  }
 a.topic:link{
   text-decoration: none;
   
@@ -254,3 +258,16 @@ a.back-to-top {
 a{
   text-decoration: none;
 }
+/*#topicNav{
+  position: fixed;
+}*/
+#topicNav.sticky {
+     position: fixed;
+     top: 0;
+  }
+  .stickyContent {
+     margin-left: 26%;
+  }
+/*#content{ 
+  margin-left: 28%;
+}*/
