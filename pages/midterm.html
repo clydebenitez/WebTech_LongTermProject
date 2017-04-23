@@ -6,10 +6,12 @@
         <link rel="stylesheet" href="../styles/layout.css">
         <link rel="stylesheet" href="../styles/mainstyle.css">
         <link rel="stylesheet" type="text/css" href="../styles/tabs.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
         <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script defer type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script defer type="text/javascript" src="../scripts/script.js"></script>
         <script defer type="text/javascript" src="../scripts/tabsAnimations.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
     </head>
     <body>
         <!-- top section -->
@@ -48,7 +50,7 @@
                     <a class="button sideButton" href="#html" id="htmlButton">HTML</a>
                     <a class="button sideButton" href="#css" id="cssButton">CSS</a>
                     <a class="button sideButton" href="#js" id="jsButton">Javascript</a>
-                    <a class="button sideButton" href="#js" id="jsButton">JS Sample Codes</a>
+                    <!-- <a class="button sideButton" href="#jsSamples" id="jsSamplesButton">JS Sample Codes</a> -->
                 </ul>
             </nav>
         </div>
@@ -481,9 +483,197 @@
                 </div>
             </div>
         </div>
-        </div>
+        <!-- <div id="jsSampleCodes" class="row">
+            <h2>JS Sample Codes</h2>
+            <div class="tabs">
+                <ul class="tab-links">
+                    <li class="active"><a href="#jsSample1">Introduction</a></li>
+                    <li><a href="#jsSample2">AJAX</a></li>
+                    <li><a href="#jsSample3">Elements</a></li>
+                    <li><a href="#jsSample4">XHTML</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div id="jsSample1" class="tab active">
+                        <div class="row">
+                            <div class="nine columns">
+                                <div class="row">
+                                    <div id="introduction" class="twelve columns">
+                                        <div id="introduction" class="twelve columns">
+                                            <div class="hide">
+                                                <a class="topic">
+                                                    <h4><strong>Introduction</strong></h4>
+                                                </a>
+                                            </div>
+                                            <div class="">
+                                                <ul class = "c">
+                                                    <li>HTML stands for Hyper Text Markup Language</li>
+                                                    <li>Language used to markup documents (i.e. web pages) in the WWW</li>
+                                                    <ul>
+                                                        <li>Structure and content</li>
+                                                        <li>Presentation (mostly deprecated in favor of style sheets)</li>
+                                                    </ul>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="jsSample2" class="tab">
+                        <div class="row">
+                            <div class="nine columns">
+                                <div class="row">
+                                    <div id="features" class="twelve columns">
+                                        <div id="history" class="twelve columns">
+                                            <div class="hide">
+                                                <a class="topic">
+                                                    <h4><strong>History</strong></h4>
+                                                </a>
+                                            </div>
+                                            <div class="">
+                                                <ul class = "c">
+                                                    <li>HTML 1.0 - first version of HTML</li>
+                                                    <li>HTML 2.0 - RFC 1866</li>
+                                                    <li>HTML 3.0 - W3C Recommendation</li>
+                                                    <li>HTML 3.2</li>
+                                                    <li>HTML 4.0</li>
+                                                    <li>HTML 4.01 - W3C Recommendation (December 24 1999)</li>
+                                                    <ul>
+                                                        <li>Strict - deprecated</li>
+                                                        <li>Transitional - still make use the deprecated</li>
+                                                        <li>Frameset - using frames</li>
+                                                    </ul>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="jsSamples" class="tab">
+                        <div class="row">
+                            <div class="nine columns">
+                                <div class="row">
+                                    <div id="elements" class="twelve columns">
+                                        <div id="elements" class="twelve columns">
+                                            <div class="hide">
+                                                <a class="topic">
+                                                    <h4><strong>Elements</strong></h4>
+                                                </a>
+                                            </div>
+                                            <div class="">
+                                                <ul class = "c">
+                                                    <li>Head</li>
+                                                    <ul>
+                                                        <li>title, base, link, meta, style, script</li>
+                                                    </ul>
+                                                    <li>Body</li>
+                                                    <ul>
+                                                        <li>
+                                                            Grouping elements(
+                                                            <p1>div, span</p1>
+                                                            )
+                                                        </li>
+                                                        <li>
+                                                            Headings(
+                                                            <p1>h1 - h6</p1>
+                                                            )
+                                                        </li>
+                                                        <li>
+                                                            Paragraphs, line breaks, horizontal rules(
+                                                            <p1>p, br, hr</p1>
+                                                            )
+                                                        </li>
+                                                        <li>
+                                                            Lists(
+                                                            <p1>ul, ol, li, dl, dt, dd, dir, menu</p1>
+                                                            )
+                                                        </li>
+                                                        <li>
+                                                            Tables(
+                                                            <p1>table, th, tr, td, thead, tfoot, tbody, colgroup, col</p1>
+                                                            )
+                                                        </li>
+                                                        <li>Structured text</li>
+                                                        <ul class = "b">
+                                                            <li>
+                                                                Phase elements(
+                                                                <p1>em, strong, dfn, code, samp, kbd, var, cite, abbr, acronym</p1>
+                                                                )
+                                                            </li>
+                                                            <li>
+                                                                Quotations(
+                                                                <p1>blockquote, q</p1>
+                                                                )
+                                                            </li>
+                                                            <li>
+                                                                Subcripts and superscripts(
+                                                                <p1>sub, sup</p1>
+                                                                )
+                                                            </li>
+                                                            <li>
+                                                                Preformatted texts(
+                                                                <p1>pre</p1>
+                                                                )
+                                                            </li>
+                                                        </ul>
+                                                        <li>
+                                                            Font styles and alignments(
+                                                            <p1>tt, i, b, big, small, strike, s, u, font, basefont, center</p1>
+                                                            )
+                                                        </li>
+                                                        <li>
+                                                            Document changes(
+                                                            <p1>ins, del</p1>
+                                                            )
+                                                        </li>
+                                                        <li>
+                                                            Links and anchors(
+                                                            <p1>a</p1>
+                                                            )
+                                                        </li>
+                                                        <li>
+                                                            Objects, images, applets(
+                                                            <p1>object, img, param, applet</p1>
+                                                            )
+                                                        </li>
+                                                        <li>
+                                                            Scripts(
+                                                            <p1>script, noscript</p1>
+                                                            )
+                                                        </li>
+                                                        <li>
+                                                            Miscellaneous(
+                                                            <p1>address, bdo</p1>
+                                                            )
+                                                        </li>
+                                                        <li>
+                                                            Miscellaneous(
+                                                            <p1>address, bdo</p1>
+                                                            )
+                                                        </li>
+                                                        <li>Frames, noframes, iframe</li>
+                                                        <li>Frameset(for frameset DTD)</li>
+                                                    </ul>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
         </div>
     </div>
+        </div>
+    </div>
+</div>
+</div>
         <!-- footer -->
         <footer>
             <div class="container">

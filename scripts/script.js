@@ -35,29 +35,29 @@ $(document).ready(function(){
         $(this).next('div').fadeToggle("slow");
     });
     $("#htmlButton").click(function(){
-      $("#html").show(500);
-      $("#css").hide(500);
-      $("#js").hide(500);
-      $("#jsSampleCodes").hide(500);
+      $("#html").show(250);
+      $("#css").hide(250);
+      $("#js").hide(250);
+      // $("#jsSampleCodes").hide(250);
       // $("#html").hide(400);
     });
     $("#cssButton").click(function(){
-      $("#html").hide(500);
-      $("#css").show(500);
-      $("#js").hide(500);
-      $("#jsSampleCodes").hide(500);
+      $("#html").hide(250);
+      $("#css").show(250);
+      $("#js").hide(250);
+      // $("#jsSampleCodes").hide(250);
     });
     $("#jsButton").click(function(){
-      $("#html").hide(500);
-      $("#css").hide(500);
-      $("#js").show(500);
-      $("#jsSampleCodes").hide(500);
+      $("#html").hide(250);
+      $("#css").hide(250);
+      $("#js").show(250);
+      // $("#jsSampleCodes").hide(250);
     });
     $("#jsSamplesButton").click(function(){
-      $("#html").hide(500);
-      $("#css").hide(500);
-      $("#js").hide(500);
-      $("#jsSampleCodes").show(500);
+      $("#html").hide(250);
+      $("#css").hide(250);
+      $("#js").hide(250);
+      $("#jsSampleCodes").show(250);
     });
 });
 
