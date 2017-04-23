@@ -537,6 +537,61 @@
                             </ul>
                         </li>
                     </ul>
+			 </li>
+            <li id="css-pe">Pseudo-elements
+                <ul>
+                    <li>::first-letter<sup>CSS3</sup>, :first-letter
+                        <ul>
+                            <li>This selects first letter of text in an element.</li>
+                            <pre><code class="css">
+	p::first-letter {
+	color: #ff0000;
+	font-size: xx-large;
+	}
+		</code></pre>
+                        </ul>
+                    </li>
+                    <li>::first-line<sup>CSS3</sup>, :first-line
+                        <ul>
+                            <li>This selects first line of text in an element,</li>
+                            <pre><code class="css">
+	p::first-line {
+	color: #ff0000;
+	font-variant: small-caps;
+	}
+		</code></pre>
+                        </ul>
+                    </li>
+                    <li>::before<sup>(CSS3)</sup>, :before
+                        <ul>
+                            <li>This may be used to add contents before a particular element.</li>
+                            <pre><code class="css">
+	h1::before {
+	content: url(smiley.gif);
+	}
+		</code></pre>
+                        </ul>
+                    </li>
+                    <li>::after<sup>CSS3</sup>, :after
+                        <ul>
+                            <li>This may be used to add contents before a particular element.</li>
+                            <pre><code class="css">
+	h1::after {
+	content: url(smiley.gif);
+	}
+		</code></pre>
+                        </ul>
+                    </li>
+                </ul>
+                <p>Sample Code:</p>
+                <p>Syntax</p>
+                <pre><code class="css">
+	selector::pseudo-element {
+	property:value;
+	}
+		</code></pre>
+            </li>
+        </ul>
 					
                                 </div>
                             </div>
