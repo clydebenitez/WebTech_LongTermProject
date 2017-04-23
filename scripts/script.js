@@ -34,6 +34,26 @@ $(document).ready(function(){
     $(".hide").click(function(){
         $(this).next('div').fadeToggle("slow");
     });
+    
+    $("#htmlButton1").click(function(){
+      $("#html").show(250);
+      $("#css").hide(250);
+      $("#js").hide(250);
+      // $("#jsSampleCodes").hide(250);
+      // $("#html").hide(400);
+    });
+    $("#cssButton1").click(function(){
+      $("#html").hide(250);
+      $("#css").show(250);
+      $("#js").hide(250);
+      // $("#jsSampleCodes").hide(250);
+    });
+    $("#jsButton1").click(function(){
+      $("#html").hide(250);
+      $("#css").hide(250);
+      $("#js").show(250);
+      // $("#jsSampleCodes").hide(250);
+    });
     $("#htmlButton").click(function(){
       $("#html").show(250);
       $("#css").hide(250);
