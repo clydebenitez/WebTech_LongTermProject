@@ -329,6 +329,7 @@
                     <li><a href="#css2">CSS Frameworks</a></li>
                     <li><a href="#css3">CSS Statements</a></li>
                     <li><a href="#css4">CSS Rule Sets</a></li>
+                    <li><a href="#css5">CSS Rule Precedence</a></li>
                 </ul>
                 <div class="tab-content">
                     <div id="css1" class="tab active">
@@ -364,6 +365,27 @@
                             or more semi-colon(;) separated property declarations.
                         </p>
                     </div>
+                         <div id="css5" class="tab">
+ +                                   <h4><strong>CSS Rule Precedence</strong></h4>
+ +                                    <ul class = "c">
+ +                                        <li><Strong> BY ORIGIN AND IMPORTANCE</Strong></li>
+ +                                            <ul>
+ +                                                <li> User Agent Important Declarations </li>
+ +                                                <li> User Important Declarations</li>
+ +                                                <li> Author Important Declaration</li>
+ +                                                <li> Author Normal Declaration</li>
+ +                                                <li> User Normal Declarations</li>
+ +                                                <li> User Agent Normal Declarations</li>
+ +                                            </ul>
+ +                                        <li><strong> BY SPECIFICITY </strong></li>
+ +                                            <ul>
+ +                                                <li> Inline Style </li>
+ +                                                <li> Number of ID Selectors </li>
+ +                                                <li> Number of Class Selectors, Attribute Selectors, and Pseudo-classes</li>
+ +                                                <li> Number of Type Selectors and Pseudo-elements</li>
+ +                                            </ul>
+ +                                    </ul>
+ +                                </div>
                 </div>
             </div>
         </div>
