@@ -82,7 +82,15 @@
                                                                 <li>Structure and content</li>
                                                                 <li>Presentation (mostly deprecated in favor of style sheets)</li>
                                                             </ul>
+								
+								
                                                         </ul>
+								<ul>
+							
+								
+								</ul>
+							
+								
                                                     </div>
                                                 </div>
                                                 
@@ -143,7 +151,12 @@
                                                         <ul class = "c">
                                                           <li>Head</li>
                                                             <ul>
-                                                                <li>title, base, link, meta, style, script</li>
+                                                               <li>title - Defines the title of the document</li>
+								<li>base - Used to know or specify the URL or URI of the webpage </li>
+								<li> link - Used to redirect the user to another link </li>
+								<li>meta - Used to specify a webpage description</li>
+								<li>style - Used for the design of the webpage</li>
+								<li>script - Used to define client-side scripting</li>
                                                             </ul>
                                                             <li>Body</li>
                                                             <ul>
@@ -196,11 +209,11 @@
                                                             <li>Reformulation of HTML in XML</li>
                                                             <li>Versions</li>
                                                             <ul>
-                                                                <li>XHTML 1.0</li>
-                                                                <li>XHTML 1.1</li>
+                                                                <li>XHTML 1.0 - W3C Recommendation and first version of XHTML</li>
+                                                                <li>XHTML 1.1 - W3C Recommendation</li>
                                                                 <li>XHTML 1.2</li>
                                                                 <li>XHTML 2.0</li>
-                                                                <li>XHTML 5</li>
+                                                                <li>XHTML 5 - Current version of XHTML</li>
                                                             </ul>
                                                             <li>Basic differences between HTML and XHTML</li>
                                                             <ul>
@@ -275,6 +288,52 @@
                                     <h4><strong>Introduction</strong></h4>
                                     <p> - Cascading Style Sheets or also known as CSS is a language used to specify the presentation aspects (e.g., layout and formatting) of structurally marked up documents.</p>
                                     <p> - Developed by Hakon Wium Lie (CHSS/HTML Cascading Style Sheets) and Bert Bos (SSP/Stream-based Style Sheet Proposal)</p>
+				    <p>Although most often used to set the visual style of web pages and user interfaces written in HTML and XHTML,
+	                		the language can be applied to any XML document, including plain XML, SVG and XUL, and is applicable to rendering in speech, 
+			                or on other media.<p/>
+					 <thead>
+                <tr>
+                    <th>Version</th>
+                    <th>Description</th>
+                </tr>
+                </thead>
+					
+                 <tbody>
+                <tr>
+                    <td>CSS1</td>
+                    <td>CSS1 is a simple style sheet mechanism that allows authors and readers to attach style (e.g. fonts, colors and spacing) to HTML documents.
+					The CSS1 language is human readable and writable, and expresses style in common desktop publishing terminology.</td>
+                </tr>
+                <tr>
+                    <td>CSS2</td>
+                    <td>This specification defines Cascading Style Sheets, level 2 (CSS2). 
+					CSS2 is a style sheet language that allows authors and users to attach style 
+					(e.g., fonts, spacing, and aural cues) to structured documents (e.g., HTML documents and XML applications). 
+					By separating the presentation style of documents from the content of documents, 
+					CSS2 simplifies Web authoring and site maintenance.
+                    </td>
+                </tr>
+                <tr>
+                    <td>CSS3</td>
+                    <td>CSS3 is the latest evolution of the Cascading Style Sheets language and aims at extending CSS2.1. 
+					It brings a lot of long-awaited novelties, like rounded corners, shadows, gradients, transitions or animations, 
+					as well as new layouts like multi-columns, flexible box or grid layouts. 
+					Experimental parts are vendor-prefixed and should either be avoided in production environments, 
+					or used with extreme caution as both their syntax and semantics can change in the future.
+                    </td>
+                </tr>
+                </tbody>
+					<ul>Author Style</ul>
+					<li>This refers to the maker of the website who embeds all the styles of a website in CSS files or inline into the html.</li>
+					<li>External Style Sheets</li>
+					<li>Embedded Styles</li>
+					<li>Inline Styles</li>
+					
+					<ul>User Style</ul>
+					<li>This refers to you or the end-user viewing a website.  You can override the author's styles by defining your own styles or CSS. Typically this is done if you need to have larger font sizes, varying colors, etc. for accessibility reasons.</li>
+					
+					<ul>>User Agent Style</ul>
+					<li>This style sheet refers to your browser such as Internet Explorer,Chrome,Firefox or any other browser. It has its own default style sheet and has the lowest priority.</li>
                                 </div>
                                 <div id="tab2" class="tab">
                                     <h4><strong>CSS Preprocessors, CSS Frameworks</strong></h4>
@@ -290,22 +349,34 @@
                                 <div id="tab4" class="tab">
                                     <h4><strong>CSS Statements</strong></h4>
                                     <ul>
-                                        <li> @charset</li>
-                                        <li> @import</li>
-                                        <li> @media</li>
-                                        <li> @fontface</li>
-                                        <li> @keyframes</li>
-                                        <li> @page</li>
+                                        <li> @charset - It referes to the character set that the style sheet used.</li>
+                                        <li> @import - It is used when css engine includes an external style sheet.</li>
+					<li> @namespace - lets the css engine consider its contents to be prefixed with XML namespace.</li>
+					<li> @document - This is a conditional group rule that applies contents if document that uses the style sheet meets define conditions.</li>
+                                        <li> @media (CSS Conditionals Level 3) -This is a conditional group rule at which contents are applied only if device meets media query define conditions. </li>
+                                        <li> @fontface - It describes external font aspect.</li>
+                                        <li> @keyframes - It describes css animation sequence aspect.</li>
+                                        <li> @page - This describes changes in layout aspect to be applied upon document printing.</li>
+					<li> @supports (CSS Conditionals Level 3) - This is a conditional group rule that applies contents if browser meets defined conditions.</li>
                                     </ul>
                                 </div>
                                 <div id="tab5" class="tab">
                                    <h4><strong>CSS Rule Sets (aka CSS Rules)</strong></h4>
                                     <p> consists of a selector, followed by a brace enclosed declaration block, which contains zero
                                     or more semi-colon(;) separated property declarations.</p>
+					<li>Simple Selector</li>
+					<li>Universal Selector - uses an asterisk (*) to refer to any type of a particular element.</li>
+					<li>Attribute Selector - selects elements based on attributes or its values.</li>
+					<li></li>
+					<li></li>
+					<li></li>
+					
                                 </div>
                             </div>
                         </div>
                     </div>
+	
+	
                     <div class="row">
                         <h2>Javascript</h2>
                         <div id="js"class="tabs">
