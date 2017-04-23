@@ -45,30 +45,7 @@ $(document).ready(function(){
       $("#css").hide(300);
       $("#js").show(300);
     });
-    // $(".jsSamplesButton").click(function(){
-    //   $("#html").hide(300);
-    //   $("#css").hide(300);
-    //   $("#js").hide(300);
-    //   $("#jsSampleCodes").show(300);
-    // });
 });
-
-// $(document).ready(function(){
-//     $("htmlButton").click(function(){
-//         $('#html').fadeToggle("slow");
-//     });
-// });
-// $(document).ready(function(){
-//     $("#cssButton").click(function(){
-//         $('#html').fadeToggle("slow");
-//     });
-// });
-// $(document).ready(function(){
-//     $("#jsButton").click(function(){
-//         $('#html').fadeToggle("slow");
-//     });
-// });
-
 
 var amountScrolled = 300;
 
@@ -85,9 +62,6 @@ $('a.back-to-top').click(function() {
 	}, 700);
 	return false;
 });
-
-
-
 
 var $window = $(window),
        $stickyEl = $('#topicNav'),
