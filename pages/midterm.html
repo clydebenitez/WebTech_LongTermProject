@@ -359,17 +359,106 @@
                                         <li> @page - This describes changes in layout aspect to be applied upon document printing.</li>
 					<li> @supports (CSS Conditionals Level 3) - This is a conditional group rule that applies contents if browser meets defined conditions.</li>
                                     </ul>
+					<p>*conditional group rule - may be considered to be something like property values that can be categorizedbased on common syntax.</p>
                                 </div>
                                 <div id="tab5" class="tab">
                                    <h4><strong>CSS Rule Sets (aka CSS Rules)</strong></h4>
                                     <p> consists of a selector, followed by a brace enclosed declaration block, which contains zero
                                     or more semi-colon(;) separated property declarations.</p>
+					
 					<li>Simple Selector</li>
+					 <ul>
+            <li id="css-ts">Type Selector
+                <ul>
+                    <li>This selects elements of the document by node names.</li>
+                    <p>Sample Code:</p>
+                    <p>Syntax</p>
+                    <pre><code class="css">
+	element { style properties }
+					</code></pre>
+                    <p>CSS Code</p>
+                    <pre><code class="css">
+	span {
+	background-color: DodgerBlue;
+	color: #ffffff;
+	}
+					</code></pre>
+                    <p>HTML Code
+                    <p>
+					<pre><code class="html">
+    &#x3C;span&#x3E;Here&#x27;s a span with some text.&#x3C;/span&#x3E;
+    &#x3C;p&#x3E;Here&#x27;s a p with some text.&#x3C;/p&#x3E;
+    &#x3C;span&#x3E;Here&#x27;s a span with more text.&#x3C;/span&#x3E;
+                    </code></pre>
+                </ul>
 					<li>Universal Selector - uses an asterisk (*) to refer to any type of a particular element.</li>
+						 <ul>
+                    <li>This uses an asterisk (*) to refer to any type of a particular element.The universal selector
+                        matches any element type.
+                    </li>
+                    <p>Sample Code:
+                    <p>
+                    <pre><code class="css">
+	* {
+	margin: 0;
+	padding: 0;	
+	}
+					 </code></pre>
+                </ul>
 					<li>Attribute Selector - selects elements based on attributes or its values.</li>
-					<li></li>
-					<li></li>
-					<li></li>
+						   <ul>
+                    <li>selects elements based on attributes or its values.</li>
+                    <ul>
+                        <li>[attr]
+                            <ul>
+                                <li>represents an element having attr as attribute name.</li>
+                            </ul>
+                        </li>
+                        <li>[attr=value]
+                            <ul>
+                                <li>represent an elements having "value" as the value of attr.</li>
+                            </ul>
+                        </li>
+                        <li>[attr|=value]
+                            <ul>
+                                <li>represent an elements with attr attribute having value equal to or begins with
+                                    "value" followed by "-" (U+002D) for language subcode matches.
+                                </li>
+                            </ul>
+					<li>Class selector</li>
+			    <ul>
+                    <li>This selects elements that match based on class attribute.</li>
+                    <p>Sample Code:
+                    <p>
+                    <pre><code class="css">
+	.intro { 
+	background-color: #FFFFFF;
+	}	
+					 </code></pre>
+                </ul>
+					<li>ID selector</li>
+			     <ul>
+                    <li>This selects elements that match based on id attribute.</li>
+                    <p>Sample Code:
+                    <p>
+                    <pre><code class="css">
+	#firstname { 
+	background-color: #F0F8FF;
+	}	
+					 </code></pre>
+                </ul>
+					<li>Pseudo selector</li>
+			    
+			    <ul>
+                    <li>Dynamic Pseudo Class
+                        <ul>
+                            <li>link pseudo
+                                <ul>
+                                    <li>:link - selects hyperlink elements that have href attribute.</li>
+                                    <li>:visited - links already visited are selected.</li>
+                                </ul>
+                            </li>
+                        </ul>
 					
                                 </div>
                             </div>
