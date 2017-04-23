@@ -287,3 +287,6 @@ ul.b {
 ul.c {
     list-style-type: disc;
 }
+#css, #js, #jsSampleCodes{
+  display: none;
+}
