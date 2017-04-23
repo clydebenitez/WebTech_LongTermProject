@@ -27,7 +27,6 @@ function closeNav() {
     document.body.style.backgroundColor = "white";
 }
 
-
 $('body').prepend('<a href="#" class="back-to-top">Back to Top</a>');
 
  // Show/hide contents of topic
