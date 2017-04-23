@@ -134,8 +134,9 @@ h2 {
 
 }
 .headtext{
-    color: azure;
+    color: white;
     font-weight: 900;
+    text-shadow: 3px 3px 3px #000
 }
 .infotext{
     font-weight: 500;
@@ -154,7 +155,8 @@ h2 {
 footer{
     background-color: black;
     color: white;
-    margin: 0px;
+    margin-top: 30px;
+    /*margin: 0px;*/
     position: relative;
     z-index: 2;
 }

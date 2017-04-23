@@ -27,30 +27,6 @@ function closeNav() {
     document.body.style.backgroundColor = "white";
 }
 
-$(document).ready(function(){
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
-
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-});
 
 $('body').prepend('<a href="#" class="back-to-top">Back to Top</a>');
 
@@ -61,11 +37,21 @@ $(document).ready(function(){
     });
 });
 
-$(document).ready(function(){
-    $(".hideButtpon").click(function(){
-        $(this).next('div').fadeToggle("slow");
-    });
-});
+// $(document).ready(function(){
+//     $("htmlButton").click(function(){
+//         $('#html').fadeToggle("slow");
+//     });
+// });
+// $(document).ready(function(){
+//     $("#cssButton").click(function(){
+//         $('#html').fadeToggle("slow");
+//     });
+// });
+// $(document).ready(function(){
+//     $("#jsButton").click(function(){
+//         $('#html').fadeToggle("slow");
+//     });
+// });
 
 
 var amountScrolled = 300;
