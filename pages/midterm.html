@@ -6,12 +6,9 @@
         <link rel="stylesheet" href="../styles/layout.css">
         <link rel="stylesheet" href="../styles/mainstyle.css">
         <link rel="stylesheet" type="text/css" href="../styles/tabs.css">
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
         <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script defer type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script defer type="text/javascript" src="../scripts/script.js"></script>
         <script defer type="text/javascript" src="../scripts/tabsAnimations.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
     </head>
     <body>
         <!-- top section -->
@@ -37,23 +34,23 @@
         </div>
         <div id="sideNav" class="sidenav">
              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#htmlButton" onclick="closeNav()" id="htmlButton1">HTML</a>
-            <ul>
+            <a onclick="closeNav()" class="htmlButton">HTML</a>
+            <ul class="subtopics">
                 <li>Introduction</li>
                 <li>History</li>
                 <li>Elements</li>
                 <li>XHTML</li>
             </ul>
-            <a href="#cssButton" onclick="closeNav()" id="cssButton1">CSS</a>
-            <ul>
+            <a onclick="closeNav()" class="cssButton">CSS</a>
+            <ul class="subtopics">
                 <li>Introduction</li>
                 <li>CSS Framworks</li>
                 <li>CSS Statements</li>
                 <li>CSS Rule Sets</li>
                 <li>CSS RUle Precedence</li>
             </ul>
-            <a href="#jsButton" onclick="closeNav()" id="jsButton1">Javascript</a>
-            <ul>
+            <a href="#jsButton" onclick="closeNav()" class="jsButton">Javascript</a>
+            <ul class="subtopics">
                 <li>Introduction</li>
                 <li>Versions</li>
                 <li>JavaScript Frameworks</li>
@@ -61,16 +58,16 @@
                 <li>Method</li>
             </ul>
         </div>
-        <div class="container section info">
+        <div id="main" class="container section info">
         
         <div class="row">
         <div id="topicNav" class="three columns">
             <nav>
                 <h5><strong>Topics</strong></h5>
                 <ul>
-                    <a class="button sideButton" href="#html" id="htmlButton">HTML</a>
-                    <a class="button sideButton" href="#css" id="cssButton">CSS</a>
-                    <a class="button sideButton" href="#js" id="jsButton">Javascript</a>
+                    <a class="button sideButton htmlButton" href="#html">HTML</a>
+                    <a class="button sideButton cssButton" href="#css">CSS</a>
+                    <a class="button sideButton jsButton" href="#js">Javascript</a>
                     <!-- <a class="button sideButton" href="#jsSamples" id="jsSamplesButton">JS Sample Codes</a> -->
                 </ul>
             </nav>
@@ -379,28 +376,28 @@
                         </p>
                     </div>
                          <div id="css5" class="tab">
- +                                   <h4><strong>CSS Rule Precedence</strong></h4>
- +                                    <ul class = "c">
- +                                        <li><Strong> BY ORIGIN AND IMPORTANCE</Strong></li>
- +                                            <ul>
- +                                                <li> User Agent Important Declarations </li>
- +                                                <li> User Important Declarations</li>
- +                                                <li> Author Important Declaration</li>
- +                                                <li> Author Normal Declaration</li>
- +                                                <li> User Normal Declarations</li>
- +                                                <li> User Agent Normal Declarations</li>
- +                                            </ul>
- +                                        <li><strong> BY SPECIFICITY </strong></li>
- +                                            <ul>
- +                                                <li> Inline Style </li>
- +                                                <li> Number of ID Selectors </li>
- +                                                <li> Number of Class Selectors, Attribute Selectors, and Pseudo-classes</li>
- +                                                <li> Number of Type Selectors and Pseudo-elements</li>
- +                                            </ul>
- +                                    </ul>
- +                                </div>
+                                    <h4><strong>CSS Rule Precedence</strong></h4>
+                                     <ul class = "c">
+                                         <li><Strong> BY ORIGIN AND IMPORTANCE</Strong></li>
+                                             <ul>
+                                                 <li> User Agent Important Declarations </li>
+                                                 <li> User Important Declarations</li>
+                                                <li> Author Important Declaration</li>
+                                                 <li> Author Normal Declaration</li>
+                                                 <li> User Normal Declarations</li>
+                                                <li> User Agent Normal Declarations</li>
+                                            </ul>
+                                         <li><strong> BY SPECIFICITY </strong></li>
+                                             <ul>
+                                                 <li> Inline Style </li>
+                                                 <li> Number of ID Selectors </li>
+                                                 <li> Number of Class Selectors, Attribute Selectors, and Pseudo-classes</li>
+                                                 <li> Number of Type Selectors and Pseudo-elements</li>
+                                             </ul>
+                                    </ul>
+                                 </div>
                                     <div id="css6" class="tab">
- +                                   <h4><strong>HTML/XHTML Stylesheets</strong></h4>     
+                                    <h4><strong>HTML/XHTML Stylesheets</strong></h4>     
                                         <ul>
                                                 <li>Author Styles</li>
                                                    <ul>

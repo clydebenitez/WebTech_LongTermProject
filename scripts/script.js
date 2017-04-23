@@ -17,14 +17,10 @@ $('a.back-to-top').click(function() {
 
 function openNav() {
     document.getElementById("sideNav").style.width = "320px";
-    document.getElementById("main").style.marginLeft = "320px";
-    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 }
 
 function closeNav() {
     document.getElementById("sideNav").style.width = "0";
-    document.getElementById("main").style.marginLeft= "0";
-    document.body.style.backgroundColor = "white";
 }
 
 $('body').prepend('<a href="#" class="back-to-top">Back to Top</a>');
@@ -34,31 +30,27 @@ $(document).ready(function(){
     $(".hide").click(function(){
         $(this).next('div').fadeToggle("slow");
     });
-    $("#htmlButton").click(function(){
-      $("#html").show(250);
-      $("#css").hide(250);
-      $("#js").hide(250);
-      // $("#jsSampleCodes").hide(250);
-      // $("#html").hide(400);
+    $(".htmlButton").click(function(){
+      $("#html").show(300);
+      $("#css").hide(300);
+      $("#js").hide(300);
     });
-    $("#cssButton").click(function(){
-      $("#html").hide(250);
-      $("#css").show(250);
-      $("#js").hide(250);
-      // $("#jsSampleCodes").hide(250);
+    $(".cssButton").click(function(){
+      $("#html").hide(300);
+      $("#css").show(300);
+      $("#js").hide(300);
     });
-    $("#jsButton").click(function(){
-      $("#html").hide(250);
-      $("#css").hide(250);
-      $("#js").show(250);
-      // $("#jsSampleCodes").hide(250);
+    $(".jsButton").click(function(){
+      $("#html").hide(300);
+      $("#css").hide(300);
+      $("#js").show(300);
     });
-    $("#jsSamplesButton").click(function(){
-      $("#html").hide(250);
-      $("#css").hide(250);
-      $("#js").hide(250);
-      $("#jsSampleCodes").show(250);
-    });
+    // $(".jsSamplesButton").click(function(){
+    //   $("#html").hide(300);
+    //   $("#css").hide(300);
+    //   $("#js").hide(300);
+    //   $("#jsSampleCodes").show(300);
+    // });
 });
 
 // $(document).ready(function(){
