@@ -192,7 +192,61 @@
                                                                             <li>taglib</li>
                                                                             <li>uri </li>
                                                                         </ul>
-                                                                </ul>
+                                                                        <ul>
+                                                                            <li>Scripting Elements</li>
+                                                                            
+                                                                             <li>Declarations</li>
+                                                                            <li><%! int a = 100; %></li>
+                                                                            
+                                                                            <li><%! int square(int n) { return n*n ; } %></li>
+                                                                                
+                                                                             <li>Expressions</li>
+                                                                            
+                                                                             <li><% String s = new java.util.Date().toString(); %></li> </li>
+                                                                                 
+                                                                             <li>Scriptlets</li>
+                                                                            
+                                                                             <li><% for(int i = 0; i < 10 ; i++) { out.println(i); } %></li>
+                                                                            
+                                                                            <li>Actions</li>
+                                                                            <li>Standard actions</li>
+                                                                            <li><jsp:directive.include>, <jsp:directive.page></li>
+                                                                            <li><jsp:declarations></li>
+                                                                            <li><jsp:scriptlet></li>
+                                                                            <li><jsp:expression></li>
+                                                                            <li><jsp:include>, <jsp:forward></li>
+                                                                                <li><jsp:useBean>, <jsp:setProperty>, <jsp:getProperty></li>
+                                                                                <li><jsp:plugin>, <jsp:param>, <jsp:params>, <jsp:fallback></li>
+                                                                                <li><jsp:element>, <jsp:attribute>, <jsp:body></li>
+                                                                                <li><jsp:text></li>
+                                                                                 
+                                                                                <li>Custom Actions (JSTL)</li>
+                                                                                <li>JSTL, user-written custom tag libraries</li>
+                                                                                    
+                                                                                    <li>Expression Language (EL)</li>
+                                                                                    <li>${ }</li>
+                                                                                    
+                                                                                    <li>Implicit Scripting Objects</li>
+                                                                                    <li>request, response, out, pageContext</li>
+                                                                                    <li>session, pageContext, application</li>
+                                                                                    <li>config, page, exception</li>
+                                                                                    
+                                                                                    <li>Implicit EL Objects</li>
+                                                                                    <li>pageContext</li>
+                                                                                    <li>pageScope</li>
+                                                                                    <li>requestScope</li>
+                                                                                    <li>sessionScope</li>
+                                                                                    <li>applicationScope</li>
+                                                                                    <li>param, paramValues</li>
+                                                                                    <li>header, headervalues</li>
+                                                                                    <li>header, headervalues</li>
+                                                                                    <li>initparam</li>
+                                                                                    
+                                                                                    
+                                                                                    <li>Comments</li>
+                                                                                    <li><%-- this is a JSP comment --%></li>
+                                                                                    <li></li>
+                                                            </ul>   
                                                             </ul>
                                                         </ul>
                                                     </div>      
