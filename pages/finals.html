@@ -41,6 +41,11 @@
                 <li>Features<li>
                 <li>Components</li>
             </ul>
+            <a onclick="closeNav()" class="servletButton">Servlet</a>
+            <ul class="subtopics">
+                <li>Introduction</li>
+                <li>Servlet Processing</li>
+            </ul>
         </div>
         <div id="main" class="container section info">
         
@@ -50,6 +55,7 @@
                 <h5><strong>Topics</strong></h5>
                 <ul>
                     <a class="button sideButton jspButton" href="#html">Java Server Pages</a>
+                    <a class="button sideButton servletButton" href="#servlet">Servlet</a>
                 </ul>
             </nav>
         </div>
@@ -202,6 +208,69 @@
                                     </div>
                                 </div>
                             </div>
+                 <div id="content" class="nine columns">
+        <div id="servlet" class="row">
+            <h2>Servlet</h2>
+            <div class="tabs">
+                <ul class="tab-links">
+                    <li class="active"><a href="#servlet1">Introduction</a></li>
+                    <li class="active"><a href="#servlet2">Servlet Processing</a></li>
+                </ul>
+                 <div class="tab-content">
+                    <div id="servlet1" class="tab active">
+                        <div class="row">
+                            <div class="nine columns">
+                                <div class="row">
+                                    <div id="introduction" class="twelve columns">
+                                        <div id="introduction" class="twelve columns">
+                                            <div class="hide">
+                                                <a class="topic">
+                                                    <h4><strong>Introduction</strong></h4>
+                                                </a>
+                                            </div>
+                                            <div class="">
+                                                <ul class = "c">
+                                                    <li>Java Object based on the Servlet API.</li>
+                                                    <li>Runs in a server application to answer client requests; technically, servlets are not tied
+                                                        to a speicifc client-server protocol, but they are most commonly used with HTTP and the
+                                                        term 'servlet' is often used in the context of an "HTTP Servlet".</li>
+                                                    <li>Web-tier components in the Java EE architecture.</li>
+                                                    <li>Runs in and is managed by a web-tier container called the 'Servlet Container'.</li>
+                                                    <li>Mapped to URLs to which clients send requests to the server</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab2" class="tab">
+                    <div class="row">
+                        <div class="nine columns">
+                            <div class="row">
+                                <div id="components" class="twelve columns">
+                                    <div id="components" class="twelve columns">
+                                        <div class="hide">
+                                            <a class="topic">
+                                                <h4><strong>Servlet Processing</strong></h4>
+                                            </a>
+                                        </div>
+                                            <div class="">
+                                                <ul class = "c">
+                                                	<li>Client sends a request to a web server URL that is mapped to a servlet.</li>
+                                                	<li>Web server passes on the request to the servlet container.</li>
+                                                	<li>Servlet container checks if servlet is already loaded.</li>
+                                                	<li>if it is not yet loaded, servlet container loads the servlet class and instantiates the servlet,
+                                                		and calls its init method.</li>
+                                                	<li>Servlet conatiner invokes the servlet's service method, passing request and response objects
+                                                		as arguments.</li>
+                                                	<li>Servlet processes the request using the response object to create the response, which is
+                                                		returned by the servlet container to the web server, which in turn sends the response
+                                                		to the client.</li>
+                                                	<li>Subsequent request to the servlet will not require servlet re-installation, unless the
+                                                		servlet has been unloaded; before a servlet is unloaded, the servlet container invokes its destroy method.</li>
         </div>
         </div>
         </div>
