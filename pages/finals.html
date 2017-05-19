@@ -369,6 +369,59 @@
     					</div>
     				</div>
     			</div>
+                    <div id="servlet5" class="tab">
+    				<div class="row">
+    					<div class="nine columns">
+    						<div class="row">
+    							<div id="config" class="twelve columns">
+    								<div id="config" class="twelve columns">
+    									<div class="hide">
+    										<a class="topic">
+    											<h4><strong>Servlet Configuration</strong></h4>
+    										</a>
+    									</div>
+    										<div class="">
+    											<ul class="c">
+    												private static ServletConfig getServletConfig(final ServletConfig servletConfig){
+    															return new ServletConfig(){
+    															}
+    														}
+    												<li>getServletName()</li>
+    													Example:
+
+    																@Override
+    																public String getServletName(){
+    																	return servletConfig.getServletName();
+    																}
+    												<li>getServletContext()</li>
+    													Example:
+
+    																@Override
+    																public ServletContext getServletContext(){
+    																	return servletConfig.getServletContext();
+    																}
+    												<li>getInitParameter()</li>
+    													Example:
+
+    																@Override
+    																public String getInitParameter(String s){
+    																	return PARAMS.get(s);
+    																}
+    												<li>getInitParameterName()</li>
+    													Example:
+
+    																@Override
+    																public Enumeration<String> getInitParameterNames(){
+    																	return PARAMS.keys();
+    																}
+                                                    </ul>	
+    										</div>
+    								</div>
+    							</div>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
     		</div>
     		</div>
     		</div>                
