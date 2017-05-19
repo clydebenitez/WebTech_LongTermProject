@@ -45,6 +45,30 @@ $(document).ready(function(){
       $("#css").hide(300);
       $("#js").show(300);
     });
+    $(".httpButton").click(function(){
+      $("#http").show(300);
+      $("#requestMethods").hide(300);
+      $("#messageHeaders").hide(300);
+      $("#statusCode").hide(300);
+    });
+    $(".requestMethodsButton").click(function(){
+      $("#http").hide(300);
+      $("#requestMethods").show(300);
+      $("#messageHeaders").hide(300);
+      $("#statusCode").hide(300);
+    });
+    $(".messageHeadersButton").click(function(){
+      $("#http").hide(300);
+      $("#requestMethods").hide(300);
+      $("#messageHeaders").show(300);
+      $("#statusCode").hide(300);
+    });
+    $(".statusCodeButton").click(function(){
+      $("#http").hide(300);
+      $("#requestMethods").hide(300);
+      $("#messageHeaders").hide(300);
+      $("#statusCode").show(300);
+    });
 });
 
 var amountScrolled = 300;
