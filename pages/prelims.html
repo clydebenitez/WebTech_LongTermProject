@@ -5,8 +5,10 @@
         <title>Webtek Course Project</title>
         <link rel="stylesheet" href="../styles/layout.css">
         <link rel="stylesheet" href="../styles/mainstyle.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script type="text/javascript" src="../scripts/script.js"></script>
+        <link rel="stylesheet" type="text/css" href="../styles/tabs.css">
+        <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script defer type="text/javascript" src="../scripts/script.js"></script>
+        <script defer type="text/javascript" src="../scripts/tabsAnimations.js"></script>
     </head>
     <body>
         <!-- top section -->
@@ -31,113 +33,140 @@
             </div>
         </div>
         <div id="sideNav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#http" onclick="closeNav()">HTTP</a>
-            <a href="#history" onclick="closeNav()">History</a>
-            <a href="#fundamentals" onclick="closeNav()">Fundamentals</a>
-            <a href="#functionality" onclick="closeNav()">Functionality</a>
-            <a href="#resourceaddressing" onclick="closeNav()">Resource Addressing</a>
-            <a href="#responsemessage" onclick="closeNav()">Response Messages</a>
-            <a href="#resourcemessage" onclick="closeNav()">Resource Messages</a>
-            <a href="#requestmethods" onclick="closeNav()">Request Methods</a>
-            <a href="#messageheader" onclick="closeNav()">Message Headers</a>
-            <a href="#statuscodes">Status Codes</a>
+             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#httpButton" onclick="closeNav()" class="httpButton">HTTP</a>
+            <ul class="subtopics">
+                <li>Introduction</li>
+                <li>History</li>
+                <li>Fundamentals</li>
+                <li>Functionality</li>
+                <li>Resource Addressing</li>
+                <li>Response Message</li>
+                <li>Resource Message</li>
+            </ul>
+            <a href="#requestMethodsButton" onclick="closeNav()" class="requestMethodsButton">HTTP Request Methods</a>
+            <ul class="subtopics">
+                <li>GET</li>
+                <li>HEAD</li>
+                <li>POST</li>
+                <li>OPTIONS</li>
+                <li>TRACE</li>
+                <li>PUT</li>
+                <li>DELETE</li>
+                <li>CONNECT</li>
+                <li>Idempotent Methods</li>
+                <li>Safe Methods</li>
+                <li>Unsafe Methods</li>
+            </ul>
+            <a href="#messageHeaderspButton" onclick="closeNav()" class="messageHeadersButton">HTTP Message Headers</a>
+            <ul class="subtopics">
+                <li>General Header Fields</li>
+                <li>Request Header Fields</li>
+                <li>Response Header Fields</li>
+                <li>Entity Header Fields</li>
+            </ul>
+            <a href="#statusCodeButton" onclick="closeNav()" class="statusCodeButton">HTTP Status Code</a>
+            <ul class="subtopics">
+                <li>Informational (1xx)</li>
+                <li>Success (2xx)</li>
+                <li>Redirection (3xx)</li>
+                <li>Client Error (4xx)</li>
+                <li>Server Error (5xx)</li>
+            </ul>
         </div>
-        <div class="container section info">
-            <div class="row">
-                <div class="three columns topicnav">
-                    <nav>
-                        <h5><strong>Topics</strong></h5>
-                        <ul>
-                            <a class="button" href="#http">HTTP</a>
-                            <a class="button" href="#history">History</a>
-                            <a class="button" href="#fundamentals">Fundamentals</a>
-                            <a class="button" href="#functionality">Functionality</a>
-                            <a class="button" href="#resourceaddressing">Resource Addressing</a>
-                            <a class="button" href="#responsemessage">Response Messages</a>
-                            <a class="button" href="#resourcemessage">Resource Messages</a>
-                            <a class="button" href="#requestmethods">Request Methods</a>
-                            <div class="dropdown">
-                                <button class="button">Message Headers</button>
-                                <div class="dropdown-content">
-                                    <a href="#generalheader">General Header Fields</a>
-                                    <a href="#requestheader">Request Header Fields</a>
-                                    <a href="#responseheader">Response Header Fields</a>
-                                    <a href="#entityheader">Entity Header Fields</a>
+        <div id="main" class="container section info">
+        
+        <div class="row">
+        <div id="topicNav" class="three columns">
+            <nav>
+                <h5><strong>Topics</strong></h5>
+                <ul>
+                    <a class="button sideButton httpButton" href="#http">HTTP</a>
+                    <a class="button sideButton requestMethodsButton" href="#requestMethods">Request Methods</a>
+                    <a class="button sideButton messageHeadersButton" href="#messageHeaders">Message Headers</a>
+                    <a class="button sideButton statusCodeButton" href="#statusCode">Status Code</a>
+                    <!-- <a class="button sideButton" href="#jsSamples" id="jsSamplesButton">JS Sample Codes</a> -->
+                </ul>
+            </nav>
+        </div>
+        <div id="content" class="nine columns">
+        <div id="http" class="row">
+            <h2>Hypertext Transfer Protocol (HTTP)</h2>
+            <div class="tabs">
+                <ul class="tab-links">
+                    <li class="active"><a href="#http0">Introduction</a></li>
+                    <li><a href="#http1">History</a></li>
+                    <li><a href="#http2">Fundamentals</a></li>
+                    <li><a href="#http3">Functionality</a></li>
+                    <li><a href="#http4">Resource Addressing</a></li>
+                    <li><a href="#http5">Response Message</a></li>
+                    <li><a href="#http6">Resource Message</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div id="http0" class="tab active">
+                        <div class="row">
+                            <div class="nine columns">
+                                <div class="row">
+                                    <div id="introduction" class="twelve columns">
+                                        <div id="introduction" class="twelve columns">
+                                            <div class="hide">
+                                                <a class="topic">
+                                                    <h4><strong>Introduction</strong></h4>
+                                                </a>
+                                            </div>
+                                            <div class="">
+                                                <ul class = "c">
+                                                    <li><Strong>Application Layer Communication Protocol</Strong> used to access resources on the world wide web. Jointly developed by the W3C and IETF (INTERNET ENGINEERING TASK FORCE).</li>
+                                                    <li><Strong>Protocol </Strong>is a <Strong>Set of rules</Strong> that end points in a telecommunication connection use when they communicate.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="dropdown">
-                                <button class="button">Status Codes (1xx-5xx)</button>
-                                <div class="dropdown-content">    
-                                    <a href="#informational">Informational 1xx</a>
-                                    <a href="#success">Success 2xx</a>
-                                    <a href="#redirection">Redirection 3xx</a>
-                                    <a href="#clienterror">Client Error 4xx</a>
-                                    <a href="#servererror">Server Error 5xx</a>
+                        </div>
+                    </div>
+                    <div id="http1" class="tab">
+                        <div class="row">
+                            <div class="nine columns">
+                                <div class="row">
+                                    <div id="features" class="twelve columns">
+                                        <div id="history" class="twelve columns">
+                                            <div class="hide">
+                                                <a class="topic">
+                                                    <h4><strong>History</strong></h4>
+                                                </a>
+                                            </div>
+                                            <div class="">
+                                                <ul class = "c">
+                                                  <li>HTTP 0.9 (1991)</li>
+                                                  <li>HTTP 1.0 (RFC 1945 - MAY 1996) – single line, resource, request, and response, after that, it terminates the line.</li>
+                                                  <li>HTTP 1.1 (RFC 2068 - JAN 1997, RFC 2616 – JUNE 1999, RFC 7230-7235 – JUNE 2014).</li>
+                                                  <li>HTTP 2 (RFC 7540 – MAY 2015) - speeding the communication client to server.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="nine columns">
-                    <div class="row">
-                        <div id="http" class="twelve columns">
-                            <div class="hide">
-                                <a class="topic">
-                                    <h4><strong>Hypertext Transfer Protocol (HTTP)</strong></h4>
-                                </a>
-                            </div>
-                            <div class="content">
-                                <ul>
-                                    <li><Strong>Application Layer Communication Protocol</Strong> used to access resources on the world wide web. Jointly developed by the W3C and IETF (INTERNET ENGINEERING TASK FORCE).</li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div id="protocol" class="twelve columns">
-                            <div class="hide">
-                                <a class="topic">
-                                    <h4><strong>Protocol</strong></h4>
-                                </a>
-                            </div>
-                            <div class="content">
-                                <ul>
-                                    <li>is a <Strong>Set of rules</Strong> that end points in a telecommunication connection use when they communicate.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div id="history" class="twelve columns">
-                            <div class="hide">
-                                <a class="topic">
-                                    <h4><Strong>History of HTTP</Strong></h4>
-                                </a>
-                            </div>
-                            <div class="content">
-                                <ul>
-                                    <li>HTTP 0.9 (1991)</li>
-                                    <li>HTTP 1.0 (RFC 1945 - MAY 1996) – single line, resource, request, and response, after that, it terminates the line.</li>
-                                    <li>HTTP 1.1 (RFC 2068 - JAN 1997, RFC 2616 – JUNE 1999, RFC 7230-7235 – JUNE 2014).</li>
-                                    <li>HTTP 2 (RFC 7540 – MAY 2015) - speeding the communication client to server.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div id="fundamentals" class="twelve columns">
-                            <div class="hide">
-                                <a class="topic">
-                                    <h4><strong>HTTP Fundamentals</strong></h4>
-                                </a>
-                            </div>
-                            <div class="content">
-                                <ul>
-                                    <li>HTTP typically runs on top of TCP/IP using <Strong>TCP port 80</Strong> by default, or <Strong>TCP port 443</Strong> for HTTPS. </li>
-                                    <li>HTTP is based on <Strong>client-server architecture</Strong>.</li>
-                                    <li>
-                                        Clients, aka user agents (UA):
+                    <div id="http2" class="tab">
+                        <div class="row">
+                            <div class="nine columns">
+                                <div class="row">
+                                    <div id="elements" class="twelve columns">
+                                        <div id="elements" class="twelve columns">
+                                            <div class="hide">
+                                                <a class="topic">
+                                                    <h4><strong>Fundamentals</strong></h4>
+                                                </a>
+                                            </div>
+                                            <div class="">
+                                                <ul class = "c">
+                                                    <li>HTTP typically runs on top of TCP/IP using <Strong>TCP port 80</Strong> by default, or <Strong>TCP port 443</Strong> for HTTPS. </li>
+                                                    <li>HTTP is based on <Strong>client-server architecture</Strong>.</li>
+                                                    <li>Clients, aka user agents (UA):
                                         <ul>
                                             <li>Web browsers, web crawlers, email clients, other end user tools and applications</li>
                                         </ul>
@@ -174,104 +203,100 @@
                                             <li>(optional) URL-encoded query</li>
                                             <li>(optional) bookmark(or fragment identifier)</li>
                                         </ul>
-                                </ul>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div id="functionality" class="twelve columns">
-                            <div class="hide">
-                                <a class="topic">
-                                    <h4><strong>HTTP Functionality</strong></h4>
-                                </a>
-                            </div>
-                            <div class="content">
-                                <ul>
-                                    <li>Cache Control</li>
-                                    <li>Content Media Type</li>
-                                    <li>Language and Character Set</li>
-                                    <li>Content/Transfer Coding</li>
-                                    <li>Content Negotiation</li>
-                                    <li>Client-Server Protocol Negotiation</li>
-                                    <li>Persistent Connections</li>
-                                    <li>Request Pipelining</li>
-                                    <li>Authentication/Authorization</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div id="resourceaddressing" class="twelve columns">
-                            <div class="hide">
-                                <a class="topic">
-                                    <h4><strong> HTTP Resource Addressing </strong></h4>
-                                </a>
-                            </div>
-                            <div class="content">
-                                <ul>
-                                    <li> HTTP resources are identified using URIs (RFC 3986), or more specifically, HTTP URLs. </li>
-                                    <ul>
-                                        <li> Scheme (http: or https:) </li>
-                                        <li>(optional) authentication information </li>
-                                        <li>Host and (optional) port number </li>
-                                        <li>Path (resolved to the document root on the server) to the resource </li>
-                                        <li>(optional) scheme-specific parameters </li>
-                                        <li>(optional) URL-encoded query </li>
-                                        <li>(optional) bookmark (or fragment identifier)</li>
-                                    </ul>
-                                    <p> example for HTTP RESOURCE ADDRESS</p>
-                                    <p> <Strong>http://usr:pwd@server.org:8080/info/profile.php?id=1234#addr</Strong>
-                                    <ul>
-                                        <li>Scheme: http</li>
-                                        <li>Credentials: usr:pwd</li>
-                                        <li>Domain Name: @server.org</li>
-                                        <li>Port Number: 8080</li>
-                                        <li>Path To Reserouce: /info/profile.php</li>
-                                        <li>Query: ?id=1234</li>
-                                        <li>Fragment Identifier: #addr</li>
-                                    </ul>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div id="cache" class="twelve columns">
-                            <div class="hide">
-                                <a class="topic">
-                                    <h4><strong>Cache</strong></h4>
-                                </a>
-                            </div>
-                            <div class="content">
-                                <ul>
-                                    <li>Local storage/copy of resource that is fetched from a server. </li>
-                                </ul>
-                            </div>
-                        </div>
+                    <div id="http3" class="tab">
                         <div class="row">
-                            <div id="cookie" class="twelve columns">
-                                <div class="hide">
-                                    <a class="topic">
-                                        <h4><strong>Cookie</strong></h4>
-                                    </a>
-                                </div>
-                                <div class="content">
-                                    <ul>
-                                        <li>a very small text file that is placed on an internet user's hard drive</li>
-                                        <li>used to retain user preferences and store information</li>
-                                    </ul>
+                            <div class="nine columns">
+                                <div class="row">
+                                    <div id="xhtml" class="twelve columns">
+                                        <div id="xhtml" class="twelve columns">
+                                            <div class="hide">
+                                                <a class="topic">
+                                                    <h4><strong>Functionality</strong></h4>
+                                                </a>
+                                            </div>
+                                            <div class="">
+                                                <ul class= "c">
+                                                <li>Cache Control</li>
+                                                <li>Content Media Type</li>
+                                                <li>Language and Character Set</li>
+                                                <li>Content/Transfer Coding</li>
+                                                <li>Content Negotiation</li>
+                                                <li>Client-Server Protocol Negotiation</li>
+                                                <li>Persistent Connections</li>
+                                                <li>Request Pipelining</li>
+                                                <li>Authentication/Authorization</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div id="http4" class="tab">
                         <div class="row">
-                            <div id="responsemessage" class="ten columns">
-                                <div class="hide">
-                                    <a class="topic">
-                                        <h4><strong>HTTP Response Message</strong></h4>
-                                    </a>
+                            <div class="nine columns">
+                                <div class="row">
+                                    <div id="xhtml" class="twelve columns">
+                                        <div id="xhtml" class="twelve columns">
+                                            <div class="hide">
+                                                <a class="topic">
+                                                    <h4><strong>Resource Addressing</strong></h4>
+                                                </a>
+                                            </div>
+                                            <div class="">
+                                                <ul class= "c">
+                                                 <li> HTTP resources are identified using URIs (RFC 3986), or more specifically, HTTP URLs. </li>
+                                                    <ul>
+                                                    <li> Scheme (http: or https:) </li>
+                                                    <li>(optional) authentication information </li>
+                                                    <li>Host and (optional) port number </li>
+                                                    <li>Path (resolved to the document root on the server) to the resource </li>
+                                                    <li>(optional) scheme-specific parameters </li>
+                                                    <li>(optional) URL-encoded query </li>
+                                                    <li>(optional) bookmark (or fragment identifier)</li>
+                                                    </ul>
+                                                    <p> example for HTTP RESOURCE ADDRESS</p>
+                                                    <p> <Strong>http://usr:pwd@server.org:8080/info/profile.php?id=1234#addr</Strong>
+                                                    <ul>
+                                                    <li>Scheme: http</li>
+                                                    <li>Credentials: usr:pwd</li>
+                                                    <li>Domain Name: @server.org</li>
+                                                    <li>Port Number: 8080</li>
+                                                    <li>Path To Reserouce: /info/profile.php</li>
+                                                    <li>Query: ?id=1234</li>
+                                                    <li>Fragment Identifier: #addr</li>
+                                                    </ul>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="content">
-                                    <ul>
-                                        <li>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="http5" class="tab">
+                        <div class="row">
+                            <div class="nine columns">
+                                <div class="row">
+                                    <div id="xhtml" class="twelve columns">
+                                        <div id="xhtml" class="twelve columns">
+                                            <div class="hide">
+                                                <a class="topic">
+                                                    <h4><strong>Response Message</strong></h4>
+                                                </a>
+                                            </div>
+                                            <div class="">
+                                                <ul class= "c">
+                                                  <li>
                                             Status Line
                                             <ul>
                                                 <li>HTTP protocol version</li>
@@ -281,20 +306,28 @@
                                         </li>
                                         <li>Response Headers</li>
                                         <li>Message body</li>
-                                    </ul>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div id="http6" class="tab">
                         <div class="row">
-                            <div id="resourcemessage" class="ten columns">
-                                <div class="hide">
-                                    <a class="topic">
-                                        <h4><strong>HTTP Resource Message</strong></h4>
-                                    </a>
-                                </div>
-                                <div class="content">
-                                    <ul>
-                                        <li>
+                            <div class="nine columns">
+                                <div class="row">
+                                    <div id="xhtml" class="twelve columns">
+                                        <div id="xhtml" class="twelve columns">
+                                            <div class="hide">
+                                                <a class="topic">
+                                                    <h4><strong>Resource Message</strong></h4>
+                                                </a>
+                                            </div>
+                                            <div class="">
+                                                <ul class= "c">
+                                                  <li>
                                             Request Line
                                             <ul>
                                                 <li>Methods - action to server</li>
@@ -313,136 +346,121 @@
                                                 <li>HTTP Protocol Version</li>
                                             </ul>
                                         </li>
-                                    </ul>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div id="requestmethods" class="ten columns">
-                                    <div class="hide">
-                                        <a class="topic">
-                                            <h4><strong>HTTP Request Methods</strong></h4>
-                                        </a>
-                                    </div>
-                                    <div class="content">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="requestMethods" class="row">
+            <h2>HTTP Request Methods</h2>
+            <div class="tabs">
+                <ul class="tab-links">
+                    <li class="active"><a href="#requestMethods1">GET</a></li>
+                    <li><a href="#requestMethods2">HEAD</a></li>
+                    <li><a href="#requestMethods3">POST</a></li>
+                    <li><a href="#requestMethods4">OPTIONS</a></li>
+                    <li><a href="#requestMethods5">TRACE</a></li>
+                    <li><a href="#requestMethods6">PUT</a></li>
+                    <li><a href="#requestMethods7">DELETE</a></li>
+                    <li><a href="#requestMethods8">CONNECT</a></li>
+                    <li><a href="#requestMethods9">Idempotent Methods</a></li>
+                    <li><a href="#requestMethods10">Safe Methods</a></li>
+                    <li><a href="#requestMethods11">Unsafe Methods</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div id="requestMethods1" class="tab active">
+                        <h4><strong>Get</strong></h4>
+                                <ul>
+                                  <li>Most commonly used HTTP method. </li>
+                                  <li>Used to request from the server the retrieval of the source identified by the request URI; the retrieved resource is returned in the message body as an entity. </li>
+                                  <li>Can be combined with conditional and/or range request headers to effect conditional and/or partial resource retrieval. </li>
+                                  <li>Must be supported by all general-purpose servers. </li>
+                                 </ul>
+                    </div>
+                    <div id="requestMethods2" class="tab">
+                        <h4><strong>HEAD</strong></h4>
+                        <ul>
+                            <li>Identical to GET, except the message body is not included in the response. </li>
+                        </ul>
+                    </div>
+                    <div id="requestMethods3" class="tab">
+                        <h4><strong>POST</strong></h4>
+                        <ul>
+                           <li>Request that the origin server accept the entity enclosed in the request as a new subordinate of the resource identified by the Request-URI in the Request-Line.</li>
+                        </ul>
+                    </div>
+                    <div id="requestMethods4" class="tab">
+                        <h4><strong>OPTIONS</strong></h4>
+                        <ul>
+                             <li>Request for information about the communication options available on the request/response chain identified by the Request-URI. This method allows the client to determine the options and/or requirements associated with a resource, or the capabilities of a server, without implying a resource action or initiating resource retrieval. </li>
+                        </ul>
+                       
+                    </div>
+                         <div id="requestMethods5" class="tab">
+                                    <h4><strong>TRACE</strong></h4>
+                                    <ul>
+                                        <li>Request the server to “echo” back to the client the received request. </li>
+                                        <li>Typically used for testing/diagnostics of the request chain. </li>
+                                    </ul>
+                                 </div>
+                                    <div id="requestMethods6" class="tab">
+                                    <h4><strong>PUT</strong></h4>     
                                         <ul>
-                                            <li>
-                                                <a class="topic hide">
-                                                <strong>GET</strong>
-                                                </a>
-                                                <div class="content">
-                                                    <ul>
-                                                        <li>Most commonly used HTTP method. </li>
-                                                        <li>Used to request from the server the retrieval of the source identified by the request URI; the retrieved resource is returned in the message body as an entity. </li>
-                                                        <li>Can be combined with conditional and/or range request headers to effect conditional and/or partial resource retrieval. </li>
-                                                        <li>Must be supported by all general-purpose servers. </li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <a class="topic hide">
-                                                <strong>HEAD</strong>
-                                                </a>
-                                                <div class="content">
-                                                    <ul>
-                                                        <li>Identical to GET, except the message body is not included in the response. </li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <a class="topic hide">
-                                                <strong>POST</strong>
-                                                </a>
-                                                <div class="content">
-                                                    <ul>
-                                                        <li>Request that the origin server accept the entity enclosed in the request as a new subordinate of the resource identified by the Request-URI in the Request-Line.</li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <a class="topic hide">
-                                                <strong>OPTIONS</strong>
-                                                </a>
-                                                <div class="content">
-                                                    <ul>
-                                                        <li>Request for information about the communication options available on the request/response chain identified by the Request-URI. This method allows the client to determine the options and/or requirements associated with a resource, or the capabilities of a server, without implying a resource action or initiating resource retrieval. </li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <a class="topic hide">
-                                                <strong>TRACE</strong>
-                                                </a>
-                                                <div class="content">
-                                                    <ul>
-                                                        <li>Request the server to “echo” back to the client the received request. </li>
-                                                        <li>Typically used for testing/diagnostics of the request chain. </li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <a class="topic hide">
-                                                <strong>PUT</strong>
-                                                </a>
-                                                <div class="content">
-                                                    <ul>
-                                                        <li>Request the server to store the enclosed entity in the message under the specified request URI.</li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <a class="topic hide">
-                                                <strong>DELETE</strong>
-                                                </a>
-                                                <div class="content">
-                                                    <ul>
-                                                        <li>Request the server to delete the resource identified by the request URI.</li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <a class="topic hide">
-                                                <strong>CONNECT</strong>
-                                                </a>
-                                                <div class="content">
-                                                    <ul>
-                                                        <li>Reserved for use of tunneling proxy servers. </li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <em>Idempotent Methods</em>
-                                                <ul>
-                                                    <li>The methods GET, HEAD, PUT, DELETE, TRACE, and OPTION are element of a set that is <strong>unchanged in value</strong> when multiplied or otherwise operated on by itself.</li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <em>Safe Methods</em>
-                                                <ul>
-                                                    <li>The methods POST, PUT, and DELETE are element of a set that has <strong>a change in value</strong> when multiplied or otherwise operated on by itself.</li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <em>Unsafe Methods</em>
-                                                <ul>
-                                                    <li>The methods GET, HEAD, TRACE, and OPTION are element of a set that has <strong>no change in value</strong> when multiplied or otherwise operated on by itself.</li>
-                                                </ul>
-                                            </li>
+                                            <li>Request the server to store the enclosed entity in the message under the specified request URI.</li>
                                         </ul>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div id="messageheaders" class="ten columns">
-                                    <a class="hide">
-                                        <h4><strong>HTTP Message Headers</strong></h4>
-                                    </a>
-                                    <div class="content">
-                                        <ul>
-                                            <a class="hide">
-                                                <li id="generalheader"><strong> GENERAL HEADER FIELDS</strong> </li>
-                                            </a>
-                                            <div class="content">
-                                                <ul>
+                        <div id="requestMethods7" class="tab">
+                        <h4><strong>DELETE</strong></h4>
+                        <ul>
+                            <li>Request the server to delete the resource identified by the request URI.</li>
+                        </ul>
+                        </div>
+                        <div id="requestMethods8" class="tab">
+                        <h4><strong>CONNECT</strong></h4>
+                        <ul>
+                            <li>Reserved for use of tunneling proxy servers. </li>
+                        </ul>
+                        </div>
+                        <div id="requestMethods9" class="tab">
+                        <h4><strong>Idempotent Methods</strong></h4>
+                        <ul>
+                            <li>The methods GET, HEAD, PUT, DELETE, TRACE, and OPTION are element of a set that is <strong>unchanged in value</strong> when multiplied or otherwise operated on by itself.</li>
+                        </ul>
+                        </div>
+                        <div id="requestMethods10" class="tab">
+                        <h4><strong>Safe Methods</strong></h4>
+                        <ul>
+                            <li>The methods POST, PUT, and DELETE are element of a set that has <strong>a change in value</strong> when multiplied or otherwise operated on by itself.</li>
+                        </ul>
+                        </div>
+                        <div id="requestMethods11" class="tab">
+                        <h4><strong>Unsafe Methods</strong></h4>
+                        <ul>
+                            <li>The methods GET, HEAD, TRACE, and OPTION are element of a set that has <strong>no change in value</strong> when multiplied or otherwise operated on by itself.</li>
+                        </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div id="messageHeaders" class="row">
+            <h2>Message Headers</h2>
+            <div class="tabs">
+                <ul class="tab-links">
+                    <li class="active"><a href="#messageHeaders1">General Header Fields</a></li>
+                    <li><a href="#messageHeaders2">Request Header Fields</a></li>
+                    <li><a href="#messageHeaders3">Response Header Fields</a></li>
+                    <li><a href="#messageHeaders4">Entity Header Fields</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div id="messageHeaders1" class="tab active">
+                        <h4><strong>GENERAL HEADER FIELDS</strong></h4>
+                        <ul>
                                                     <li>uses both client and the server.</li>
                                                     <ul>
                                                         <li> Cache-control: cache response server to client.</li>
@@ -472,13 +490,10 @@
                                                         <li> Warning: protocol variation. </li>
                                                     </ul>
                                                 </ul>
-                                            </div>
-                                            <a class="hide">
-                                                <li id="requestheader"> <strong> REQUEST HEADER FIELDS </strong> 
-                                                </li>
-                                            </a>
-                                            <div class="content">
-                                                <ul>
+                    </div>
+                    <div id="messageHeaders2" class="tab">
+                        <h4><strong>REQUEST HEADER FIELDS</strong></h4>
+                        <ul>
                                                     <li>it comes from the client's request.</li>
                                                     <ul>
                                                         <li>Accept</li>
@@ -501,12 +516,10 @@
                                                         <li> User-Agent </li>
                                                     </ul>
                                                 </ul>
-                                            </div>
-                                            <a class="hide">
-                                                <li id="responseheader"> <strong> RESPONSE HEADER FIELDS </strong> </li>
-                                            </a>
-                                            <div class="content">
-                                                <ul>
+                    </div>
+                    <div id="messageHeaders3" class="tab">
+                        <h4><strong>RESPONSE HEADER FIELDS</strong></h4>
+                        <ul>
                                                     <li>it comes from the server's response. </li>
                                                     <ul>
                                                         <li>Accept-Range: portion of the copy accepted.</li>
@@ -536,22 +549,20 @@
                                                         <li>WWW-Authenticate</li>
                                                     </ul>
                                                 </ul>
-                                            </div>
-                                            <a class="hide">
-                                                <li id="entityheader"> <strong> ENTITY HEADER FIELDS </strong> </li>
-                                            </a>
-                                            <div class="content">
-                                                <ul>
-                                                    <li>message body.</li>
-                                                    <ul>
-                                                        <li>Allow</li>
-                                                    </ul>
-                                                    <ul>
-                                                        <li>Content-encoding</li>
-                                                    </ul>
-                                                    <ul>
-                                                        <li>Content-language</li>
-                                                    </ul>
+                    </div>
+                    <div id="messageHeaders4" class="tab">
+                        <h4><strong>ENTITY HEADER FIELDS</strong></h4>
+                        <ul>
+                           <li>message body.</li>
+                            <ul>
+                                <li>Allow</li>
+                            </ul>
+                            <ul>
+                                <li>Content-encoding</li>
+                            </ul>
+                            <ul>
+                                <li>Content-language</li>
+                            </ul>
                                                     <ul>
                                                         <li>Content-length</li>
                                                     </ul>
@@ -573,56 +584,58 @@
                                                     <ul>
                                                         <li>Last Modified</li>
                                                     </ul>
-                                                </ul>
-                                            </div>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                           
+                        </ul>
                     </div>
-                    <div class="row">
-                        <div id="statuscodes" class="ten columns">
-                            <a class="hide">
-                                <h4><strong>HTTP Status Codes</strong></h4>
-                            </a>
-                            <div class="content">
-                                <ul>
-                                    <a class="hide"><li id="informational"> <strong>Informational (1xx)</strong></li></a>
-                                    <div class="content">
-                                        <ul>
-                                            <li> 100 Continue </li>
-                                            <li> 101 Switching Protocols</li>
-                                        </ul>
-                                    </div>
-                                    <a class="hide"><li id="success"> <strong>Success (2xx)</strong></li></a>
-                                    <div class="content">
-                                        <ul>
-                                            <li> 200 OK </li>
-                                            <li> 202 Accepted </li>
-                                            <li> 203 Non-Authorative Information </li>
-                                            <li> 204 No Content </li>
-                                            <li> 205 Reset Content </li>
-                                            <li> 206 Partial Content </li>
-                                        </ul>
-                                    </div>
+                    
+            </div>
+        </div>
 
-
-                                    <a class="hide"><li id="redirection"> <strong>Redirection (3xx)</strong></li></a>
-                                    <div class="content">
-                                        <ul>
-                                            <li> 300 Multiple Choices </li>
-                                            <li> 301 Moved Permanently </li>
-                                            <li> 302 Found </li>
-                                            <li> 303 See Other </li>
-                                            <li> 304 Not Modified </li>
-                                            <li> 305 Use Proxy </li>
-                                            <li> 307 Temporary Redirect </li>
-                                        </ul>
-                                    </div>
-                                    <a class="hide"><li id="clienterror"> <strong>Client Error (4xx)</strong> </li></a>
-                                    <div class="content">
-                                        <ul>
+        </div>
+        <div id="statusCode" class="row">
+            <h2>Status Code</h2>
+            <div class="tabs">
+                <ul class="tab-links">
+                    <li class="active"><a href="#statusCode1">Informational (1xx)</a></li>
+                    <li><a href="#statusCode2">Success (2xx)</a></li>
+                    <li><a href="#statusCode3">Redirection (3xx)</a></li>
+                    <li><a href="#statusCode4">Client Error (4xx)</a></li>
+                    <li><a href="#statusCode5">Server Error (5xx)</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div id="statusCode1" class="tab active">
+                        <h4><strong>Informational (1xx)</strong></h4>
+                            <ul>
+                                <li> 100 Continue </li>
+                                <li> 101 Switching Protocols</li>
+                            </ul>
+                    </div>
+                    <div id="statusCode2" class="tab">
+                        <h4><strong>Success (2xx)</strong></h4>
+                        <ul>
+                            <li> 200 OK </li>
+                            <li> 202 Accepted </li>
+                            <li> 203 Non-Authorative Information </li>
+                            <li> 204 No Content </li>
+                            <li> 205 Reset Content </li>
+                            <li> 206 Partial Content </li>
+                        </ul>
+                    </div>
+                    <div id="statusCode3" class="tab">
+                        <h4><strong>Redirection (3xx)</strong></h4>
+                        <ul>
+                             <li> 300 Multiple Choices </li>
+                             <li> 301 Moved Permanently </li>
+                             <li> 302 Found </li>
+                             <li> 303 See Other </li>
+                             <li> 304 Not Modified </li>
+                             <li> 305 Use Proxy </li>
+                             <li> 307 Temporary Redirect </li>                    
+                        </ul>
+                    </div>
+                    <div id="statusCode4" class="tab">
+                        <h4><strong>Client Error (4xx)</strong></h4>
+                        <ul>
                                             <li> 400 Bad Request </li>
                                             <li> 401 Unauthorized </li>
                                             <li> 402 Payment Required </li>
@@ -640,26 +653,32 @@
                                             <li> 415 Unsupported Media Type </li>
                                             <li> 416 Request Range Not Satisfiable </li>
                                             <li> 417 Expectation Failed </li>
-                                        </ul>
-                                    </div>
-                                    <a class="hide"><li id="servererror"> <strong>Server Error (5xx)</strong> </li></a>
-                                    <div class="content">
-                                        <ul>
-                                            <li> 500 Internal Server Error </li>
-                                            <li> 501 Not Implemented </li>
-                                            <li> 502 Bad Gateway </li>
-                                            <li> 503 Service Unavailable </li>
-                                            <li> 504 Gateway Timeout </li>
-                                            <li> 505 HTTP Version Not Supported </li>
-                                        </ul>
-                                    </div>
-                                </ul>
-                            </div>
-                        </div>
+                           
+                        </ul>
+                        
+                         <div id="statusCode5" class="tab">
+                        <h4><strong>Server Error(5xx)</strong></h4>
+                        <ul>
+                            <li> 500 Internal Server Error </li>
+                            <li> 501 Not Implemented </li>
+                            <li> 502 Bad Gateway </li>
+                            <li> 503 Service Unavailable </li>
+                            <li> 504 Gateway Timeout </li>
+                            <li> 505 HTTP Version Not Supported </li>                   
+                        </ul>
                     </div>
-                </div>
+                    </div>
+                    
             </div>
         </div>
+
+        </div>            
+    </div>
+        </div>
+    </div>
+       
+
+
         <!-- footer -->
         <footer>
             <div class="container">
