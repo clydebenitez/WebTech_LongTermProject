@@ -499,24 +499,24 @@
                         <ul>
                                                     <li>it comes from the client's request.</li>
                                                     <ul>
-                                                        <li>Accept</li>
-                                                        <li>Accept-charset</li>
-                                                        <li>Accept-encoding</li>
-                                                        <li>Accept-Language</li>
-                                                        <li>Authorization</li>
-                                                        <li> Expect </li>
-                                                        <li> From </li>
-                                                        <li> Host </li>
-                                                        <li> If-Match </li>
-                                                        <li> If-Modified-Since </li>
-                                                        <li> If-None-Match </li>
-                                                        <li> If-Range</li>
-                                                        <li> If-Unmodified-Since </li>
-                                                        <li> Max-forward </li>
-                                                        <li> Proxy-Authorization </li>
-                                                        <li> Range </li>
-                                                        <li> Referer </li>
-                                                        <li> User-Agent </li>
+                                                        <li>Accept: Content-Types that are acceptable for the response. </li>
+                                                        <li>Accept-charset: Character sets that are acceptable.</li>
+                                                        <li>Accept-encoding: List of acceptable encodings. See HTTP compression. </li>
+                                                        <li>Accept-Language: List of acceptable human languages for response</li>
+                                                        <li>Authorization: Authentication credentials for HTTP authentication. </li>
+                                                        <li> Expect: Indicates that particular server behaviors are required by the client. </li>
+                                                        <li> From: The email address of the user making the request </li>
+                                                        <li> Host: The domain name of the server (for virtual hosting), and the TCP port number on which the server is listening. The port number may be omitted if the port is the standard port for the service requested. </li>
+                                                        <li> If-Match: Only performs the action if the client supplied entity matches the same entity on the server. This is mainly for methods like PUT to only update a resource if it has not been modified since the user last updated it. </li>
+                                                        <li> If-Modified-Since: Allows a 304 Not Modified to be returned if content is unchanged. </li>
+                                                        <li> If-None-Match: Allows a 304 Not Modified to be returned if content is unchanged </li>
+                                                        <li> If-Range: If the entity is unchanged, send me the part(s) that I am missing; otherwise, send me the entire new entity.</li>
+                                                        <li> If-Unmodified-Since: Only send the response if the entity has not been modified since a specific time. </li>
+                                                        <li> Max-forward: Limit the number of times the message can be forwarded through proxies or gateways. </li>
+                                                        <li> Proxy-Authorization: Authorization credentials for connecting to a proxy. </li>
+                                                        <li> Range: Request only part of an entity. Bytes are numbered from 0./li>
+                                                        <li> Referer: This is the address of the previous web page from which a link to the currently requested page was followed.  </li>
+                                                        <li> User-Agent: The user agent string of the user agent. </li>
                                                     </ul>
                                                 </ul>
                     </div>
@@ -567,7 +567,7 @@
                                 <li>Content-language</li>
                             </ul>
                                                     <ul>
-                                                        <li>Content-length</li>
+                                                        <li>Content-length: The length of the request body in octets (8-bit bytes)</li>
                                                     </ul>
                                                     <ul>
                                                         <li>Content-location: fetching the location of the resource.</li>
@@ -579,7 +579,7 @@
                                                         <li> Content-range: partial reviewal of the resource.</li>
                                                     </ul>
                                                     <ul>
-                                                        <li>Content-type</li>
+                                                        <li>Content-type: The MIME type of the body of the request (used with POST and PUT requests).</li>
                                                     </ul>
                                                     <ul>
                                                         <li>Expires</li>
