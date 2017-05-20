@@ -35,20 +35,28 @@
             </div>
         </div>
         <div id="sideNav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a onclick="closeNav()" class="jspButton"> Java Server Pages</a>
+             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#jspButton" onclick="closeNav()" class="jspButton">Java Server Pages</a>
             <ul class="subtopics">
                 <li>Introduction</li>
                 <li>Motivation</li>
-                <li>Features<li>
+                <li>Features</li>
                 <li>Components</li>
             </ul>
-            <a onclick="closeNav()" class="servletButton">Servlet</a>
+            <a href="#servletButton" onclick="closeNav()" class="servletButton">Servlet</a>
             <ul class="subtopics">
                 <li>Introduction</li>
                 <li>Servlet Processing</li>
                 <li>Javax Servlet</li>
                 <li>Javax Servlet HTTP</li>
+            </ul>
+            <a href="#phpButton" onclick="closeNav()" class="phpButton">PHP</a>
+            <ul class="subtopics">
+                <li>Introduction</li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
             </ul>
         </div>
         <div id="main" class="container section info">
@@ -58,8 +66,10 @@
             <nav>
                 <h5><strong>Topics</strong></h5>
                 <ul>
-                    <a class="button sideButton jspButton" href="#html">Java Server Pages</a>
+                    <a class="button sideButton jspButton" href="#jsp">Java Server Pages</a>
                     <a class="button sideButton servletButton" href="#servlet">Servlet</a>
+                    <a class="button sideButton phpButton" href="#php">PHP</a>
+                    <!-- <a class="button sideButton" href="#jsSamples" id="jsSamplesButton">JS Sample Codes</a> -->
                 </ul>
             </nav>
         </div>
@@ -68,13 +78,13 @@
             <h2>Java Server Pages</h2>
             <div class="tabs">
                 <ul class="tab-links">
-                    <li class="active"><a href="#tab1">Introduction</a></li>
-                    <li><a href="#tab2">Motivation</a></li>
-                    <li><a href="#tab3">Features</a></li>
-                    <li><a href="#tab4">Components</a></li>
+                    <li class="active"><a href="#jsp0">Introduction</a></li>
+                    <li><a href="#jsp1">Motivation</a></li>
+                    <li><a href="#jsp2">Features</a></li>
+                    <li><a href="#jsp3">Components</a></li>
                 </ul>
-                 <div class="tab-content">
-                    <div id="tab1" class="tab active">
+                <div class="tab-content">
+                    <div id="jsp0" class="tab active">
                         <div class="row">
                             <div class="nine columns">
                                 <div class="row">
@@ -98,18 +108,18 @@
                                                 </ul>
                                             </div>
                                         </div>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                  <div id="tab2" class="tab">
+                    <div id="jsp1" class="tab">
                         <div class="row">
                             <div class="nine columns">
                                 <div class="row">
-                                    <div id="motivation" class="twelve columns">
-                                        <div id="motivation" class="twelve columns">
+                                    <div id="features" class="twelve columns">
+                                        <div id="history" class="twelve columns">
                                             <div class="hide">
                                                 <a class="topic">
                                                     <h4><strong>Motivation</strong></h4>
@@ -117,33 +127,33 @@
                                             </div>
                                             <div class="">
                                                 <ul class = "c">
-                                                    <li>It is typically a good idea to separate business logic from presentation concern </li>
+                                                   <li>It is typically a good idea to separate business logic from presentation concern </li>
                                                     <ul>
                                                         <li>Allows modern web development teams to be divided up into programmers and web page authors / designers </li>
                                                         <li>Fosters component reuse (e.g. the same data object can be consumed by user agents of varying capabilities and needs) </li>
                                                     </ul>
                                                     <li>Servlets can be very powerful for programming business logic, but are very awkward to use when generating static (i.e. template) content</li>
                                                     <li>(X)HTML marked-up documents are very convenient for static content generation but cannot be used to program business logic (or generate dynamic content arising from data produced by the business logic).  </li>
-                                                   
                                                 </ul>
                                             </div>
                                         </div>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
-                      </div>
-                </div>
-                                <div id="tab3" class="tab">
-                    <div class="row">
-                        <div class="nine columns">
-                            <div class="row">
-                                <div id="features" class="twelve columns">
-                                    <div id="features" class="twelve columns">
-                                        <div class="hide">
-                                            <a class="topic">
-                                                <h4><strong>Features</strong></h4>
-                                            </a>
-                                        </div>
+                        </div>
+                    </div>
+                    <div id="jsp2" class="tab">
+                        <div class="row">
+                            <div class="nine columns">
+                                <div class="row">
+                                    <div id="elements" class="twelve columns">
+                                        <div id="elements" class="twelve columns">
+                                            <div class="hide">
+                                                <a class="topic">
+                                                    <h4><strong>Features</strong></h4>
+                                                </a>
+                                            </div>
                                             <div class="">
                                                 <ul class = "c">
                                                     <li>Text-based document capable of generating both static and dynamic content (typically intermixed) </li>
@@ -155,26 +165,27 @@
                                                     <li>Template text are converted into JSPWriter </li>
                                                 </ul>
                                             </div>
+                                        </div>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                 <div id="tab4" class="tab">
-                    <div class="row">
-                        <div class="nine columns">
-                            <div class="row">
-                                <div id="components" class="twelve columns">
-                                    <div id="components" class="twelve columns">
-                                        <div class="hide">
-                                            <a class="topic">
-                                                <h4><strong>Components</strong></h4>
-                                            </a>
-                                        </div>
+                    <div id="jsp3" class="tab">
+                        <div class="row">
+                            <div class="nine columns">
+                                <div class="row">
+                                    <div id="xhtml" class="twelve columns">
+                                        <div id="xhtml" class="twelve columns">
+                                            <div class="hide">
+                                                <a class="topic">
+                                                    <h4><strong>Components</strong></h4>
+                                                </a>
+                                            </div>
                                             <div class="">
-                                                <ul class = "c">
-                                                    <li>Template (i.e. static) text  </li>
+                                                <ul class= "c">
+                                                     <li>Template (i.e. static) text  </li>
                                                     <li>JSP elements </li>
                                                         <ul>
                                                             <li>Directives  </li>
@@ -204,45 +215,6 @@
                                                                         </ul>
                                                                 </ul>
                                                             </ul>
-                                                        </ul>
-                                                    </div>      
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                 <div id="content" class="nine columns">
-        <div id="servlet" class="row">
-            <h2>Servlet</h2>
-            <div class="tabs">
-                <ul class="tab-links">
-                    <li class="active"><a href="#servlet1">Introduction</a></li>
-                    <li><a href="#servlet2">Servlet Processing</a></li>
-                    <li><a href="#servlet3">Javax Servlet</a></li>
-                    <li><a href="#servlet4">Javax Servlet HTTP</a></li>
-                </ul>
-                 <div class="tab-content">
-                    <div id="servlet1" class="tab active">
-                        <div class="row">
-                            <div class="nine columns">
-                                <div class="row">
-                                    <div id="introduction" class="twelve columns">
-                                        <div id="introduction" class="twelve columns">
-                                            <div class="hide">
-                                                <a class="topic">
-                                                    <h4><strong>Introduction</strong></h4>
-                                                </a>
-                                            </div>
-                                            <div class="">
-                                                <ul class = "c">
-                                                    <li>Java Object based on the Servlet API.</li>
-                                                    <li>Runs in a server application to answer client requests; technically, servlets are not tied
-                                                        to a speicifc client-server protocol, but they are most commonly used with HTTP and the
-                                                        term 'servlet' is often used in the context of an "HTTP Servlet".</li>
-                                                    <li>Web-tier components in the Java EE architecture.</li>
-                                                    <li>Runs in and is managed by a web-tier container called the 'Servlet Container'.</li>
-                                                    <li>Mapped to URLs to which clients send requests to the server</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -252,18 +224,36 @@
                         </div>
                     </div>
                 </div>
-                <div id="servlet2" class="tab">
-                    <div class="row">
-                        <div class="nine columns">
-                            <div class="row">
-                                <div id="processing" class="twelve columns">
-                                    <div id="processing" class="twelve columns">
-                                        <div class="hide">
-                                            <a class="topic">
-                                                <h4><strong>Servlet Processing</strong></h4>
-                                            </a>
-                                        </div>
-                                            <div class="">
+            </div>
+        </div>
+        <div  id="servlet"class="row">
+            <h2>Servlet</h2>
+            <div class="tabs">
+                <ul class="tab-links">
+                    <li class="active"><a href="#servlet1">Introduction</a></li>
+                    <li><a href="#servlet2">Servlet Processing</a></li>
+                    <li><a href="#servlet3">Javax Servlet</a></li>
+                    <li><a href="#servlet4">Javax Servlet HTTP</a></li>
+                    <li><a href="#servlet5">Servlet Configuration</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div id="servlet1" class="tab active">
+                        <h4><strong>Introduction</strong></h4>
+                         <div class="">
+                                <ul class = "c">
+                                    <li>Java Object based on the Servlet API.</li>
+                                    <li>Runs in a server application to answer client requests; technically, servlets are not tied
+                                                        to a speicifc client-server protocol, but they are most commonly used with HTTP and the
+                                                        term 'servlet' is often used in the context of an "HTTP Servlet".</li>
+                                    <li>Web-tier components in the Java EE architecture.</li>
+                                    <li>Runs in and is managed by a web-tier container called the 'Servlet Container'.</li>
+                                    <li>Mapped to URLs to which clients send requests to the server</li>
+                                </ul>
+                                            </div>
+                    </div>
+                    <div id="servlet2" class="tab">
+                        <h4><strong>Servlet Processing</strong></h4>
+                        <div class="">
                                                 <ol class = "c">
                                                 	<li>Client sends a request to a web server URL that is mapped to a servlet.</li>
                                                 	<li>Web server passes on the request to the servlet container.</li>
@@ -279,23 +269,10 @@
                                                 		servlet has been unloaded; before a servlet is unloaded, the servlet container invokes its destroy method.</li>
                                                	</ol>
        										 </div>
-       								 </div>
-      						    </div>
-      					   </div>
-      			        </div>
-    				</div>
-    		<div id="servlet3" class="tab">
-    				<div class="row">
-    					<div class="nine columns">
-    						<div class="row">
-    							<div id="javax1" class="twelve columns">
-    								<div id="javax1" class="twelve columns">
-    									<div class="hide">
-    										<a class="topic">
-    											<h4><strong>Javax Servlet</strong></h4>
-    										</a>
-    									</div>
-    										<div class="">
+                    </div>
+                    <div id="servlet3" class="tab">
+                        <h4><strong>Javax Servlet</strong></h4>
+                                <div class="">
     											<ul class="c">
     												<li>Servlet</li>
     												<li>GenericServlet</li>
@@ -324,25 +301,11 @@
                                                         </ul>
     											</ul>
     										</div>
-    								</div>
-    							</div>
-    						</div>
-    					</div>
-    				</div>
-    			</div>
-    			<div id="servlet4" class="tab">
-    				<div class="row">
-    					<div class="nine columns">
-    						<div class="row">
-    							<div id="javax2" class="twelve columns">
-    								<div id="javax2" class="twelve columns">
-    									<div class="hide">
-    										<a class="topic">
-    											<h4><strong>Javax Servlet HTTP</strong></h4>
-    										</a>
-    									</div>
-    										<div class="">
-    											<ul class="c">
+                    </div>
+                    <div id="servlet4" class="tab">
+                        <h4><strong>Javax Servlet HTTP</strong></h4>
+                        <div class="">
+    				        <ul class="c">
     												<li>HTTPServlet</li>
     													<ul>
                                                             <li>it provides the definition of HTTP specific methods such as doGet(), doPost(), doTrace(), etc.</li>
@@ -365,24 +328,10 @@
                                                         </ul>
     											</ul>
     													</div>
-    								</div>
-    							</div>
-    						</div>
-    					</div>
-    				</div>
-    			</div>
-                    <div id="servlet5" class="tab">
-    				<div class="row">
-    					<div class="nine columns">
-    						<div class="row">
-    							<div id="config" class="twelve columns">
-    								<div id="config" class="twelve columns">
-    									<div class="hide">
-    										<a class="topic">
-    											<h4><strong>Servlet Configuration</strong></h4>
-    										</a>
-    									</div>
-    										<div class="">
+                    </div>
+                         <div id="servlet5" class="tab">
+                                    <h4><strong>Servlet Configuration</strong></h4>
+                                   <div class="">
     											<ul class="c">
     												private static ServletConfig getServletConfig(final ServletConfig servletConfig){<br>
     															return new ServletConfig(){<br>
@@ -416,26 +365,86 @@
     																public Enumeration<String> getInitParameterNames(){<br>
     																	return PARAMS.keys();<br>
     																}
-    											</ul>	
-    										</div>
-    								</div>
-    							</div>
-    						</div>
-    					</div>
-    				</div>
-    			</div>
-    		</div>
-    		</div>
-    		</div>                
-    		</div>
-    		</div>
-    		</div>
-    		</div>
-    		</div>            
-    
                                                     
-                
-
+                                                    </div>
+                                 </div>
+                                   
+                     
+                </div>
+            </div>
+        </div>
+        <div id="php" class="row">
+            <h2>Hypertext Preprocessor(PHP)</h2>
+            <div class="tabs">
+                <ul class="tab-links">
+                    <li class="active"><a href="#php1">Introduction</a></li>
+                    <li><a href="#php2">Superglobals</a></li>
+                    
+                </ul>
+                <div class="tab-content">
+                    <div id="php1" class="tab active">
+                        <h4><strong>Introduction</strong></h4>
+                       <p> -is a widely-used open source general-purpose scripting language that is especially suited for web development and can be embedded into HTML.</p>
+                        <p> -takes most of its syntax from C, Java, and Perl</p>
+                        <p> -PHP scripts are executed on the server</p>
+                        <p> -can be used to control user-access</p>
+                    </div>
+                    <div id="php2" class="tab">
+                        <h4><strong>Superglobals</strong></h4>
+                      <div class="">
+    				    <ul class="c">
+                            <li>$GLOBALS</li>
+                            <ul>
+                                <li>is a PHP super global variable which is used to access global variables from anywhere in the PHP script (also from within functions or methods).</li>
+                                <li>An associative array containing references to all variables which are currently defined in the global scope of the script. The variable names are the keys of the array.</li>
+                            </ul>
+                            <li>$_SERVER</li>
+                            <ul>
+                                <li>is a PHP super global variable which holds information about headers, paths, and script locations.</li>
+                                <li>is an array containing information such as headers, paths, and script locations</li>
+                            </ul>
+                            <li>$_REQUEST</li>
+                            <ul>
+                                <li>is used to collect data after submitting an HTML form.</li>
+                            </ul>
+                            <li>$_POST</li>
+                            <ul>
+                                <li>used to collect form data after submitting an HTML form with method="post". $_POST is also widely used to pass variables.</li>
+                            </ul>
+                            <li>$_GET</li>
+                            <ul>
+                                <li>used to collect form data after submitting an HTML form with method="get".</li>
+                                <li>can also collect data sent in the URL.</li>
+                            </ul>
+                            <li>$_FILES</li>
+                            <ul>
+                                <li>an associative array of items uploaded to the current script via the HTTP POST method</li>
+                            </ul>
+                            <li>$_ENV</li>
+                            <ul>
+                                <li>an associative array of variables passed to the current script via the environment method.</li>
+                            </ul>
+                            <li>$_COOKIE</li>
+                            <ul>
+                                <li>an associative array of variables passed to the current script via HTTP Cookies.</li>
+                            </ul>
+                            <li>$_SESSION</li>
+                            <ul>
+                                <li>an associative array containing session variables available to the current script.</li>
+                            </ul>
+                          </ul>
+    											
+                                                    
+                    </div>
+                    </div>
+            </div>
+        </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</div>
         <!-- footer -->
         <footer>
             <div class="container">
