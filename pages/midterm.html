@@ -599,30 +599,9 @@
                                         <ul>
                                             <li>OBject, Number, Boolean, String, Date, Math, Global, RegExp, Error</li>
                                             <li>Arrays (Array)</li>
-                                            <pre><code class="javascript">
-                                            <span class ="hljs-keyword">var</span> myArr = [];
-                                            <span class ="hljs-keyword">var</span> myArr = <span class ="hljs-keyword">new</span> <span class="hljs-built_in">Array</span>();
-                                            myArr.push(<span class="hljs-string">'sample'</span>);
-                                            myArr.push({<span class="hljs-attr">name</span>:<span class="hljs-string">'spencer'</span>});
-                                            myArr.push(<span class="hljs-keyword">function</span>(){ <span class="hljs-built_in">console</span>.log(<span class = "hljs-string">'Hello'</span>); })
-                                            <span class = "hljs-keyword">var</span> item = myArr.pop();
-                                            myArr.unshift(<span class="hljs-string">'first item'</span>);
-                                            <span class = "hljs-keyword">var</span> firstItem = myArr.shift();
-                                            <span class = "hljs-keyword">var</span> arr = [<span class="hljs-string">'one'</span>, <span class="hljs-string">'two'</span>, <span class="hljs-string">'three'</span>];
-                                            <span class="hljs-keyword">var</span> sliced = arr.slice(<span class="hljs-number">0</span>, <span class="hljs-number">2</span>);
-                                            arr.reverse();
-                                            arr.sort();
-                                            arr.sort(<span class="hljs-keyword">function</span>(a, b){
-                                                <span class="hljs-keyword">return</span> a - b;
-                                            });
-                                            arr.join(<span class="hljs-string">','</span>);
-                                            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> index <span class="hljs-keyword">in</span> arr){
-                                                <span class="hljs-built_in">console</span>.log(arr[index]);
-                                            }
-                                            arr.forEach(<span class="hljs-keyword">function</span>(value)){
-                                                <span class="hljs-built_in">console</span>.log(value);
-                                            });
-                                            </code></pre>
+<pre><code class="javascript">
+<span class ="hljs-keyword">var</span> myArr = [];<br><span class ="hljs-keyword">var</span> myArr = <span class ="hljs-keyword">new</span> <span class="hljs-built_in">Array</span>();<br>myArr.push(<span class="hljs-string">'sample'</span>);<br>myArr.push({<span class="hljs-attr">name</span>:<span class="hljs-string">'spencer'</span>});<br>myArr.push(<span class="hljs-keyword">function</span>(){ <span class="hljs-built_in">console</span>.log(<span class = "hljs-string">'Hello'</span>); })<br><span class = "hljs-keyword">var</span> item = myArr.pop();<br>myArr.unshift(<span class="hljs-string">'first item'</span>);<br><span class = "hljs-keyword">var</span> firstItem = myArr.shift();<br><span class = "hljs-keyword">var</span> arr = [<span class="hljs-string">'one'</span>, <span class="hljs-string">'two'</span>, <span class="hljs-string">'three'</span>];<br><span class="hljs-keyword">var</span> sliced = arr.slice(<span class="hljs-number">0</span>, <span class="hljs-number">2</span>);<br>arr.reverse();<br>arr.sort();<br>arr.sort(<span class="hljs-keyword">function</span>(a, b){    <br><span class="hljs-keyword">return</span> a - b;<br>});<br>arr.join(<span class="hljs-string">','</span>);<br><span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> index <span class="hljs-keyword">in</span> arr){<br>   <span class="hljs-built_in">console</span>.log(arr[index]);<br>}<br>arr.forEach(<span class="hljs-keyword">function</span>(value)){<br>   <span class="hljs-built_in">console</span>.log(value);<br>});
+</code></pre>
                                             <li>Functions (Function, Arguments)</li>
                                         </ul>
                                         <li>DOM Objects</li>
