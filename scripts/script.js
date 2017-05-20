@@ -73,17 +73,36 @@ $(document).ready(function(){
       $("#jsp").show(300);
       $("#servlet").hide(300);
       $("#php").hide(300);
+      $("#jstl").hide(300);
+      $("#node.js").hide(300);
     });
     $(".servletButton").click(function(){
       $("#jsp").hide(300);
       $("#servlet").show(300);
       $("#php").hide(300);
-        
+      $("#jstl").hide(300); 
+      $("#node.js").hide(300);  
     });
     $(".phpButton").click(function(){
       $("#jsp").hide(300);
       $("#servlet").hide(300);
       $("#php").show(300);
+      $("#jstl").hide(300);
+      $("#node.js").hide(300);
+    });
+    $(".jstlButton").click(function(){
+      $("#jsp").hide(300);
+      $("#servlet").hide(300);
+      $("#php").hide(300);
+      $("#jstl").show(300);
+      $("#node.js").hide(300);
+    });
+     $(".nodeButton").click(function(){
+      $("#jsp").hide(300);
+      $("#servlet").hide(300);
+      $("#php").hide(300);
+      $("#jstl").hide(300);
+      $("#node.js").show(300);
     });
 });
 
