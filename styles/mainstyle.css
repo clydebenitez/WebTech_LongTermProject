@@ -17,7 +17,7 @@ body {
 .header {
     padding: 30px 0 20px 0;
     margin-bottom: 25px;
-    background-image: url(../imgs/homepage.png);
+    background-image: url(../imgs/wall.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;   
@@ -33,7 +33,7 @@ body {
 }
 .logo {
     font-weight: 600;
-    color: #313638;
+    color: cornsilk;
     background-color: black;
     position: fixed;
     top: 0;
@@ -42,7 +42,7 @@ body {
     padding-left: 10px;
     z-index: 1;
 }
-.final{
+.term{
   color: white;
   text-shadow: 3px 3px 30px #000
 }
