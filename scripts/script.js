@@ -69,6 +69,22 @@ $(document).ready(function(){
       $("#messageHeaders").hide(300);
       $("#statusCode").show(300);
     });
+    $(".jspButton").click(function(){
+      $("#jsp").show(300);
+      $("#servlet").hide(300);
+      $("#php").hide(300);
+    });
+    $(".servletButton").click(function(){
+      $("#jsp").hide(300);
+      $("#servlet").show(300);
+      $("#php").hide(300);
+        
+    });
+    $(".phpButton").click(function(){
+      $("#jsp").hide(300);
+      $("#servlet").hide(300);
+      $("#php").show(300);
+    });
 });
 
 var amountScrolled = 300;
