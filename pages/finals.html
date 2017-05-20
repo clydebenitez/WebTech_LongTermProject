@@ -465,77 +465,21 @@
                                 <div class="">
                                     <ul class="c">
                                         <li>Start a PHP Session</li>
-                                        <pre><code class="javascript hljs">
-                                          <span class ="hljs-meta">&lt;?php</span>
-                                          <span class ="hljs-comment">//Start the session</span>
-                                          session_start();
-                                          <span class ="hljs-meta">?&gt;</span>
-                                          &lt;!DOCTYPE html&gt;
-                                          &lt;html&gt;
-                                          &lt;body&gt;
-                                          <span class ="hljs-meta">&lt;?php</span>
-                                          <span class ="hljs-comment">//Set session variable</span>
-                                          $_SESSION["favcolor"] = 'violet';
-                                          $_SESSION["favanimal"] = 'dog';
-                                          echo "Session variables are set.";
-                                          <span class ="hljs-meta">?&gt;</span>
-                                          &lt;/body&gt;
-                                          &lt;/html&gt;
-                                          
-                                            </code></pre>
+<pre><code class="javascript hljs">
+<span class ="hljs-meta">&lt;?php</span><br><span class ="hljs-comment">//Start the session</span><br>session_start();<br><span class ="hljs-meta">?&gt;</span><br>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;body&gt;<br><span class ="hljs-meta">&lt;?php</span><br><span class ="hljs-comment">//Set session variable</span><br>$_SESSION["favcolor"] = 'violet';<br>$_SESSION["favanimal"] = 'dog';<br>echo "Session variables are set.";<br><span class ="hljs-meta">?&gt;</span><br>&lt;/body&gt;<br>&lt;/html&gt;
+</code></pre>
                                         <li>Get PHP Session Variable Values</li>
-                                        <pre><code class="javascript hljs">
-                                          <span class ="hljs-meta">&lt;?php</span>
-                                          <span class ="hljs-comment">//Start the session</span>
-                                          session_start();
-                                          <span class ="hljs-meta">?&gt;</span>
-                                          &lt;!DOCTYPE html&gt;
-                                          &lt;html&gt;
-                                          &lt;body&gt;
-                                          <span class ="hljs-meta">&lt;?php</span>
-                                          <span class ="hljs-comment">//Echo session variables that were set on previous page</span>
-                                          echo "Favorite color is " . $_SESSION["favcolor"] . ".&lt;br&gt;";
-                                          echo "Favorite animal is " . $_SESSION["favanimal"] . ".";
-                                           <span class ="hljs-meta">?&gt;</span>
-                                          &lt;/body&gt;
-                                          &lt;/html&gt;
-                                          
-                                            </code></pre>
+<pre><code class="javascript hljs">
+<span class ="hljs-meta">&lt;?php</span><br><span class ="hljs-comment">//Start the session</span><br>session_start();<br><span class ="hljs-meta">?&gt;</span><br>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;body&gt;<br><span class ="hljs-meta">&lt;?php</span><br><span class ="hljs-comment">//Echo session variables that were set on previous page</span><br>echo "Favorite color is " . $_SESSION["favcolor"] . ".&lt;br&gt;";<br>echo "Favorite animal is " . $_SESSION["favanimal"] . ".";<br><span class ="hljs-meta">?&gt;</span><br>&lt;/body&gt;<br>&lt;/html&gt;
+</code></pre>
                                         <li>Modify a PHP Session Variable</li>
-                                        <pre><code class="javascript hljs">
-                                          <span class ="hljs-meta">&lt;?php</span>
-                                          <span class ="hljs-comment">//Start the session</span>
-                                          session_start();
-                                          <span class ="hljs-meta">?&gt;</span>
-                                          &lt;!DOCTYPE html&gt;
-                                          &lt;html&gt;
-                                          &lt;body&gt;
-                                          <span class ="hljs-meta">&lt;?php</span>
-                                          <span class ="hljs-comment">//to change a session variable, just overwrite it</span>
-                                          $_SESSION["favcolor"] = "violet";
-                                          print_r($_SESSION);
-                                           <span class ="hljs-meta">?&gt;</span>
-                                          &lt;/body&gt;
-                                          &lt;/html&gt;
-                                          </code></pre>
+<pre><code class="javascript hljs">
+<span class ="hljs-meta">&lt;?php</span><br><span class ="hljs-comment">//Start the session</span><br>session_start();<br><span class ="hljs-meta">?&gt;</span><br>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;body&gt;<br><span class ="hljs-meta">&lt;?php</span><br><span class ="hljs-comment">//to change a session variable, just overwrite it</span><br>$_SESSION["favcolor"] = "violet";<br>print_r($_SESSION);<br><span class ="hljs-meta">?&gt;</span><br>&lt;/body&gt;<br>&lt;/html&gt;
+</code></pre>
                                         <li>Destroy a PHP Session</li>
-                                        <pre><code class="javascript hljs">
-                                          <span class ="hljs-meta">&lt;?php</span>
-                                          <span class ="hljs-comment">//Start the session</span>
-                                          session_start();
-                                          <span class ="hljs-meta">?&gt;</span>
-                                          &lt;!DOCTYPE html&gt;
-                                          &lt;html&gt;
-                                          &lt;body&gt;
-                                          <span class ="hljs-meta">&lt;?php</span>
-                                          <span class ="hljs-comment">//remove all session variable</span>
-                                          session_unset();
-                                          <span class ="hljs-comment">//destroy the session</span>
-                                          session_destroy();
-                                           <span class ="hljs-meta">?&gt;</span>
-                                          &lt;/body&gt;
-                                          &lt;/html&gt;
-                                          </code></pre>
+<pre><code class="javascript hljs">
+<span class ="hljs-meta">&lt;?php</span><br><span class ="hljs-comment">//Start the session</span><br>session_start();<br><span class ="hljs-meta">?&gt;</span><br>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;body&gt;<br><span class ="hljs-meta">&lt;?php</span><br><span class ="hljs-comment">//remove all session variable</span><br>session_unset();<br><span class ="hljs-comment">//destroy the session</span><br>session_destroy();<br><span class ="hljs-meta">?&gt;</span><br>&lt;/body&gt;<br>&lt;/html&gt;
+</code></pre>
                                     </ul>
                                 </div>
                             </div>
