@@ -412,11 +412,102 @@
                         <div id="css7" class="tab">
                         <h4><strong> CSS Selectors </strong></h4>
                         <ul>
-                            <li> Type Selector </li>
-                            <li> Universal Selector </li>
-                            <li> Attribute Selector </li>
-                            <li> Class Selector</li>
-                            <li> ID Selector</li>
+                            <li><strong> Type Selector </strong></li>
+                            	<ul>
+                            		<li>element{style properties}</li>
+                            			example:<br>
+                            				p{<br>
+                            				    color:blue<br>
+                            				}
+                            	</ul>
+                            <li><strong> Universal Selector </strong></li>
+                            	<ul>
+                            		<li>*{style properties}</li>
+                            			example:<br>
+                            				*{<br>
+                            					marign: 0;<br>
+                            				}
+                            	</ul>
+                            <li><strong> Attribute Selector </strong></li>
+                            	<ul>
+                            		<li>[attribute]{style properties}</li>
+                            			example:<br>
+                            				a[target]{<br>
+                            					background-color: red;<br>
+                            				}
+                            	</ul>
+                            <li><strong> Class Selector</strong></li>
+                            	<ul>
+                            		<li>.classname{style properties}</li>
+                            			example:<br>
+                            				.intro{<br>
+                            					padding: 0;<br>
+                            				}
+                            	</ul>
+                            <li><strong> ID Selector</strong></li>
+                            	<ul>
+                            		<li>#id_value{style properties}</li>
+                            			example:<br>
+                            				#firstname{<br>
+                            					color: green;<br>
+                            				}
+                            	</ul>
+                            <li><strong> Grouping Selector</strong></li>
+                            	<ul>
+                            		<li>selector,selector,element{style properties}</li>
+                            			example:<br>
+                            				h1,h2,p{<br>
+                            					text-align: center;<br>
+                            				}
+                            	</ul>
+                            <li><strong> Adjacent Sibling Selector</strong></li>
+                            	<ul>
+                            		<li>formet_element + target_element{style properties}</li>
+                            			example:<br>
+                            				div + p{<br>
+                            					color: orange;<br>
+                            				}
+                            	</ul>
+                            <li><strong> General Sibling Selector</strong></li>
+                            	<ul>
+                            		<li>element ~ element{style properties}</li>
+                            			example:<br>
+                            				p ~ span{<br>
+                            					text-align: left;<br>
+                            				}
+                            	</ul>
+                            <li><strong> Child Selector</strong></li>
+                            	<ul>
+                            		<li> selector1 > selector2{style properties}</li>
+                            			example:<br>
+                            				ul > li{<br>
+                            					padding: 5px;<br>
+                            				}
+                            	</ul>
+                            <li><strong> Descendant Selector</strong></li>
+                            	<ul>
+                            		<li> selector1 selector2 {style properties}</li>
+                            			example:<br>
+                            				div span{<br>
+                            					text-align: right;<br>
+                            				}
+                            	</ul>
+                            <li><strong> Pseudo-element</strong></li>
+                            	<ul>
+                            		<li>selector::pseudo-element{style properties}</li>
+                            			example:<br>
+                            				.exciting-text::after{<br>
+                            					content: "<- now this *is* exciting->";<br>
+                            				}
+                            	</ul>
+                            <li><strong> Pseudo-class</strong></li>
+                            	<ul>
+                            		<li>element:pseudo-class{style properties}</li>
+                            			example:<br>
+                            				a:link{<br>
+                            					color: blue;<br>
+                            				}
+                            	</ul>
                         </ul>
                 </div>
                 </div>
