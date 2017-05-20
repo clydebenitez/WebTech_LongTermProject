@@ -565,7 +565,6 @@
                                                 <td>c:url</td>
                                                 <td> It creates a URL with optional query parameters.</td>
                                             </tr>
-                                            
                                         </table>
                                     </ul>
                                 </div>
@@ -574,12 +573,40 @@
                                 <h4><strong>SQL Tag Library</strong></h4>
                                 <div class="">
                                     <ul class="c">
-                                        <ul>
-                                            <li>Database connections</li>
-                                            <li>queries</li>
-                                            <li>updates</li>
-                                        </ul>
+                                      <p> The SQL tag library allows the tag to interact with RDBMSs (Relational Databases) such as Microsoft SQL Server, mySQL, or Oracle. </p>
                                     </ul>
+                                    
+                                           <h4><strong> JSTL SQL Tags Lists </strong></h4>
+                                        <table style="width:100%">
+                                            <tr>
+                                                <th>Tags</th>
+                                                <th>Description</th> 
+                                            </tr>
+                                            <tr>
+                                                <td>sql:setDataSource</td>
+                                                <td>It is used for creating a simple data source suitable only for prototyping. </td>
+                                            </tr>
+                                            <tr>
+                                                <td>sql:query</td>
+                                                <td>It is used for executing the SQL query defined in its sql attribute or the body. </td>
+                                            </tr>
+                                            <tr>
+                                                <td>c:update</td>
+                                                <td>It is used for executing the SQL update defined in its sql attribute or in the tag body. </td>
+                                            </tr>
+                                             <tr>
+                                                <td>c:param</td>
+                                                <td>It is used for sets the parameter in an SQL statement to the specified value. </td>
+                                            </tr>
+                                             <tr>
+                                                <td>c:dateParam</td>
+                                                <td>It is used for sets the parameter in an SQL statement to a specified java.util.Date value.</td>
+                                            </tr>
+                                             <tr>
+                                                <td>c:transaction</td>
+                                                <td>It is used to provide the nested database action with a common connection.</td>
+                                            </tr>
+                                        </table>
                                 </div>
                             </div>
                             <div id="jstl4" class="tab">
