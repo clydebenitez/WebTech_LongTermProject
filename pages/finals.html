@@ -10,6 +10,10 @@
         <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script defer type="text/javascript" src="../scripts/script.js"></script>
         <script defer type="text/javascript" src="../scripts/tabsAnimations.js"></script>
+        
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
     </head>
     <body>
         <!-- top section -->
@@ -18,7 +22,7 @@
             <div class="container">
                 <div class="row">
                     <div class="four columns">
-                        <span  class="logo term"style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Finals Overview</span>
+                        <span  class="logo final"style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Finals Overview</span>
                     </div>
                     <div class="eight columns nav">
                         <a class="button" href="../index.html">Home</a>
@@ -67,6 +71,15 @@
                 <li>XML</li>
                 <li>JSTL Function</li>
             </ul>
+            <a href="#nodeButton" onclick="closeNav()" class="nodeButton">JSTL</a>
+            <ul class="subtopics">
+                <li>Introduction</li>
+                <li>Core Tag Library</li>
+                <li>SQL Tag Library</li>
+                <li>Internationalization Tag Library</li>
+                <li>XML</li>
+                <li>JSTL Function</li>
+            </ul>
         </div>
         <div id="main" class="container section info">
         <div class="row">
@@ -78,6 +91,7 @@
                         <a class="button sideButton servletButton" href="#servlet">Servlet</a>
                         <a class="button sideButton phpButton" href="#php">PHP</a>
                         <a class="button sideButton jstlButton" href="#jstl">JSTL</a>
+                        <a class="button sideButton nodeButton" href="#node.js">Node.js</a>
                         <!-- <a class="button sideButton" href="#jsSamples" id="jsSamplesButton">JS Sample Codes</a> -->
                     </ul>
                 </nav>
@@ -389,6 +403,8 @@
                         <ul class="tab-links">
                             <li class="active"><a href="#php1">Introduction</a></li>
                             <li><a href="#php2">Superglobals</a></li>
+                            <li><a href="#php3">Session Handling</a></li>
+                            
                         </ul>
                         <div class="tab-content">
                             <div id="php1" class="tab active">
@@ -441,6 +457,85 @@
                                         <ul>
                                             <li>an associative array containing session variables available to the current script.</li>
                                         </ul>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="php3" class="tab">
+                                <h4><strong>Session Handling</strong></h4>
+                                <div class="">
+                                    <ul class="c">
+                                        <li>Start a PHP Session</li>
+                                        <pre><code class="javascript hljs">
+                                          <span class ="hljs-meta">&lt;?php</span>
+                                          <span class ="hljs-comment">//Start the session</span>
+                                          session_start();
+                                          <span class ="hljs-meta">?&gt;</span>
+                                          &lt;!DOCTYPE html&gt;
+                                          &lt;html&gt;
+                                          &lt;body&gt;
+                                          <span class ="hljs-meta">&lt;?php</span>
+                                          <span class ="hljs-comment">//Set session variable</span>
+                                          $_SESSION["favcolor"] = 'violet';
+                                          $_SESSION["favanimal"] = 'dog';
+                                          echo "Session variables are set.";
+                                          <span class ="hljs-meta">?&gt;</span>
+                                          &lt;/body&gt;
+                                          &lt;/html&gt;
+                                          
+                                            </code></pre>
+                                        <li>Get PHP Session Variable Values</li>
+                                        <pre><code class="javascript hljs">
+                                          <span class ="hljs-meta">&lt;?php</span>
+                                          <span class ="hljs-comment">//Start the session</span>
+                                          session_start();
+                                          <span class ="hljs-meta">?&gt;</span>
+                                          &lt;!DOCTYPE html&gt;
+                                          &lt;html&gt;
+                                          &lt;body&gt;
+                                          <span class ="hljs-meta">&lt;?php</span>
+                                          <span class ="hljs-comment">//Echo session variables that were set on previous page</span>
+                                          echo "Favorite color is " . $_SESSION["favcolor"] . ".&lt;br&gt;";
+                                          echo "Favorite animal is " . $_SESSION["favanimal"] . ".";
+                                           <span class ="hljs-meta">?&gt;</span>
+                                          &lt;/body&gt;
+                                          &lt;/html&gt;
+                                          
+                                            </code></pre>
+                                        <li>Modify a PHP Session Variable</li>
+                                        <pre><code class="javascript hljs">
+                                          <span class ="hljs-meta">&lt;?php</span>
+                                          <span class ="hljs-comment">//Start the session</span>
+                                          session_start();
+                                          <span class ="hljs-meta">?&gt;</span>
+                                          &lt;!DOCTYPE html&gt;
+                                          &lt;html&gt;
+                                          &lt;body&gt;
+                                          <span class ="hljs-meta">&lt;?php</span>
+                                          <span class ="hljs-comment">//to change a session variable, just overwrite it</span>
+                                          $_SESSION["favcolor"] = "violet";
+                                          print_r($_SESSION);
+                                           <span class ="hljs-meta">?&gt;</span>
+                                          &lt;/body&gt;
+                                          &lt;/html&gt;
+                                          </code></pre>
+                                        <li>Destroy a PHP Session</li>
+                                        <pre><code class="javascript hljs">
+                                          <span class ="hljs-meta">&lt;?php</span>
+                                          <span class ="hljs-comment">//Start the session</span>
+                                          session_start();
+                                          <span class ="hljs-meta">?&gt;</span>
+                                          &lt;!DOCTYPE html&gt;
+                                          &lt;html&gt;
+                                          &lt;body&gt;
+                                          <span class ="hljs-meta">&lt;?php</span>
+                                          <span class ="hljs-comment">//remove all session variable</span>
+                                          session_unset();
+                                          <span class ="hljs-comment">//destroy the session</span>
+                                          session_destroy();
+                                           <span class ="hljs-meta">?&gt;</span>
+                                          &lt;/body&gt;
+                                          &lt;/html&gt;
+                                          </code></pre>
                                     </ul>
                                 </div>
                             </div>
@@ -525,6 +620,102 @@
                                     </ul>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                        </div>
+                    <div id="node.js"class="row">
+                    <h2>Node.js</h2>
+                    <div class="tabs">
+                        <ul class="tab-links">
+                            <li class="active"><a href="#node1">Introduction</a></li>
+                            <li><a href="#node2">Features</a></li>
+                            <li><a href="#node3">Built-in modules</a></li>
+                            <li><a href="#node4">Express JS</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="node1" class="tab active">
+                                <h4><strong>Introduction</strong></h4>
+                                <p> - Node.js is an open source server framework which is built on top of the JavaScript V8 engine mostly used for web development - specially for network intensive single page apps, it is free, cross-platform and uses one of the most popular programming language - JavaScript</p>
+                            </div>
+                            <div id="node2" class="tab">
+                                <h4><strong>Features</strong></h4>
+                                <div class="">
+                                    <ul class="c">
+                                       
+                                            <li>Asynchronous and Event Driven</li>
+                                            <ul>
+                                                <li>With the advent of the web there needs to be some kind of way to execute tasks upon receiving them, in the past this is done sychornously, meaning you need to wait for a certain code to finish before you can execute another task, though this can be mitigated by using Threads in some languages, a more powerful approach that Node is built upon is that all of its library API was built asychronous first and an event driven mechanism. Meaning for instance in reading a file you don't need to wait for that block of code to finish before moving through the next one.</li>
+                                                <pre><code class="javascript hljs">
+                                                var fs = require('fs');
+                                                 fs.readFile(function(err, data){
+                                                    console.log('data');
+                                                 });
+                                                 console.log('This will be executed first, depending on the size of the file');
+                                                </code></pre>
+                                            </ul>
+                                            <li>Its Fast!</li>
+                                                <ul>
+                                                    <li>As noted above Node js is built on top of the V8 and there is no question that the V8 engine is one of the best JavaScript engine out there in terms of speed</li>
+                                                </ul>
+                                            <li>Single Threading</li>
+                                                <ul>
+                                                    <li>Node uses a single threaded model with event looping. Meaning there are no threads in Node, it accomplishes tasks -again - in an event driven fashion in a asychronous way. In a way this model can serve a much larger request pool than the traditional Threaded model such as being used on Java or Apache (Php) servers</li>
+                                                </ul>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="node3" class="tab">
+                                <h4><strong>Built-in modules</strong></h4>
+                                <div class="">
+                                    <ul class="c">
+                                        <ul>
+                                            <li>asset - module for asse</li>
+                                            <li>crypto - module for handling OpenSSL enryption</li>
+                                            <li>fs - File system - reading and writing files</li>
+                                            <li>http - module for creating a HTTP server</li>
+                                            <li>https - module for creating a HTTPS server</li>
+                                            <li>net - module for creating network servers and clients</li>
+                                            <li>querystring - module for handiling URL query strings</li>
+                                            <li>url - module for parsing URL a string</li>
+                                            <li>util - utility functions</li>
+                                            <li>zlib - module for compressing/decompressing files</li>
+                                        </ul>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="node4" class="tab">
+                                <h4><strong>Express JS</strong></h4>
+                                <div class="">
+                                    <p>Express is built on top of node so every functionality of Node can be used in an express app, the basics can be as followed: </p>
+                                    <ul>
+                                        <li>First install express on your app</li>
+                                        <pre><code class="javascript hljs">
+                                         npm install express
+                                          </code></pre>
+                                        <li>Then on our app.js</li>
+                                         <pre><code class="javascript hljs">
+                                         // Require express
+                                         var express = require('express')
+                                         var app - express() // instanstiate the app
+                                         
+                                         app.get('/', function (req, res){
+                                            res.send('Hello World from Express!')
+                                         })
+                                         // Let the app listen to port 3000
+                                         app.listen(3000, function(){
+                                            console.log('Example app listening on port 3000!')
+                                         })
+                                          </code></pre>
+                                    </ul>
+                                </div>
+                            </div>
+                           
+                            
+                        </div>
+                        </div>
+                            </div>
+                        </div>
+                        </div
                         </div>
                     </div>
                 </div>
