@@ -67,7 +67,7 @@
                 <li>Introduction</li>
                 <li>Core Tag Library</li>
                 <li>SQL Tag Library</li>
-                <li>Internationalization Tag Library</li>
+                <li>Formatting Tag Library</li>
                 <li>XML</li>
                 <li>JSTL Function</li>
             </ul>
@@ -76,7 +76,7 @@
                 <li>Introduction</li>
                 <li>Core Tag Library</li>
                 <li>SQL Tag Library</li>
-                <li>Internationalization Tag Library</li>
+                <li>Formatting Tag Library</li>
                 <li>XML</li>
                 <li>JSTL Function</li>
             </ul>
@@ -494,7 +494,7 @@
                             <li class="active"><a href="#jstl1">Introduction</a></li>
                             <li><a href="#jstl2">Core Tag Library</a></li>
                             <li><a href="#jstl3">SQL Tag Library</a></li>
-                            <li><a href="#jstl4">Internationalization Tag Library</a></li>
+                            <li><a href="#jstl4">Formatting Tag Library</a></li>
                             <li><a href="#jstl5">XML</a></li>
                             <li><a href="#jstl6">JSTL Function</a></li>
                         </ul>
@@ -508,11 +508,64 @@
                                 <h4><strong>Core Tag Library</strong></h4>
                                 <div class="">
                                     <ul class="c">
-                                        <ul>
-                                            <li>variable support</li>
-                                            <li>flow control</li>
-                                            <li>URL management</li>
-                                        </ul>
+                                        <p> The JSTL core tag provide variable support, URL management, flow control etc.</p>
+                                        <p> The prefix of core tag is c.</p>
+                                       
+                                        <h4><strong> JSTL Core Tag Lists </strong></h4>
+                                        <table style="width:100%">
+                                            <tr>
+                                                <th>Tags</th>
+                                                <th>Description</th> 
+                                            </tr>
+                                            <tr>
+                                                <td>c:out</td>
+                                                <td>It display the result of an expression. </td>
+                                            </tr>
+                                            <tr>
+                                                <td>c:import</td>
+                                                <td>It Retrives relative or an absolute URL and display the contents to either a String in 'var',a Reader in 'varReader' or the page. </td>
+                                            </tr>
+                                            <tr>
+                                                <td>c:set</td>
+                                                <td>It sets the result of an expression under evaluation in a 'scope' variable. </td>
+                                            </tr>
+                                             <tr>
+                                                <td>c:remove</td>
+                                                <td>It is used for removing the specified scoped variable from a particular scope. </td>
+                                            </tr>
+                                             <tr>
+                                                <td>c:catch</td>
+                                                <td>It is used for Catches any Throwable exceptions that occurs in the body.</td>
+                                            </tr>
+                                             <tr>
+                                                <td>c:if</td>
+                                                <td>It is conditional tag used for testing the condition and display the body content only if the expression evaluates is true.</td>
+                                            </tr>
+                                             <tr>
+                                                <td>c:choose, c:when, c:otherwise</td>
+                                                <td>It is the simple conditional tag that includes its body content if the evaluated condition is true.</td>
+                                            </tr>
+                                             <tr>
+                                                <td>c:forEach</td>
+                                                <td> It is the basic iteration tag. It repeats the nested body content for fixed number of times or over collection. </td>
+                                            </tr>
+                                             <tr>
+                                                <td>c:forTokens</td>
+                                                <td> It is the basic iteration tag. It repeats the nested body content for fixed number of times or over collection. </td>
+                                            </tr>
+                                             <tr>
+                                                <td>c:param</td>
+                                                <td> It adds a parameter in a containing 'import' tag's URL. </td>
+                                            </tr>
+                                             <tr>
+                                                <td>c:redirect</td>
+                                                <td> It redirects the browser to a new URL and supports the context-relative URLs.</td>
+                                            </tr>
+                                             <tr>
+                                                <td>c:url</td>
+                                                <td> It creates a URL with optional query parameters.</td>
+                                            </tr>
+                                        </table>
                                     </ul>
                                 </div>
                             </div>
@@ -520,24 +573,91 @@
                                 <h4><strong>SQL Tag Library</strong></h4>
                                 <div class="">
                                     <ul class="c">
-                                        <ul>
-                                            <li>Database connections</li>
-                                            <li>queries</li>
-                                            <li>updates</li>
-                                        </ul>
+                                      <p> The SQL tag library allows the tag to interact with RDBMSs (Relational Databases) such as Microsoft SQL Server, mySQL, or Oracle. </p>
                                     </ul>
+                                    
+                                           <h4><strong> JSTL SQL Tags Lists </strong></h4>
+                                        <table style="width:100%">
+                                            <tr>
+                                                <th>Tags</th>
+                                                <th>Description</th> 
+                                            </tr>
+                                            <tr>
+                                                <td>sql:setDataSource</td>
+                                                <td>It is used for creating a simple data source suitable only for prototyping. </td>
+                                            </tr>
+                                            <tr>
+                                                <td>sql:query</td>
+                                                <td>It is used for executing the SQL query defined in its sql attribute or the body. </td>
+                                            </tr>
+                                            <tr>
+                                                <td>c:update</td>
+                                                <td>It is used for executing the SQL update defined in its sql attribute or in the tag body. </td>
+                                            </tr>
+                                             <tr>
+                                                <td>c:param</td>
+                                                <td>It is used for sets the parameter in an SQL statement to the specified value. </td>
+                                            </tr>
+                                             <tr>
+                                                <td>c:dateParam</td>
+                                                <td>It is used for sets the parameter in an SQL statement to a specified java.util.Date value.</td>
+                                            </tr>
+                                             <tr>
+                                                <td>c:transaction</td>
+                                                <td>It is used to provide the nested database action with a common connection.</td>
+                                            </tr>
+                                        </table>
                                 </div>
                             </div>
                             <div id="jstl4" class="tab">
-                                <h4><strong>Internationalization Tag Library</strong></h4>
+                                <h4><strong>Formatting Tag Library</strong></h4>
                                 <div class="">
                                     <ul class="c">
-                                        <ul>
-                                            <li>Locate setting</li>
-                                            <li>message bunding</li>
-                                            <li>number formatting</li>
-                                            <li>date formatting</li>
-                                        </ul>
+                                        <p> The formatting tags provide support for message formatting, number and date formatting etc., The JSTL formatting tags are used for internationalized web sites to display and format text, the time, the date and numbers. </p>
+                                       
+                                      <h4><strong> JSTL Formatting Tags Lists </strong></h4>
+                                        <table style="width:100%">
+                                            <tr>
+                                                <th>Tags</th>
+                                                <th>Description</th> 
+                                            </tr>
+                                            <tr>
+                                                <td>fmt:parseNumber</td>
+                                                <td>It is used to Parses the string representation of a currency, percentage or number. </td>
+                                            </tr>
+                                            <tr>
+                                                <td>fmt:timeZone</td>
+                                                <td>It specifies a parsing action nested in its body or the time zone for any time formatting. </td>
+                                            </tr>
+                                            <tr>
+                                                <td>fmt:formatNumber</td>
+                                                <td>It is used to format the numerical value with specific format or precision.</td>
+                                            </tr>
+                                             <tr>
+                                                <td>fmt:parseDate</td>
+                                                <td>It parses the string representation of a time and date. </td>
+                                            </tr>
+                                             <tr>
+                                                <td>fmt:bundle</td>
+                                                <td>It is used for creating the ResourceBundle objects which will be used by their tag body.</td>
+                                            </tr>
+                                             <tr>
+                                                <td>fmt:setTimeZone</td>
+                                                <td>It stores the time zone inside a time zone configuration variable.</td>
+                                            </tr>
+                                             <tr>
+                                                <td>fmt:setBundle</td>
+                                                <td>It loads the resource bundle and stores it in a bundle configuration variable or the named scoped variable.</td>
+                                            </tr>
+                                             <tr>
+                                                <td>fmt:message</td>
+                                                <td>It display an internationalized message.</td>
+                                            </tr>
+                                             <tr>
+                                                <td>fmt:formatDate</td>
+                                                <td>It formats the time and/or date using the supplied pattern and styles. </td>
+                                            </tr>
+                                        </table>
                                     </ul>
                                 </div>
                             </div>
@@ -579,9 +699,7 @@
                         <div class="tab-content">
                             <div id="node1" class="tab active">
                                 <h4><strong>Introduction</strong></h4>
-                                <p>- Node.js was developed by Ryan Dahl in 2009</p>
-                                <p>- Node.js is an open source server-side platform built on Google Chrome's JavaScript V8 Engine.</p>
-                                <p>- It is for network intensive single page apps that uses JavaScript</p>
+                                <p> - Node.js is an open source server framework which is built on top of the JavaScript V8 engine mostly used for web development - specially for network intensive single page apps, it is free, cross-platform and uses one of the most popular programming language - JavaScript</p>
                             </div>
                             <div id="node2" class="tab">
                                 <h4><strong>Features</strong></h4>
@@ -590,19 +708,22 @@
                                        
                                             <li>Asynchronous and Event Driven</li>
                                             <ul>
-                                                <li>All APIs of Node.js library are asynchronous, that is, non-blocking. It essentially means a Node.js based server never waits for an API to return data. With the advent of the web there needs to be some kind of way to execute tasks upon receiving them, in the past this is done sychornously, meaning you need to wait for a certain code to finish before you can execute another task, though this can be mitigated by using Threads in some languages.The server moves to the next API after calling it and a notification mechanism of Events of Node.js helps the server to get a response from the previous API call.</li>
-                                               
-<pre><code class="javascript hljs">
-var fs = require('fs');<br>fs.readFile(function(err, data){<br>console.log('data');<br>});<br>console.log('This will be executed first, depending on the size of the file');
-</code></pre>
+                                                <li>With the advent of the web there needs to be some kind of way to execute tasks upon receiving them, in the past this is done sychornously, meaning you need to wait for a certain code to finish before you can execute another task, though this can be mitigated by using Threads in some languages, a more powerful approach that Node is built upon is that all of its library API was built asychronous first and an event driven mechanism. Meaning for instance in reading a file you don't need to wait for that block of code to finish before moving through the next one.</li>
+                                                <pre><code class="javascript hljs">
+                                                var fs = require('fs');
+                                                 fs.readFile(function(err, data){
+                                                    console.log('data');
+                                                 });
+                                                 console.log('This will be executed first, depending on the size of the file');
+                                                </code></pre>
                                             </ul>
-                                            <li>Very Fast!</li>
+                                            <li>Its Fast!</li>
                                                 <ul>
-                                                    <li>Being built on Google Chrome's V8 JavaScript Engine, Node.js library is very fast in code execution.No question that the V8 engine is one of the best JavaScript engine out there in terms of speed</li>
+                                                    <li>As noted above Node js is built on top of the V8 and there is no question that the V8 engine is one of the best JavaScript engine out there in terms of speed</li>
                                                 </ul>
-                                            <li>Single Thread but Highly Scalable</li>
+                                            <li>Single Threading</li>
                                                 <ul>
-                                                    <li>Node uses a single threaded model with event looping. Meaning there are no threads in Node, it accomplishes tasks -again - in an event driven fashion in a asychronous way.Event mechanism helps the server to respond in a non-blocking way and makes the server highly scalable as opposed to traditional servers which create limited threads to handle requests.</li>
+                                                    <li>Node uses a single threaded model with event looping. Meaning there are no threads in Node, it accomplishes tasks -again - in an event driven fashion in a asychronous way. In a way this model can serve a much larger request pool than the traditional Threaded model such as being used on Java or Apache (Php) servers</li>
                                                 </ul>
                                     </ul>
                                 </div>
@@ -612,16 +733,16 @@ var fs = require('fs');<br>fs.readFile(function(err, data){<br>console.log('data
                                 <div class="">
                                     <ul class="c">
                                         <ul>
-                                            <li>asset - module for assertion tests</li>
-                                            <li>crypto - module for handling OpenSSL cryptographic functions</li>
+                                            <li>asset - module for asse</li>
+                                            <li>crypto - module for handling OpenSSL enryption</li>
                                             <li>fs - File system - reading and writing files</li>
-                                            <li>http - module to make Node.js act as a HTTP server</li>
-                                            <li>https - module to make Node.js act as a HTTPS server</li>
+                                            <li>http - module for creating a HTTP server</li>
+                                            <li>https - module for creating a HTTPS server</li>
                                             <li>net - module for creating network servers and clients</li>
-                                            <li>querystring - to handle URL query strings</li>
+                                            <li>querystring - module for handiling URL query strings</li>
                                             <li>url - module for parsing URL a string</li>
-                                            <li>util - to access utility functions</li>
-                                            <li>zlib - module for compressing or decompressing files</li>
+                                            <li>util - utility functions</li>
+                                            <li>zlib - module for compressing/decompressing files</li>
                                         </ul>
                                     </ul>
                                 </div>
