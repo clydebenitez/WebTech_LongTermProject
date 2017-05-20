@@ -422,8 +422,8 @@
                                     </div>
                         <div id="css7" class="tab">
                         <h4><strong> CSS Selectors </strong></h4>
-                        <ul>
                             <li><strong> Type Selector </strong></li>
+                        			<p> This basic selector chooses all elements that matches the given name </p>
                             	<ul>
                             		<li>element{style properties}</li>
                             			example:<br>
@@ -432,6 +432,7 @@
                             				}
                             	</ul>
                             <li><strong> Universal Selector </strong></li>
+                            		<p> This basic selector chooses all nodes. It also exists in a one-namespace only and in an all-namespace variant too. </p>
                             	<ul>
                             		<li>*{style properties}</li>
                             			example:<br>
@@ -440,6 +441,8 @@
                             				}
                             	</ul>
                             <li><strong> Attribute Selector </strong></li>
+                            		<p> This basic selector chooses nodes based on the value of one of its attributes. </p>
+                            	</ul>
                             	<ul>
                             		<li>[attribute]{style properties}</li>
                             			example:<br>
@@ -448,6 +451,7 @@
                             				}
                             	</ul>
                             <li><strong> Class Selector</strong></li>
+                            		<p> This basic selector chooses elements based on the value of their class attribute. </p>
                             	<ul>
                             		<li>.classname{style properties}</li>
                             			example:<br>
@@ -456,6 +460,7 @@
                             				}
                             	</ul>
                             <li><strong> ID Selector</strong></li>
+                            		<p> This basic selector chooses nodes based on the value of its id attribute. There should be only one element with a given ID in a document. </p>
                             	<ul>
                             		<li>#id_value{style properties}</li>
                             			example:<br>
@@ -464,6 +469,7 @@
                             				}
                             	</ul>
                             <li><strong> Grouping Selector</strong></li>
+                            		<p> By combining the grouping of selectors that share the same declaration and declarations that share the same selector you can apply multiple declarations to multiple selectors. </p>
                             	<ul>
                             		<li>selector,selector,element{style properties}</li>
                             			example:<br>
@@ -472,6 +478,7 @@
                             				}
                             	</ul>
                             <li><strong> Adjacent Sibling Selector</strong></li>
+                            		<p> The '+' combinator selects nodes that immediately follow the former specified element. </p>
                             	<ul>
                             		<li>formet_element + target_element{style properties}</li>
                             			example:<br>
@@ -480,6 +487,7 @@
                             				}
                             	</ul>
                             <li><strong> General Sibling Selector</strong></li>
+                            		<p> The '~' combinator selects nodes that follow (not necessarily immediately) the former specified element, if both elements shared the same parent. </p>
                             	<ul>
                             		<li>element ~ element{style properties}</li>
                             			example:<br>
@@ -488,6 +496,7 @@
                             				}
                             	</ul>
                             <li><strong> Child Selector</strong></li>
+                            		<p> The '>' combinator selects nodes that are direct children of the former specified element. </p>
                             	<ul>
                             		<li> selector1 > selector2{style properties}</li>
                             			example:<br>
@@ -496,6 +505,7 @@
                             				}
                             	</ul>
                             <li><strong> Descendant Selector</strong></li>
+                            		<p> The ' ' combinator selects nodes that are children (not necessary direct children) of the former specified element. </p>
                             	<ul>
                             		<li> selector1 selector2 {style properties}</li>
                             			example:<br>
@@ -504,6 +514,7 @@
                             				}
                             	</ul>
                             <li><strong> Pseudo-element</strong></li>
+                            	<p> Pseudo-elements are abstractions of the tree representing entities beyond what HTML does. For example, HTML doesn't have an element describing the first letter or line of a paragraph, or the marker of a list. Pseudo-elements represent these entities and allow CSS rules to be associated with them. that way, these entitities can be styled independently. </p>
                             	<ul>
                             		<li>selector::pseudo-element{style properties}</li>
                             			example:<br>
@@ -512,6 +523,7 @@
                             				}
                             	</ul>
                             <li><strong> Pseudo-class</strong></li>
+                            	<p> Pseudo-classes allow to select elements based on information that is not contained in the document tree like a state or that is particularly complex to extract. E.g. they match if a link has been previously visited or not. </p>
                             	<ul>
                             		<li>element:pseudo-class{style properties}</li>
                             			example:<br>
