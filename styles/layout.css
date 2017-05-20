@@ -147,6 +147,7 @@ button{
     cursor: pointer;
     box-sizing: border-box; 
     width: 170px;
+    background: pink;
 }
 
 .button:hover,

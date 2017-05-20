@@ -22,6 +22,12 @@ body {
     background-repeat: no-repeat;
     background-position: center center;   
 }
+.midterm{
+  background-image: url(../imgs/midterm.png);
+}
+.finals{
+ background-image: url(../imgs/final.jpg); 
+}
 .logo {
     font-weight: 600;
     color: cornsilk;
@@ -33,6 +39,10 @@ body {
     padding-left: 10px;
     z-index: 1;
 }
+.final{
+  color: white;
+  text-shadow: 3px 3px 30px #000
+}
 .nav {
   text-align: right;
 }
@@ -41,7 +51,8 @@ body {
   margin: 2px 0;
 }
 .button {
-  background-color: rgba(255,255,255,.8);
+  /*background-color: rgba(255,255,255,.8);*/
+  background-color: pink;
 }
 .button:hover {
   background-color: rgba(255,255,255,.6);
@@ -136,7 +147,7 @@ h2 {
 .headtext{
     color: white;
     font-weight: 900;
-    text-shadow: 3px 3px 3px #000
+    text-shadow: 3px 3px 40px #000
 }
 .infotext{
     font-weight: 500;
