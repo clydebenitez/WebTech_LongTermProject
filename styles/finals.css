@@ -50,3 +50,6 @@ li.active a:hover {
 .tab h4 {
     color: #8D6E63;
 }
+#servlet, #php, #jstl, #node{
+    display: none;
+}

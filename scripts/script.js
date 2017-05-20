@@ -8,12 +8,12 @@ $(window).scroll(function() {
   }
 });
 
-$('a.back-to-top').click(function() {
-  $('html, body').animate({
-    scrollTop: 0
-  }, 700);
-  return false;
-});
+// $('a.back-to-top').click(function() {
+//   $('html, body').animate({
+//     scrollTop: 0
+//   }, 700);
+//   return false;
+// });
 
 function openNav() {
     document.getElementById("sideNav").style.width = "320px";
@@ -74,35 +74,35 @@ $(document).ready(function(){
       $("#servlet").hide(300);
       $("#php").hide(300);
       $("#jstl").hide(300);
-      $("#node.js").hide(300);
+      $("#node").hide(300);
     });
     $(".servletButton").click(function(){
       $("#jsp").hide(300);
       $("#servlet").show(300);
       $("#php").hide(300);
       $("#jstl").hide(300); 
-      $("#node.js").hide(300);  
+      $("#node").hide(300);  
     });
     $(".phpButton").click(function(){
       $("#jsp").hide(300);
       $("#servlet").hide(300);
       $("#php").show(300);
       $("#jstl").hide(300);
-      $("#node.js").hide(300);
+      $("#node").hide(300);
     });
     $(".jstlButton").click(function(){
       $("#jsp").hide(300);
       $("#servlet").hide(300);
       $("#php").hide(300);
       $("#jstl").show(300);
-      $("#node.js").hide(300);
+      $("#node").hide(300);
     });
      $(".nodeButton").click(function(){
       $("#jsp").hide(300);
       $("#servlet").hide(300);
       $("#php").hide(300);
       $("#jstl").hide(300);
-      $("#node.js").show(300);
+      $("#node").show(300);
     });
 });
 

@@ -50,3 +50,6 @@ li.active a:hover {
 .tab h4 {
     color: #F09D51;
 }
+#requestMethods, #messageHeaders, #statusCode{
+    display: none;
+}
